@@ -10,7 +10,6 @@
       <PortfolioMenuDropdown :menu-items="menuItems[2].children!" />
       <ProcessMenuDropdown :menu-items="menuItems[2].children!" />
       <MegaMenuDropdown v-if="showMegaMenu" />
-
       <li v-if="showContactUs" class="nav-item">
         <router-link class="nav-link" :to="{ name: 'contact.v2' }"> Contact us </router-link>
       </li>
