@@ -212,7 +212,7 @@ const pagesRoutes = [
     meta: {
       title: setTitle('About-V4')
     },
-    component: () => import('@/views/pages/about/AboutV4/index.vue')
+    component: () => import('@/views/pages/about/Aboutv4/index.vue')
   },
   {
     path: '/pages/team',
