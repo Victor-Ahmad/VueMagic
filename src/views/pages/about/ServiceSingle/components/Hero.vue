@@ -8,10 +8,10 @@
     <b-container class="position-relative pt-4 pt-lg-0">
       <b-row class="align-items-center">
         <b-col md="7" xl="6">
-          <h1 class="mb-4">Digital Marketing</h1>
+          <h1 class="mb-4">Web Design</h1>
           <p class="mb-4">
-            Digital marketing is the strategic use of online channels and technologies to promote
-            products, services, or brands to a target audience.
+            Our Web Design service is dedicated to crafting visually appealing, user-friendly, and
+            responsive websites that align perfectly with your brand identity.
           </p>
         </b-col>
 
@@ -21,26 +21,6 @@
           >
         </b-col>
       </b-row>
-    </b-container>
-  </section>
-  <section class="pt-0 mt-n7">
-    <b-container>
-      <div
-        class="position-relative h-300px h-md-400px rounded-3"
-        style="background-size: cover; background-position: center"
-        :style="{ backgroundImage: `url('${bg5Img}')` }"
-      >
-        <div class="bg-overlay bg-dark opacity-5"></div>
-        <div class="position-absolute top-50 start-50 translate-middle z-index-2">
-          <CustomGLightbox
-            className="btn btn-icon btn-xl btn-white btn-round mb-0 stretched-link"
-            link="https://www.youtube.com/embed/tXHviS-4ygo"
-            data-gallery="video"
-          >
-            <BIconPlayFill class="fa-lg" />
-          </CustomGLightbox>
-        </div>
-      </div>
     </b-container>
   </section>
 </template>

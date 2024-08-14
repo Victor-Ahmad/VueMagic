@@ -2,12 +2,11 @@
   <TopNavigationBar8 />
   <main>
     <Hero />
-
-    <Approach />
-
+    <Requirements />
     <Works />
-
     <Pricing />
+    <Call />
+    <!-- <Approach /> -->
   </main>
 
   <Footer9 />
@@ -20,4 +19,6 @@ import Hero from '@/views/pages/about/ServiceSingle/components/Hero.vue'
 import Pricing from '@/views/pages/about/ServiceSingle/components/Pricing.vue'
 import Works from '@/views/pages/about/ServiceSingle/components/Works.vue'
 import Footer9 from '@/views/pages/about/ServiceSingle/components/Footer9.vue'
+import Requirements from '@/views/pages/about/ServiceSingle/components/Requirements.vue'
+import Call from '@/views/pages/about/ServiceSingle/components/Call.vue'
 </script>
