@@ -1,8 +1,9 @@
 <template>
-  <section class="pt-0">
+  <section class="pb-0">
     <b-container>
       <div class="inner-container-small text-center mb-4 mb-md-6">
         <h2 class="mb-0">How its work?</h2>
+        <p>Our Web Design process is divided into four key stages:</p>
       </div>
 
       <b-row class="g-4 g-lg-7">

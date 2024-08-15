@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-0">
+  <section class="pb-0">
     <b-container>
       <b-row class="g-4 g-lg-7">
         <b-col md="6">
