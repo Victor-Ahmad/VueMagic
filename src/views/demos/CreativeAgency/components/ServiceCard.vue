@@ -1,5 +1,5 @@
 <template>
-  <b-card no-body class="card-hover-shadow border h-100 p-4">
+  <b-card no-body class="card-hover-shadow border h-100 p-4" @click="goToServicePage">
     <b-card-body class="p-0">
       <figure class="text-primary mb-4">
         <span v-html="service.icon" />
@@ -28,11 +28,18 @@
 import { BIconArrowRight } from 'bootstrap-icons-vue'
 import type { ServiceType } from '@/types'
 import type { PropType } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 defineProps({
   service: {
     type: Object as PropType<ServiceType>,
     required: true
   }
 })
+function goToServicePage() {
+  router.push({ name: 'services.single' }).then(() => {
+    window.scrollTo(0, 0)
+  })
+}
 </script>

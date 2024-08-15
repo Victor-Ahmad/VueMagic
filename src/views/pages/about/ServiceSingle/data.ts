@@ -1,8 +1,45 @@
 import avatar11 from '@/assets/images/avatar/11.jpg'
 import avatar8 from '@/assets/images/avatar/08.jpg'
 import avatar5 from '@/assets/images/avatar/05.jpg'
-import type { PricingPlanType, ServiceType } from '@/types'
-
+import type { PricingPlanType, ServiceType , StepType } from '@/types'
+export const cards: StepType[] = [
+  {
+    title: 'Brand Guidelines',
+    description:
+      'Logo, color scheme, fonts, and any existing branding elements.',
+ 
+  },
+  {
+    title: 'Content Outline',
+    description:
+      "A rough draft or detailed outline of the pages you need (e.g., Home, About Us, Services, Contact).",
+ 
+  },
+  {
+    title: 'Target Audience',
+    description:
+      "Information about your target demographic, including age, preferences, and user behavior.",
+    
+  },
+  {
+    title: 'Competitor Analysis',
+    description:
+      ' Any websites you admire or consider competitors to help us understand your vision.',
+   
+  },
+  {
+    title: 'Functionality Requirements',
+    description:
+      'Any specific features you need (e.g., e-commerce, booking systems, galleries).',
+   
+  },
+  {
+    title: 'Business consulting',
+    description:
+      'Consultants analyze your operations, provide strategic recommendations assist in implementing solutions to tackle challenges, and drive growth.',
+  
+  }
+]
 export const approach: string[] = [
   "Reach a global audience and expand your brand's presence",
   'Real-time tracking and data-driven decision-making',
