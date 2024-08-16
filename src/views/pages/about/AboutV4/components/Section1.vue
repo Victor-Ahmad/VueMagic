@@ -26,24 +26,49 @@
   
           <b-col lg="6" class="ps-xl-7">
             <h2 class="mb-4">Know About Mizzle</h2>
-            <p>
-              At Mizzle, we're not just in the business of digital solutions; we're in the business of
-              crafting digital success stories. Founded on a passion for innovation and a commitment
-              to excellence, we've been at the forefront of the digital landscape, helping businesses
-              like yours thrive in the digital age.
-            </p>
-            <p>
-              Our story begins with a vision – a vision to transform the digital experience for
-              businesses of all sizes. Over the years, we've evolved from a small startup to a dynamic
-              digital agency with a global footprint.
-            </p>
-            <p class="mb-4">
+           <ul>
+            <li>
+              <h6>Know About Mizzle:</h6>
+              <p>
+                At Mizzle, we're not just in the business of digital solutions; we're in the business of
+                crafting digital success stories. Founded on a passion for innovation and a commitment
+                to excellence, we've been at the forefront of the digital landscape, helping businesses
+                like yours thrive in the digital age.
+              </p>
+            </li>
+            <li>
+              <h6>Know About Mizzle:</h6>
+              <p>
+                Our story begins with a vision – a vision to transform the digital experience for
+                businesses of all sizes. Over the years, we've evolved from a small startup to a dynamic
+                digital agency with a global footprint.
+              </p>
+            </li>
+            <li>
+              <h6>Know About Mizzle:</h6>
+              <p class="mb-4">
+                To empower businesses to achieve their digital goals. We believe that the digital realm
+                offers boundless opportunities for growth and connection, and we're here to guide you
+                through this transformative journey.
+              </p>
+            </li>
+            <li>
+              <h6>Know About Mizzle:</h6>
+              <p class="mb-4">
               To empower businesses to achieve their digital goals. We believe that the digital realm
               offers boundless opportunities for growth and connection, and we're here to guide you
               through this transformative journey.
             </p>
-  
-           
+            </li>
+            <li>
+              <h6>Know About Mizzle:</h6>
+              <p class="mb-4">
+              To empower businesses to achieve their digital goals. We believe that the digital realm
+              offers boundless opportunities for growth and connection, and we're here to guide you
+              through this transformative journey.
+            </p>
+            </li>
+          </ul>
           </b-col>
         </b-row>
       </b-container>

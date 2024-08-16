@@ -6,8 +6,10 @@
         <Hero1 />
         <Team1 />
         <Section1 />
+        <Feature1 />
         <Cta1 />
         <Test1 />
+        <Contact1 />
     </main>
     <Footer2 />
   </template>
@@ -18,9 +20,9 @@
   import Hero1 from '@/views/pages/about/AboutV4/components/Hero1.vue';
   import Team1 from '@/views/pages/about/AboutV4/components/Team1.vue';
   import Section1 from '@/views/pages/about/AboutV4/components/Section1.vue';
-  
-  
+  import Feature1 from '@/views/pages/about/AboutV4/components/Feature1.vue';
   import Cta1 from '@/views/pages/about/AboutV4/components/Cta1.vue';
   import Test1 from '@/views/pages/about/AboutV4/components/Test1.vue';
+  import Contact1 from '@/views/pages/about/AboutV4/components/Contact1.vue';
   import Footer2 from '@/views/pages/about/AboutV4/components/Footer2.vue';
   </script>
