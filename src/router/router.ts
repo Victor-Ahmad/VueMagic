@@ -453,7 +453,15 @@ const portfolioRoutes = [
       title: setTitle('Portfolio Case Study v.2')
     },
     component: () => import('@/views/portfolio/CaseStudyV2/index.vue')
-  }
+  },
+  {
+    path: '/portfolio/portfolio',
+    name: 'portfolio.portfolio',
+    meta: {
+      title: setTitle('Portfolio Portfolio')
+    },
+    component: () => import('@/views/portfolio/Portfolio/index.vue')
+  },
 ]
 
 const authRoutes = [

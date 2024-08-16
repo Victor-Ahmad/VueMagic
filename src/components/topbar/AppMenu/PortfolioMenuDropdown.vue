@@ -1,11 +1,12 @@
 <template>
   <li class="nav-item dropdown" @click="scrollMethod">
     <a
-      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100"
-      href="#projects"
+      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100 cursor-pointer"
       :class="menuItemActive('portfolio', currentRouteName) && 'active'"
+      @click="goToPortfolioPage"
     >
       Portfolio
+
       <!-- <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" /> -->
     </a>
     <!-- this is a comment -->
@@ -81,7 +82,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 import portfolioList1Img from '@/assets/images/portfolio/list/01.jpg'
 import portfolioList2Img from '@/assets/images/portfolio/list/02.jpg'
-
+import { useRouter } from 'vue-router'
 type PortfolioMenuDropdownProps = {
   menuItems: MenuItemType[]
 }
@@ -95,6 +96,12 @@ const scrollMethod = () => {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
     }
+  })
+}
+
+function goToPortfolioPage() {
+  router.push({ name: 'portfolio.portfolio' }).then(() => {
+    window.scrollTo(0, 0)
   })
 }
 </script>

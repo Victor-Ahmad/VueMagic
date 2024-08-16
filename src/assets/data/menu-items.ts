@@ -470,6 +470,12 @@ export const APP_MENU_ITEMS: MenuItemType[] = [
         parentKey: 'portfolio'
       },
       {
+        key: 'portfolio-portfolio',
+        label: 'Portfolio Portfolio',
+        route: { name: 'portfolio.portfolio' },
+        parentKey: 'portfolio'
+      },
+      {
         key: 'portfolio-showcase',
         label: 'Portfolio Showcase',
         route: { name: 'portfolio.showcase' },

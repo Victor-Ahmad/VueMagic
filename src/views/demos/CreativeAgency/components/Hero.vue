@@ -33,7 +33,11 @@
           </p>
 
           <div class="d-flex gap-1 gap-sm-3 flex-wrap mt-4 mt-xl-5">
-            <b-button variant="dark" type="button">Get started</b-button>
+            <b-button variant="dark" type="button"
+              ><router-link class="text-white" :to="{ name: 'contact.v1' }">
+                Get started
+              </router-link></b-button
+            >
             <b-button variant="outline-dark" type="button">Start a 14 days free trial</b-button>
           </div>
 
