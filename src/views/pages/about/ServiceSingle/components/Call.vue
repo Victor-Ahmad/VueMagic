@@ -18,7 +18,7 @@
               brighter future!
             </p>
 
-            <a href="#" class="btn btn-primary mb-6">Get started today</a>
+            <a @click="goToServicePage" class="btn btn-primary mb-6">Get started today</a>
 
             <p class="text-white text-center">Used by the world best companies.</p>
 
@@ -54,4 +54,11 @@ import { swiper } from '@/views/pages/about/ServiceV2/data'
 
 import ctaVectorImg from '@/assets/images/elements/cta-vector.svg'
 import saasDecoration05 from '@/assets/images/elements/saas-decoration/05.png'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+function goToServicePage() {
+  router.push({ name: 'contact.v1' }).then(() => {
+    window.scrollTo(0, 0)
+  })
+}
 </script>
