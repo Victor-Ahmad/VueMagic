@@ -1,8 +1,7 @@
 <template>
   <li class="nav-item dropdown">
     <a
-      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100"
-      href="/"
+      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100 cursor-pointer"
     >
       Demos
       <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" />

@@ -36,10 +36,6 @@
               </ul>
             </div>
 
-            <!-- <router-link :to="{ name: 'portfolio.portfolio' }" class="btn btn-light mt-auto mb-5"
-              >View all projects
-              <font-awesome-icon :icon="faArrowRightLong" class="ms-1" />
-            </router-link> -->
             <div class="btn btn-light mt-auto mb-5" @click="goToPortfolioPage">
               View all projects
               <font-awesome-icon :icon="faArrowRightLong" class="ms-1" />
@@ -50,7 +46,7 @@
         <b-col md="8" lg="9">
           <b-row class="g-4 filter-container" data-isotope='{"layoutMode": "masonry"}'>
             <b-col
-              @click="goToPortfolioPage"
+              @click="goToProjectsPage"
               sm="6"
               lg="4"
               v-for="(project, idx) in projects"
@@ -77,6 +73,11 @@ import router from '@/router'
 
 function goToPortfolioPage() {
   router.push({ name: 'portfolio.portfolio' }).then(() => {
+    window.scrollTo(0, 0)
+  })
+}
+function goToProjectsPage() {
+  router.push({ name: 'portfolio.case-study.v1' }).then(() => {
     window.scrollTo(0, 0)
   })
 }
