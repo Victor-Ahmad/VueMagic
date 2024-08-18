@@ -66,7 +66,7 @@
               <router-link :to="{ name: 'contact.v1' }" class="btn btn-dark icons-center"
                 ><BIconEnvelope class="me-2" />Email us</router-link
               >
-              <router-link :to="{ name: 'contact.v2' }" class="btn btn-dark icons-center"
+              <router-link :to="{ name: 'contact.v1' }" class="btn btn-dark icons-center"
                 ><BIconTelephone class="me-2" />Contact us</router-link
               >
             </div>

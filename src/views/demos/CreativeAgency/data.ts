@@ -196,41 +196,41 @@ export const projects: RecentProjectType[] = [
     category: 'UI/UX design',
     categoryClass: 'marketing business brand',
     image: portfolioImg1,
-    route: { name: 'portfolio.case-study.v1' }
+    route: { name: 'portfolio.portfolio' }
   },
   {
     name: 'ElevateTech Redesign',
     category: 'Brand design',
     categoryClass: 'brand ui',
     image: portfolioImg4,
-    route: { name: 'portfolio.case-study.v1' }
+    route: { name: 'portfolio.portfolio' }
   },
   {
     name: 'User-Centric Redesign',
     category: 'Web design',
     categoryClass: 'business design brand',
     image: portfolioImg2,
-    route: { name: 'portfolio.case-study.v1' }
+    route: { name: 'portfolio.portfolio' }
   },
   {
     name: 'Sustainability Initiative',
     category: 'Business dev',
     categoryClass: 'design marketing',
     image: portfolioImg5,
-    route: { name: 'portfolio.case-study.v1' }
+    route: { name: 'portfolio.portfolio' }
   },
   {
     name: 'E-commerce Expansion',
     category: 'Digital Marketing',
     categoryClass: 'business design',
     image: portfolioImg6,
-    route: { name: 'portfolio.case-study.v1' }
+    route: { name: 'portfolio.portfolio' }
   },
   {
     name: 'Social Media Engagement',
     category: 'UI/UX design',
     categoryClass: 'ui',
     image: portfolioImg3,
-    route: { name: 'portfolio.case-study.v1' }
+    route: { name: 'portfolio.portfolio' }
   }
 ]

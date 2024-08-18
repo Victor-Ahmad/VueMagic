@@ -34,7 +34,7 @@ export const portfolioData: PortfolioType[] = [
     image: portfolio2,
     category: 'UI/UX design',
     categoryClass: 'ui business',
-    route: { name: 'portfolio.case-study.v2' }
+    route: { name: 'portfolio.case-study.v1' }
   },
   {
     title: 'Website Optimization for TechWave',
@@ -48,7 +48,7 @@ export const portfolioData: PortfolioType[] = [
     image: portfolio1,
     category: 'Web design',
     categoryClass: ' design brand',
-    route: { name: 'portfolio.case-study.v2' }
+    route: { name: 'portfolio.case-study.v1' }
   },
   {
     title: 'Cherry Studio',
@@ -62,7 +62,7 @@ export const portfolioData: PortfolioType[] = [
     image: portfolio3,
     category: 'Digital Marketing',
     categoryClass: 'business design',
-    route: { name: 'portfolio.case-study.v2' }
+    route: { name: 'portfolio.case-study.v1' }
   },
   {
     title: 'Transforming Ideas into Reality',
@@ -76,6 +76,6 @@ export const portfolioData: PortfolioType[] = [
     image: portfolio4,
     category: 'brand design',
 categoryClass: 'brand ui marketing',
-    route: { name: 'portfolio.case-study.v2' }
+    route: { name: 'portfolio.case-study.v1' }
   }
 ]

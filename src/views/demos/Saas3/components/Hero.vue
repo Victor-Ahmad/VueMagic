@@ -310,7 +310,7 @@
             <b-col cols="12">
               <div class="text-center border rounded px-5 py-3 mt-4 mt-lg-5">
                 <span class="heading-color">Join our community?</span>
-                <router-link class="ms-2" :to="{ name: 'contact.v2' }"
+                <router-link class="ms-2" :to="{ name: 'contact.v1' }"
                   >Contact us now
                   <BIconChevronRight class="small mb-1" />
                 </router-link>

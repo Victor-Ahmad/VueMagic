@@ -36,16 +36,21 @@
               </ul>
             </div>
 
-            <router-link :to="{ name: 'portfolio.showcase' }" class="btn btn-light mt-auto mb-5"
+            <!-- <router-link :to="{ name: 'portfolio.portfolio' }" class="btn btn-light mt-auto mb-5"
               >View all projects
               <font-awesome-icon :icon="faArrowRightLong" class="ms-1" />
-            </router-link>
+            </router-link> -->
+            <div class="btn btn-light mt-auto mb-5" @click="goToPortfolioPage">
+              View all projects
+              <font-awesome-icon :icon="faArrowRightLong" class="ms-1" />
+            </div>
           </div>
         </b-col>
 
         <b-col md="8" lg="9">
           <b-row class="g-4 filter-container" data-isotope='{"layoutMode": "masonry"}'>
             <b-col
+              @click="goToPortfolioPage"
               sm="6"
               lg="4"
               v-for="(project, idx) in projects"
@@ -68,7 +73,13 @@ import { initIsotope } from '@/helpers/init-isotope'
 import { onMounted } from 'vue'
 import ProjectCard from '@/views/demos/CreativeAgency/components/ProjectCard.vue'
 import { projects } from '@/views/demos/CreativeAgency/data'
+import router from '@/router'
 
+function goToPortfolioPage() {
+  router.push({ name: 'portfolio.portfolio' }).then(() => {
+    window.scrollTo(0, 0)
+  })
+}
 onMounted(() => {
   initIsotope()
 })

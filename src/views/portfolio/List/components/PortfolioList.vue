@@ -20,7 +20,7 @@
           </p>
           <div class="text-center d-inline-block bg-light border rounded px-5 py-3">
             <span class="heading-color me-1">Work with us?</span>
-            <router-link class="ms-2" :to="{ name: 'contact.v2' }"
+            <router-link class="ms-2" :to="{ name: 'contact.v1' }"
               >Contact us now
               <BIconChevronRight class="small" />
             </router-link>

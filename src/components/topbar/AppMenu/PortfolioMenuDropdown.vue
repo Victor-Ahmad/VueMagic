@@ -1,16 +1,13 @@
 <template>
-  <li class="nav-item dropdown" @click="scrollMethod">
+  <li class="nav-item dropdown" @click="goToPortfolioPage">
     <a
       class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100 cursor-pointer"
       :class="menuItemActive('portfolio', currentRouteName) && 'active'"
-      @click="goToPortfolioPage"
     >
       Portfolio
 
       <!-- <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" /> -->
     </a>
-    <!-- this is a comment -->
-
     <!-- <div class="dropdown-menu dropdown-menu-center dropdown-menu-size-xl p-3">
       <b-row class="g-xl-3">
         <b-col xl="8" class="d-none d-xl-block">
@@ -90,14 +87,14 @@ type PortfolioMenuDropdownProps = {
 defineProps<PortfolioMenuDropdownProps>()
 
 const currentRouteName = router.currentRoute.value.name
-const scrollMethod = () => {
-  nextTick(() => {
-    const element = document.getElementById('projects')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  })
-}
+// const scrollMethod = () => {
+//   nextTick(() => {
+//     const element = document.getElementById('projects')
+//     if (element) {
+//       element.scrollIntoView({ behavior: 'smooth' })
+//     }
+//   })
+// }
 
 function goToPortfolioPage() {
   router.push({ name: 'portfolio.portfolio' }).then(() => {

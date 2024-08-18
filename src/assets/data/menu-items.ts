@@ -216,6 +216,12 @@ export const APP_MENU_ITEMS: MenuItemType[] = [
             parentKey: 'pages-about'
           },
           {
+            key: 'about-v4',
+            label: 'About v.4',
+            route: { name: 'about.v4' },
+            parentKey: 'pages-about'
+          },
+          {
             key: 'about-team',
             label: 'Team',
             route: { name: 'pages.team' },
@@ -266,12 +272,12 @@ export const APP_MENU_ITEMS: MenuItemType[] = [
           }
         ]
       },
-      {
-        key: 'pages-contact-1',
-        label: 'Contact v.1',
-        route: { name: 'contact.v1' },
-        parentKey: 'pages'
-      },
+      // {
+      //   key: 'pages-contact-1',
+      //   label: 'Contact v.1',
+      //   route: { name: 'contact.v1' },
+      //   parentKey: 'pages'
+      // },
       {
         key: 'pages-contact-2',
         label: 'Contact v.2',
@@ -500,7 +506,20 @@ export const APP_MENU_ITEMS: MenuItemType[] = [
         parentKey: 'portfolio'
       }
     ]
-  }
+  },
+  {
+    key: 'contact',
+    label: 'contact',
+    children: [
+      {
+        key: 'contact-1',
+        label: 'Contact v.1',
+        route: { name: 'contact.v1' },
+        parentKey: 'contact'
+      }
+    ]
+    }
+ 
 ]
 
 export const MEGA_MENU_ITEMS: MegaMenuType = {

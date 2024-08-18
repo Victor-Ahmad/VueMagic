@@ -1,13 +1,13 @@
 <template>
   <li class="nav-item dropdown">
-    <a
+    <router-link
       class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100"
-      href="#"
       :class="menuItemActive('pages', currentRouteName) && 'active'"
+      :to="{ name: 'about.v4' }"
     >
       About Us
       <!-- <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" /> -->
-    </a>
+    </router-link>
     <!-- <div class="dropdown-menu">
       <template v-for="(item, idx) in menuItems" :key="item.key + idx">
         <MenuItemWithChildren v-if="item.children" :item="item" />
