@@ -6,9 +6,9 @@
     >
       Portfolio
 
-      <!-- <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" /> -->
+      <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" />
     </a>
-    <!-- <div class="dropdown-menu dropdown-menu-center dropdown-menu-size-xl p-3">
+    <div class="dropdown-menu dropdown-menu-center dropdown-menu-size-xl p-3">
       <b-row class="g-xl-3">
         <b-col xl="8" class="d-none d-xl-block">
           <div class="d-flex gap-4">
@@ -65,7 +65,7 @@
           </ul>
         </b-col>
       </b-row>
-    </div> -->
+    </div>
   </li>
 </template>
 
