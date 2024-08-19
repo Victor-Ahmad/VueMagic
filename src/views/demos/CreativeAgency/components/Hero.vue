@@ -39,7 +39,7 @@
               </router-link></b-button
             >
             <b-button variant="dark" type="button">
-              <router-link class="text-white" :to="{ name: 'services.single' }">
+              <router-link class="text-white" :to="{ name: 'services.v3' }">
                 Our services
               </router-link>              
 
