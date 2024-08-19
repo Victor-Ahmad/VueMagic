@@ -231,6 +231,14 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/AboutV4/index.vue')
   },
   {
+    path: '/process',
+    name: 'process',
+    meta: {
+      title: setTitle('Process')
+    },
+    component: () => import('@/views/pages/about/Process/index.vue')
+  },
+  {
     path: '/pages/team',
     name: 'pages.team',
     meta: {
@@ -309,7 +317,8 @@ const pagesRoutes = [
       title: setTitle('ContactV2')
     },
     component: () => import('@/views/pages/contact/ContactV2/index.vue')
-  }
+  },
+ 
 ]
 
 const saasRoutes = [
