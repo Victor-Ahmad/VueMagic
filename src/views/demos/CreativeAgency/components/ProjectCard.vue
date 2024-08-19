@@ -57,7 +57,7 @@ defineProps({
 </script>
 <style scoped>
 .img {
-  height: 250px !important;
-  width: 300px;
+  height: 250px;
+  width: 100%;
 }
 </style>

@@ -239,12 +239,12 @@ export const APP_MENU_ITEMS: MenuItemType[] = [
             route: { name: 'services.v2' },
             parentKey: 'pages-about'
           },
-          {
-            key: 'about-services-single',
-            label: 'Service Single',
-            route: { name: 'services.single' },
-            parentKey: 'pages-about'
-          },
+          // {
+          //   key: 'about-services-single',
+          //   label: 'Service Single',
+          //   route: { name: 'services.single' },
+          //   parentKey: 'pages-about'
+          // },
           {
             key: 'about-customer-stories',
             label: 'Customer Stories',

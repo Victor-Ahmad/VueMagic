@@ -50,6 +50,20 @@
                     />
                     <label for="floatingNumber">Phone number</label>
                   </div>
+                  <div class="input-floating-label form-floating mb-4">
+                    <select
+                      class="form-select bg-transparent border-bottom cursor-pointer p-0"
+                      id="floatingServices"
+                      aria-label="Select a service"
+                    >
+                      <option value="" disabled selected>Select a service</option>
+                      <option value="web_design">Web Design</option>
+                      <option value="seo">SEO Optimization</option>
+                      <option value="marketing">Digital Marketing</option>
+                      <option value="content_creation">Content Creation</option>
+                    </select>
+                    <label for="floatingServices">Services</label>
+                  </div>
 
                   <div class="input-floating-label form-floating mb-4">
                     <textarea
@@ -75,3 +89,20 @@
 <script setup lang="ts">
 import bg02 from '@/assets/images/bg/02.jpg'
 </script>
+<style scoped>
+select.form-select {
+  padding: 10px !important;
+}
+select.form-select option:hover {
+  background-color: #198754;
+  color: white;
+}
+
+select.form-select option:checked {
+  background-color: #198754;
+  color: white;
+}
+/* select.form-select option {
+  cursor: pointer;
+} */
+</style>
