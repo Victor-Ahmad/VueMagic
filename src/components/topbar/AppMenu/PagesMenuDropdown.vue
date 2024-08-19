@@ -6,9 +6,9 @@
       :to="{ name: 'about.v4' }"
     >
       About Us
-      <!-- <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" /> -->
+      <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" />
     </router-link>
-    <!-- <div class="dropdown-menu">
+    <div class="dropdown-menu">
       <template v-for="(item, idx) in menuItems" :key="item.key + idx">
         <MenuItemWithChildren v-if="item.children" :item="item" />
         <MenuItem v-else :item="item" />
@@ -32,7 +32,7 @@
           Documentation
         </a>
       </li>
-    </div> -->
+    </div>
   </li>
 </template>
 
