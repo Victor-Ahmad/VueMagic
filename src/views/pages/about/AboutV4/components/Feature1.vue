@@ -55,7 +55,7 @@
             <b-col lg="6" class="ms-auto mb-6 mb-lg-0 order-lg-2">
                 <div class="d-sm-flex">
                 <div class="ms-sm-4">
-                    <ol>
+                    <ol start="4">
                        <li><h6>Know About Mizzle:</h6></li>
                           <ul>
                             <li>

@@ -38,7 +38,12 @@
                 Get started
               </router-link></b-button
             >
-            <b-button variant="outline-dark" type="button">Start a 14 days free trial</b-button>
+            <b-button variant="dark" type="button">
+              <router-link class="text-white" :to="{ name: 'services.single' }">
+                Our services
+              </router-link>              
+
+             </b-button>
           </div>
 
           <ul class="list-inline d-flex flex-wrap gap-2 gap-sm-4 mb-0 mt-4 mt-xl-5">
