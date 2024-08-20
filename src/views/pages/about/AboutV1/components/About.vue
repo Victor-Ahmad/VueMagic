@@ -72,7 +72,7 @@
 
           <div class="text-center d-inline-block bg-dark rounded px-5 py-3 mt-4 mt-lg-5">
             <span class="text-white">Work with us?</span>
-            <router-link :to="{ name: 'contact.v2' }" class="ms-2"
+            <router-link :to="{ name: 'contact.v1' }" class="ms-2"
               >Contact us now<BIconChevronRight class="small ms-1"
             /></router-link>
           </div>

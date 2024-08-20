@@ -1,8 +1,7 @@
 <template>
-  <li class="nav-item dropdown">
+  <li class="nav-item dropdown" @click="goToProcessPage">
     <a
-      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100"
-      href="#"
+      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100 cursor-pointer"
       :class="menuItemActive('process', currentRouteName) && 'active'"
     >
       Process
@@ -27,4 +26,9 @@ type PortfolioMenuDropdownProps = {
 defineProps<PortfolioMenuDropdownProps>()
 
 const currentRouteName = router.currentRoute.value.name
+function goToProcessPage() {
+  router.push({ name: 'process' }).then(() => {
+    window.scrollTo(0, 0)
+  })
+}
 </script>

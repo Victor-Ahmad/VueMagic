@@ -27,6 +27,14 @@ const demoRoutes = [
     },
     component: () => import('@/views/demos/CreativeAgency/index.vue')
   },
+  // {
+  //   path: '/pages/about',
+  //   name: 'psges.about',
+  //   meta: {
+  //     title: setTitle('about')
+  //   },
+  //   component: () => import('@/views/pages/about/index.vue')
+  // },
   {
     path: '/demos/agency/digital',
     name: 'demos.agency.digital',
@@ -182,6 +190,14 @@ const pagesRoutes = [
     },
     component: () => import('@/views/pages/speciality/Terms&Conditions/index.vue')
   },
+  //  {
+  //   path: '/pages/about',
+  //   name: 'psges.about',
+  //   meta: {
+  //     title: setTitle('about')
+  //   },
+  //   component: () => import('@/views/pages/about/index.vue')
+  // },
   {
     path: '/about/v1',
     name: 'about.v1',
@@ -205,6 +221,22 @@ const pagesRoutes = [
       title: setTitle('About-V3')
     },
     component: () => import('@/views/pages/about/AboutV3/index.vue')
+  },
+  {
+    path: '/about/v4',
+    name: 'about.v4',
+    meta: {
+      title: setTitle('About-V4')
+    },
+    component: () => import('@/views/pages/about/AboutV4/index.vue')
+  },
+  {
+    path: '/process',
+    name: 'process',
+    meta: {
+      title: setTitle('Process')
+    },
+    component: () => import('@/views/pages/about/Process/index.vue')
   },
   {
     path: '/pages/team',
@@ -285,7 +317,8 @@ const pagesRoutes = [
       title: setTitle('ContactV2')
     },
     component: () => import('@/views/pages/contact/ContactV2/index.vue')
-  }
+  },
+ 
 ]
 
 const saasRoutes = [
@@ -445,7 +478,15 @@ const portfolioRoutes = [
       title: setTitle('Portfolio Case Study v.2')
     },
     component: () => import('@/views/portfolio/CaseStudyV2/index.vue')
-  }
+  },
+  {
+    path: '/portfolio/portfolio',
+    name: 'portfolio.portfolio',
+    meta: {
+      title: setTitle('Portfolio Portfolio')
+    },
+    component: () => import('@/views/portfolio/Portfolio/index.vue')
+  },
 ]
 
 const authRoutes = [

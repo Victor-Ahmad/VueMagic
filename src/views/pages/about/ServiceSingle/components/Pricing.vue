@@ -1,103 +1,25 @@
 <template>
-  <section class="pt-0">
+  <section class="pb-0">
     <b-container>
       <b-row>
         <b-col lg="6" class="mb-6 mb-lg-0">
           <b-card no-body class="bg-dark overflow-hidden p-sm-4 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
-              <h3 class="mb-3">Pricing plan for this service</h3>
-              <p>
-                Our essential plan is self-service solution for businesses to handle website
-                messaging and personalization
-              </p>
+              <h3 class="mb-3">Who Could Benefit from This Service</h3>
+              <p>Our Web Design service is perfect for:</p>
 
-              <b-tabs nav-class="gap-1 nav-pills-primary" pills content-class="mt-5">
-                <b-tab title="Monthly" class="fade">
-                  <div
-                    class=""
-                    id="pills-monthly"
-                    role="tabpanel"
-                    aria-labelledby="pills-monthly-tab"
-                    tabindex="0"
-                  >
-                    <div class="bg-light border rounded p-3">
-                      <h6 class="mb-3">Quick look at all the features</h6>
-
-                      <ul class="list-group list-group-borderless">
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Unlimited monthly
-                          visitors
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Dedicated SEO strategists
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Google Docs style editors
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Basic chat and email
-                          support
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />AI powered product
-                          recommendation engine
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="d-sm-flex justify-content-between align-items-center mt-4">
-                      <div class="mb-3 mb-sm-0 heading-color">
-                        <span class="h3">{{ currency }}199</span> / month
-                      </div>
-
-                      <a href="#" class="btn btn-lg btn-white mb-0">Get started</a>
-                    </div>
-                  </div>
-                </b-tab>
-
-                <b-tab title="Annual" class="fade">
-                  <div
-                    class=""
-                    id="pills-annual"
-                    role="tabpanel"
-                    aria-labelledby="pills-annual-tab"
-                    tabindex="0"
-                  >
-                    <div class="bg-light border rounded p-3">
-                      <h6 class="mb-3">Quick look at all the features</h6>
-
-                      <ul class="list-group list-group-borderless">
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Unlimited monthly
-                          visitors
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Dedicated SEO strategists
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Google Docs style editors
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />Basic chat and email
-                          support
-                        </li>
-                        <li class="list-group-item mb-0">
-                          <BIconPatchCheckFill class="text-primary me-2" />AI powered product
-                          recommendation engine
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="d-sm-flex justify-content-between align-items-center mt-4">
-                      <div class="mb-3 mb-sm-0 heading-color">
-                        <span class="h3">{{ currency }}159 </span> / month
-                      </div>
-
-                      <a href="#" class="btn btn-lg btn-white mb-0">Get started</a>
-                    </div>
-                  </div>
-                </b-tab>
-              </b-tabs>
+              <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
+                <b-list-group-item
+                  v-for="list in approach"
+                  :key="list"
+                  class="heading-color d-flex mb-0"
+                >
+                  <span class="flex-centered">
+                    <BIconPatchCheck class="text-primary me-2" />
+                  </span>
+                  {{ list }}
+                </b-list-group-item>
+              </b-list-group>
             </b-card-header>
           </b-card>
         </b-col>
@@ -135,7 +57,7 @@
     </b-container>
   </section>
 
-  <section class="position-relative z-index-2 pt-0">
+  <!-- <section class="position-relative z-index-2 pt-0">
     <b-container class="position-relative">
       <div class="inner-container bg-light border rounded position-relative overflow-hidden p-4">
         <figure class="position-absolute top-0 start-0 ms-n8">
@@ -200,14 +122,14 @@
         </b-row>
       </div>
     </b-container>
-  </section>
+  </section> -->
 </template>
 
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination } from 'swiper/modules'
-import { currency } from '@/helpers'
 import { pricing } from '@/views/pages/about/ServiceSingle/data'
 import SwiperCard from '@/views/pages/about/ServiceSingle/components/SwiperCard.vue'
-import { BIconPatchCheckFill } from 'bootstrap-icons-vue'
+import { approach } from '@/views/pages/about/ServiceSingle/data'
+import { BIconPatchCheck } from 'bootstrap-icons-vue'
 </script>

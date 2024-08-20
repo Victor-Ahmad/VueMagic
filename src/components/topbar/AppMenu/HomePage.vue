@@ -3,11 +3,12 @@
     <a
       class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100"
       href="/"
+      :class="menuItemActive('demos', currentRouteName) && 'active'"
     >
       Home
       <!-- <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" /> -->
     </a>
-    <div class="dropdown-menu dropdown-menu-size-lg p-3">
+    <!-- <div class="dropdown-menu dropdown-menu-size-lg p-3">
       <b-row class="pt-2">
         <b-col v-for="(chunk, idx) in splitMenuitems" :key="idx" sm="6">
           <ul class="list-unstyled">
@@ -38,7 +39,7 @@
           </div>
         </b-col>
       </b-row>
-    </div>
+    </div> -->
   </li>
 </template>
 

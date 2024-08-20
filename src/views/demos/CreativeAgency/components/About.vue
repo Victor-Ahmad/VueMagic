@@ -4,17 +4,18 @@
       <b-row class="mb-3 mb-xl-0">
         <b-col xl="9">
           <h4 class="lh-base mb-0">
-            Our digital agency specializes in crafting customized strategies that give your business
-            the competitive edge it deserves.
+            Welcome to <span style="color: #09b850">Mizzle</span> , where we transform innovative
+            ideas into practical solutions. Founded with the vision of bridging technology and
+            business needs.
           </h4>
         </b-col>
       </b-row>
       <b-row class="align-items-center">
         <b-col lg="7" class="pe-lg-5">
           <p class="mb-5">
-            With a track record of success, we're here to guide you through the ever-evolving
-            digital landscape. Discover how our innovative solutions and expert insights can make a
-            real difference in your brand's digital journey
+            we specialize in delivering exceptional web design, software solutions, outsourcing,
+            marketing, UI/UX design, and business analysis services. Our approach is tailored to
+            ensure your business not only meets its goals but surpasses them.
           </p>
 
           <b-card no-body class="card-body bg-light p-sm-5 h-100">
@@ -253,7 +254,7 @@
 
             <b-tabs nav-class="nav-pills nav-pills-dark border-0" content-class="mt-4">
               <b-tab title="Our Mission" class="fade">
-                <h5 class="mb-3">Our Commitment to Your Success</h5>
+                <h5 class="mb-3">Modern & creative agency specialized in Business</h5>
                 <p class="mb-2">
                   At Mizzle, our mission is to empower businesses with digital tools, research and
                   strategies.
@@ -262,26 +263,28 @@
                 <ul class="list-group list-group-borderless mb-3">
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
                     <BIconPatchCheckFill class="me-2" />
-                    Client-Centric Approach
+                    Create 50+ unique sections
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
                     <BIconPatchCheckFill class="me-2" />
-                    Experienced Team
+                    Super fast loading speed
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
                     <BIconPatchCheckFill class="me-2" />
-                    Measurable Results
+                    Fully responsive on any devices
                   </li>
                 </ul>
 
-                <router-link class="icon-link icon-link-hover" :to="{ name: 'about.v2' }"
+                <router-link class="icon-link icon-link-hover" :to="{ name: 'about.v4' }"
                   >Know about more
                   <BIconArrowRight class="bi" />
                 </router-link>
               </b-tab>
 
               <b-tab title="Our Goal" class="fade">
-                <h5 class="mb-3">Charting the Future of Digital Innovation</h5>
+                <h5 class="mb-3">
+                  We believe that it takes great people to deliver a great product
+                </h5>
                 <p class="mb-2">
                   We envision a future where businesses of all sizes can harness the full potential
                   of the digital world to achieve their dreams.
@@ -302,7 +305,7 @@
                   </li>
                 </ul>
 
-                <router-link class="icon-link icon-link-hover" :to="{ name: 'about.v1' }"
+                <router-link class="icon-link icon-link-hover" :to="{ name: 'about.v4' }"
                   >Know about more
                   <BIconArrowRight class="bi" />
                 </router-link>

@@ -1,14 +1,14 @@
 <template>
-  <li class="nav-item dropdown" @click="scrollMethod">
+  <li class="nav-item dropdown" @click="goToPortfolioPage">
     <a
-      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100"
-      href="#projects"
+      class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100 cursor-pointer"
       :class="menuItemActive('portfolio', currentRouteName) && 'active'"
     >
       Portfolio
-      <!-- <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" /> -->
+
+      <font-awesome-icon :icon="faAngleDown" class="fa-sm ms-1" />
     </a>
-    <!-- <div class="dropdown-menu dropdown-menu-center dropdown-menu-size-xl p-3">
+    <div class="dropdown-menu dropdown-menu-center dropdown-menu-size-xl p-3">
       <b-row class="g-xl-3">
         <b-col xl="8" class="d-none d-xl-block">
           <div class="d-flex gap-4">
@@ -65,7 +65,7 @@
           </ul>
         </b-col>
       </b-row>
-    </div> -->
+    </div>
   </li>
 </template>
 
@@ -79,7 +79,7 @@ import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 import portfolioList1Img from '@/assets/images/portfolio/list/01.jpg'
 import portfolioList2Img from '@/assets/images/portfolio/list/02.jpg'
-
+import { useRouter } from 'vue-router'
 type PortfolioMenuDropdownProps = {
   menuItems: MenuItemType[]
 }
@@ -87,12 +87,18 @@ type PortfolioMenuDropdownProps = {
 defineProps<PortfolioMenuDropdownProps>()
 
 const currentRouteName = router.currentRoute.value.name
-const scrollMethod = () => {
-  nextTick(() => {
-    const element = document.getElementById('projects')
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
+// const scrollMethod = () => {
+//   nextTick(() => {
+//     const element = document.getElementById('projects')
+//     if (element) {
+//       element.scrollIntoView({ behavior: 'smooth' })
+//     }
+//   })
+// }
+
+function goToPortfolioPage() {
+  router.push({ name: 'portfolio.portfolio' }).then(() => {
+    window.scrollTo(0, 0)
   })
 }
 </script>

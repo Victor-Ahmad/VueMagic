@@ -14,7 +14,7 @@
 
     <FAQ />
 
-    <Blogs />
+    <!-- <Blogs /> -->
   </main>
 
   <Footer2 />
@@ -24,7 +24,7 @@
 import About from '@/views/demos/CreativeAgency/components/About.vue'
 import Hero from '@/views/demos/CreativeAgency/components/Hero.vue'
 import Services from '@/views/demos/CreativeAgency/components/Services.vue'
-import Blogs from '@/views/demos/CreativeAgency/components/Blogs.vue'
+// import Blogs from '@/views/demos/CreativeAgency/components/Blogs.vue'
 import FAQ from '@/views/demos/CreativeAgency/components/FAQ.vue'
 import Testimonials from '@/views/demos/CreativeAgency/components/Testimonials.vue'
 import RecentProjects from '@/views/demos/CreativeAgency/components/RecentProjects.vue'

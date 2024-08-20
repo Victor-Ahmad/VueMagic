@@ -110,9 +110,19 @@
               </b-col>
 
               <b-col md="6">
-                <b-form-group label="Company *" label-for="company" label-class="heading-color">
-                  <b-form-input type="text" class="form-control-lg" placeholder="Company name"
-                /></b-form-group>
+                <b-form-group label="Services *" label-for="services" label-class="heading-color">
+                  <select
+                    class="form-control-lg form-select bg-transparent border-bottom cursor-pointer p-2"
+                    id="floatingServices"
+                    aria-label="Select a service"
+                  >
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="web_design">Web Design</option>
+                    <option value="seo">SEO Optimization</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="content_creation">Content Creation</option>
+                  </select>
+                </b-form-group>
               </b-col>
 
               <b-col cols="12">
@@ -150,3 +160,21 @@ import {
   BIconYoutube
 } from 'bootstrap-icons-vue'
 </script>
+<style scoped>
+select.form-select {
+  padding: 10px !important;
+  color: #a9a9ad !important;
+}
+select.form-select option {
+  color: #000;
+}
+select.form-select option:hover {
+  background-color: #198754 !important;
+  color: white;
+}
+
+select.form-select option:checked {
+  background-color: #198754;
+  color: white;
+}
+</style>
