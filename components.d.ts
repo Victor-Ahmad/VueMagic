@@ -15,22 +15,16 @@ declare module 'vue' {
     BCardFooter: typeof import('bootstrap-vue-next')['BCardFooter']
     BCardHeader: typeof import('bootstrap-vue-next')['BCardHeader']
     BCardText: typeof import('bootstrap-vue-next')['BCardText']
+    BCardTitle: typeof import('bootstrap-vue-next')['BCardTitle']
     BCol: typeof import('bootstrap-vue-next')['BCol']
     BCollapse: typeof import('bootstrap-vue-next')['BCollapse']
     BContainer: typeof import('bootstrap-vue-next')['BContainer']
     BDropdown: typeof import('bootstrap-vue-next')['BDropdown']
     BDropdownItem: typeof import('bootstrap-vue-next')['BDropdownItem']
     BForm: typeof import('bootstrap-vue-next')['BForm']
-<<<<<<< HEAD
-=======
     BFormGroup: typeof import('bootstrap-vue-next')['BFormGroup']
     BFormInput: typeof import('bootstrap-vue-next')['BFormInput']
-    BFormSelect: typeof import('bootstrap-vue-next')['BFormSelect']
     BFormTextarea: typeof import('bootstrap-vue-next')['BFormTextarea']
-
-    BIconPatchCheck: typeof import('bootstrap-vue-next')['BIconPatchCheck']
-
->>>>>>> f8cbe36817dec0d40f3655de1886e03b564fe0ea
     BListGroup: typeof import('bootstrap-vue-next')['BListGroup']
     BListGroupItem: typeof import('bootstrap-vue-next')['BListGroupItem']
     BProgress: typeof import('bootstrap-vue-next')['BProgress']

@@ -62,7 +62,8 @@ $min-contrast-ratio: 2;
 $color-contrast-dark: $black;
 $color-contrast-light: $white;
 
-$primary: #09b850; // To change dark mode primary color go to user.scss file and follow the instruction
+// The main color(green) : #09b850, 
+$primary: #05dac3; // To change dark mode primary color go to user.scss file and follow the instruction
 $secondary: $gray-500;
 $success: $green;
 $info: $cyan;
