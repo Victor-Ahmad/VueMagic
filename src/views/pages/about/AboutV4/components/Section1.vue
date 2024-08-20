@@ -2,28 +2,6 @@
     <section class="pt-0">
       <b-container>
         <b-row class="g-4 align-items-center">
-          <b-col lg="6">
-            <b-row class="g-xl-5">
-              <b-col md="6" v-for="(item, idx) in feature" :key="idx">
-                <b-card no-body class="bg-light p-4" :class="idx == feature.length - 2 ? 'mt-5' : ''">
-                  <figure class="text-primary mb-3 flex-shrink-0">
-                    <span v-html="item.icon" />
-                  </figure>
-                  <h6>{{ item.title }}</h6>
-                  <p class="mb-0">{{ item.description }}</p>
-                </b-card>
-  
-                <b-card no-body class="bg-light p-4 mt-5">
-                  <figure class="text-primary mb-3 flex-shrink-0">
-                    <span v-html="item.icon1" />
-                  </figure>
-                  <h6>{{ item.title1 }}</h6>
-                  <p class="mb-0">{{ item.description1 }}</p>
-                </b-card>
-              </b-col>
-            </b-row>
-          </b-col>
-  
           <b-col lg="6" class="ps-xl-7">
             <h2 class="mb-4">Know About Mizzle</h2>
            <ul>
@@ -70,6 +48,31 @@
             </li>
           </ul>
           </b-col>
+
+
+          <b-col lg="6">
+            <b-row class="g-xl-5">
+              <b-col md="6" v-for="(item, idx) in feature" :key="idx">
+                <b-card no-body class="bg-light p-4" :class="idx == feature.length - 1? 'mt-5' : ''">
+                  <figure class="text-primary mb-3 flex-shrink-0">
+                    <span v-html="item.icon" />
+                  </figure>
+                  <h6>{{ item.title }}</h6>
+                  <p class="mb-0">{{ item.description }}</p>
+                </b-card>
+  
+                <b-card no-body class="bg-light p-4 mt-5">
+                  <figure class="text-primary mb-3  flex-shrink-0">
+                    <span v-html="item.icon1" />
+                  </figure>
+                  <h6 >{{ item.title1 }}</h6>
+                  <p class="mb-0">{{ item.description1 }}</p>
+                </b-card>
+              </b-col>
+            </b-row>
+          </b-col>
+  
+          
         </b-row>
       </b-container>
     </section>

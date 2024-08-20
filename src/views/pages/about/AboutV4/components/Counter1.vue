@@ -15,7 +15,7 @@
                 </h4>
                 <span class="h4 text-primary mb-0">{{ item.prefix }}</span>
               </div>
-              <p class="text-center heading-color mb-0">{{ item.title }}</p>
+            <p class="text-center heading-color mb-0">{{ item.title }}</p>
             </div>
           </b-col>
         </b-row>
