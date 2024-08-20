@@ -6,6 +6,8 @@
 
     <About />
 
+    <!-- <ServicePage /> -->
+
     <Services />
 
     <RecentProjects />
@@ -23,6 +25,7 @@
 <script lang="ts" setup>
 import About from '@/views/demos/CreativeAgency/components/About.vue'
 import Hero from '@/views/demos/CreativeAgency/components/Hero.vue'
+// import ServicePage from '@/views/demos/CreativeAgency/components/ServicePage.vue'
 import Services from '@/views/demos/CreativeAgency/components/Services.vue'
 // import Blogs from '@/views/demos/CreativeAgency/components/Blogs.vue'
 import FAQ from '@/views/demos/CreativeAgency/components/FAQ.vue'
