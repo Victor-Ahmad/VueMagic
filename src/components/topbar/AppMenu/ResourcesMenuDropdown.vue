@@ -1,15 +1,20 @@
 <template>
   <li class="nav-item dropdown dropdown-fullwidth" @click="scrollMethod">
-    <a
+     <router-link 
+    class="nav-link dropdown-toggle arrow-none d-flex justify-content-between align-items-center w-100 "
+    :to="{ name: 'services.v3' }">
+    Service & FAQ
+    <!-- <a
       class="nav-link dropdown-toggle arrow-none"
       href="#services"
       data-bs-toggle="dropdown"
       aria-haspopup="true"
       aria-expanded="false"
-    >
-      Service & FAQ
-      <font-awesome-icon :icon="faAngleDown" class="fa-sm" />
-    </a>
+    > -->
+      <font-awesome-icon :icon="faAngleDown" class="fa-sm  ms-1" />
+    <!-- </a> -->
+     </router-link> 
+    
     <div class="dropdown-menu py-0">
       <b-row class="p-2 p-sm-4">
         <b-col md="6" xl="4" xxl="3">
