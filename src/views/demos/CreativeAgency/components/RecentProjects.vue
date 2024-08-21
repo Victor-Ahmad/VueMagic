@@ -9,8 +9,8 @@
         </p>
       </div>
 
-      <b-row class="g-4">
-        <b-col md="4" lg="3">
+      <b-row class="g-4 filter-container" data-isotope='{"layoutMode": "masonry"}'>
+        <!-- <b-col md="4" lg="3">
           <div class="d-flex flex-column h-100">
             <h6 class="mb-sm-3">Browse by:</h6>
             <div class="grid-menu mb-4" data-target=".filter-container">
@@ -41,22 +41,26 @@
               <font-awesome-icon :icon="faArrowRightLong" class="ms-1" />
             </div>
           </div>
-        </b-col>
+        </b-col> -->
 
-        <b-col md="8" lg="9">
-          <b-row class="g-4 filter-container" data-isotope='{"layoutMode": "masonry"}'>
-            <b-col
-              @click="goToProjectsPage"
-              sm="6"
-              lg="4"
-              v-for="(project, idx) in projects"
-              :key="idx"
-              class="grid-item"
-              :class="project.categoryClass"
-            >
-              <ProjectCard :project="project" />
-            </b-col>
-          </b-row>
+        <b-col
+          @click="goToProjectsPage"
+          sm="6"
+          lg="4"
+          v-for="(project, idx) in projects"
+          :key="idx"
+          class="grid-item"
+          :class="project.categoryClass"
+        >
+          <ProjectCard :project="project" />
+        </b-col>
+      </b-row>
+      <b-row class="mt-6">
+        <b-col class="d-flex flex-row justify-content-center align-items-center">
+          <div class="btn btn-light" @click="goToPortfolioPage">
+            View all projects
+            <font-awesome-icon :icon="faArrowRightLong" class="ms-1" />
+          </div>
         </b-col>
       </b-row>
     </b-container>

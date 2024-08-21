@@ -12,7 +12,9 @@ declare module 'vue' {
     BAccordion: typeof import('bootstrap-vue-next')['BAccordion']
     BAccordionItem: typeof import('bootstrap-vue-next')['BAccordionItem']
 
+
     BAlert: typeof import('bootstrap-vue-next')['BAlert']
+
 
     BButton: typeof import('bootstrap-vue-next')['BButton']
     BCard: typeof import('bootstrap-vue-next')['BCard']
@@ -29,8 +31,8 @@ declare module 'vue' {
     BForm: typeof import('bootstrap-vue-next')['BForm']
     BFormGroup: typeof import('bootstrap-vue-next')['BFormGroup']
     BFormInput: typeof import('bootstrap-vue-next')['BFormInput']
-    BFormSelect: typeof import('bootstrap-vue-next')['BFormSelect']
     BFormTextarea: typeof import('bootstrap-vue-next')['BFormTextarea']
+
 
 
     BIconPatchCheck: typeof import('bootstrap-vue-next')['BIconPatchCheck']
@@ -42,11 +44,11 @@ declare module 'vue' {
     BOffcanvas: typeof import('bootstrap-vue-next')['BOffcanvas']
     BPopover: typeof import('bootstrap-vue-next')['BPopover']
 
+
     BProgress: typeof import('bootstrap-vue-next')['BProgress']
     BProgressBar: typeof import('bootstrap-vue-next')['BProgressBar']
     BRow: typeof import('bootstrap-vue-next')['BRow']
     BTab: typeof import('bootstrap-vue-next')['BTab']
-    BTableSimple: typeof import('bootstrap-vue-next')['BTableSimple']
     BTabs: typeof import('bootstrap-vue-next')['BTabs']
 
     CartItem: typeof import('./src/components/widgets/CartItem.vue')['default']
@@ -71,6 +73,7 @@ declare module 'vue' {
     PortfolioMenuDropdown: typeof import('./src/components/topbar/AppMenu/PortfolioMenuDropdown.vue')['default']
     ProcessMenuDropdown: typeof import('./src/components/topbar/AppMenu/ProcessMenuDropdown.vue')['default']
     ResourcesMenuDropdown: typeof import('./src/components/topbar/AppMenu/ResourcesMenuDropdown.vue')['default']
+
 
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
