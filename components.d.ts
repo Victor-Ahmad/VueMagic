@@ -7,15 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    BAccordion: typeof import('bootstrap-vue-next')['BAccordion']
-    BAccordionItem: typeof import('bootstrap-vue-next')['BAccordionItem']
     BButton: typeof import('bootstrap-vue-next')['BButton']
     BCard: typeof import('bootstrap-vue-next')['BCard']
     BCardBody: typeof import('bootstrap-vue-next')['BCardBody']
     BCardFooter: typeof import('bootstrap-vue-next')['BCardFooter']
     BCardHeader: typeof import('bootstrap-vue-next')['BCardHeader']
     BCardText: typeof import('bootstrap-vue-next')['BCardText']
-    BCardTitle: typeof import('bootstrap-vue-next')['BCardTitle']
     BCol: typeof import('bootstrap-vue-next')['BCol']
     BCollapse: typeof import('bootstrap-vue-next')['BCollapse']
     BContainer: typeof import('bootstrap-vue-next')['BContainer']
@@ -28,11 +25,10 @@ declare module 'vue' {
     BIconPatchCheck: typeof import('bootstrap-vue-next')['BIconPatchCheck']
     BListGroup: typeof import('bootstrap-vue-next')['BListGroup']
     BListGroupItem: typeof import('bootstrap-vue-next')['BListGroupItem']
-    BProgress: typeof import('bootstrap-vue-next')['BProgress']
-    BProgressBar: typeof import('bootstrap-vue-next')['BProgressBar']
     BRow: typeof import('bootstrap-vue-next')['BRow']
     BTab: typeof import('bootstrap-vue-next')['BTab']
     BTabs: typeof import('bootstrap-vue-next')['BTabs']
+    ResourcesMenuDropdown: typeof import('./src/components/topbar/AppMenu/ResourcesMenuDropdown.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
