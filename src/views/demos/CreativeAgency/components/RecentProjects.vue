@@ -1,5 +1,5 @@
 <template>
-  <section id="projects">
+  <section id="projects" style="background-color: #e7f8ee">
     <b-container>
       <div class="inner-container text-center mb-4 mb-sm-6">
         <h2 class="mb-4">Showcasing Recent Projects</h2>
