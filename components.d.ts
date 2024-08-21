@@ -25,6 +25,7 @@ declare module 'vue' {
     BFormGroup: typeof import('bootstrap-vue-next')['BFormGroup']
     BFormInput: typeof import('bootstrap-vue-next')['BFormInput']
     BFormTextarea: typeof import('bootstrap-vue-next')['BFormTextarea']
+    BIconPatchCheck: typeof import('bootstrap-vue-next')['BIconPatchCheck']
     BListGroup: typeof import('bootstrap-vue-next')['BListGroup']
     BListGroupItem: typeof import('bootstrap-vue-next')['BListGroupItem']
     BProgress: typeof import('bootstrap-vue-next')['BProgress']
