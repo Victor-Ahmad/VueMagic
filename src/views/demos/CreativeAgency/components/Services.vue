@@ -26,6 +26,53 @@ import ServiceCard from '@/views/demos/CreativeAgency/components/ServiceCard.vue
         <h2 class="mb-0">Our Comprehensive Services</h2>
       </div>
 
+      <b-row v-if="loading" class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <b-col>
+          <p>Loading services...</p>
+        </b-col>
+      </b-row>
+
+      <b-row v-if="error" class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <b-col>
+          <p>{{ error }}</p>
+        </b-col>
+      </b-row>
+
+      <b-row v-if="services && services.length" class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <b-col v-for="(service, idx) in services" :key="idx">
+          <ServiceCard :service="service" />
+        </b-col>
+      </b-row>
+
+      <b-row v-if="services && !services.length" class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+        <b-col>
+          <p>No services available.</p>
+        </b-col>
+      </b-row>
+    </b-container>
+  </section>
+</template>
+
+<script lang="ts" setup>
+import { onMounted } from 'vue'
+import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
+import ServiceCard from '@/views/demos/CreativeAgency/components/ServiceCard.vue'
+
+const { services, loading, error, loadServices } = useServices()
+
+onMounted(() => {
+  loadServices()
+})
+</script>
+
+<!-- 
+<template>
+  <section class="pb-0" id="services">
+    <b-container>
+      <div class="inner-container text-center mb-4 mb-sm-6">
+        <h2 class="mb-0">Our Comprehensive Services</h2>
+      </div>
+
       <b-row class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
         <b-col v-for="service in data.services" :key="service.id">
           <b-card no-body class="card-hover-shadow border h-100 p-4">
@@ -68,7 +115,7 @@ onMounted(() => {
 })
 
 console.log('result :', data.services)
-</script>
+</script> -->
 
 <!-- <template>
   <section class="pb-0" id="services">
