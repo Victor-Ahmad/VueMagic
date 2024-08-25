@@ -2,11 +2,7 @@ import type { ComponentOptionsBase, CreateComponentPublicInstance } from 'vue'
 import type { RouteParamsRaw } from 'vue-router'
 
 export type IconType = BSIconType | string
-export interface Service {
-  id: number;
-  name: string;
-  description: string;
-}
+
 export type BSIconType = ComponentOptionsBase<{}, any, any, any, any, any, any, any, string, any> &
   ThisType<CreateComponentPublicInstance<{}, any, any, any, any, any, any, any, Readonly<{}>>>
 
