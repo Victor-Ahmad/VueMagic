@@ -1,5 +1,5 @@
 <template>
-  <section class="pb-0">
+  <section class="pb-0" style="background-color: #e7f8ee">
     <b-container>
       <b-row class="mb-3 mb-xl-0">
         <b-col xl="9">
