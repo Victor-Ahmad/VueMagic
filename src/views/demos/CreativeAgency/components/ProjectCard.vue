@@ -39,7 +39,7 @@ defineProps({
         ></router-link>
       </h6>
       <p class="text-center font-weight-regular">{{ project.name }}</p>
-      <p class="text-black text-center">{{ project.category }}</p>
+      <p class="text-center">{{ project.category }}</p>
     </div>
   </b-card>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <section class="pb-0">
-    <b-container class="p-0">
+    <b-container>
       <b-row
         v-if="loading"
         class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"

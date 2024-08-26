@@ -125,6 +125,7 @@ const router = useRouter()
 const { services, loading, error, loadServices } = useServices()
 onMounted(() => {
   loadServices()
+  console.log(services)
 })
 function goToServicePage() {
   router.push({ name: 'services.single' }).then(() => {
