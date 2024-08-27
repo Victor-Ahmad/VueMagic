@@ -53,11 +53,15 @@
 
             <b-form class="row g-4">
               <b-col md="6">
-                <b-form-group label="Your name *" label-for="name" label-class="heading-color">
-                  <b-form-input type="text" class="form-control-lg" placeholder="Full name"
+                <b-form-group label="First name *" label-for="name" label-class="heading-color">
+                  <b-form-input type="text" class="form-control-lg" placeholder="First name"
                 /></b-form-group>
               </b-col>
-
+              <b-col md="6">
+                <b-form-group label="Last name *" label-for="name" label-class="heading-color">
+                  <b-form-input type="text" class="form-control-lg" placeholder="Last name"
+                /></b-form-group>
+              </b-col>
               <b-col md="6">
                 <b-form-group label="Email address *" label-for="email" label-class="heading-color">
                   <b-form-input
@@ -74,10 +78,10 @@
                 /></b-form-group>
               </b-col>
 
-              <b-col md="6">
+              <b-col md="12">
                 <b-form-group label="Services *" label-for="services" label-class="heading-color">
                   <select
-                    class="form-control-lg form-select bg-transparent border-bottom cursor-pointer p-2"
+                    class="form-control-lg form-select bg-primary-bg-subtle border-bottom cursor-pointer p-2"
                     id="floatingServices"
                     aria-label="Select a service"
                   >
