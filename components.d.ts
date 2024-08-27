@@ -9,13 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppMenu: typeof import('./src/components/topbar/AppMenu/index.vue')['default']
     AuthSwiper: typeof import('./src/components/AuthSwiper/AuthSwiper.vue')['default']
-    BAccordion: typeof import('bootstrap-vue-next')['BAccordion']
-    BAccordionItem: typeof import('bootstrap-vue-next')['BAccordionItem']
-
-
-    BAlert: typeof import('bootstrap-vue-next')['BAlert']
-
-
+    BackToTop: typeof import('./src/components/BackToTop.vue')['default']
     BButton: typeof import('bootstrap-vue-next')['BButton']
     BCard: typeof import('bootstrap-vue-next')['BCard']
     BCardBody: typeof import('bootstrap-vue-next')['BCardBody']
@@ -32,25 +26,12 @@ declare module 'vue' {
     BFormGroup: typeof import('bootstrap-vue-next')['BFormGroup']
     BFormInput: typeof import('bootstrap-vue-next')['BFormInput']
     BFormTextarea: typeof import('bootstrap-vue-next')['BFormTextarea']
-
-
-
-    BIconPatchCheck: typeof import('bootstrap-vue-next')['BIconPatchCheck']
-
     BListGroup: typeof import('bootstrap-vue-next')['BListGroup']
     BListGroupItem: typeof import('bootstrap-vue-next')['BListGroupItem']
-    BNav: typeof import('bootstrap-vue-next')['BNav']
-    BNavItem: typeof import('bootstrap-vue-next')['BNavItem']
-    BOffcanvas: typeof import('bootstrap-vue-next')['BOffcanvas']
-    BPopover: typeof import('bootstrap-vue-next')['BPopover']
-
-
-    BProgress: typeof import('bootstrap-vue-next')['BProgress']
-    BProgressBar: typeof import('bootstrap-vue-next')['BProgressBar']
+    BlogNavbar: typeof import('./src/components/navbar/BlogNavbar.vue')['default']
     BRow: typeof import('bootstrap-vue-next')['BRow']
     BTab: typeof import('bootstrap-vue-next')['BTab']
     BTabs: typeof import('bootstrap-vue-next')['BTabs']
-
     CartItem: typeof import('./src/components/widgets/CartItem.vue')['default']
     CartOffcanvas: typeof import('./src/components/topbar/CartOffcanvas.vue')['default']
     CustomGLightbox: typeof import('./src/components/CustomGLightbox.vue')['default']
@@ -73,8 +54,6 @@ declare module 'vue' {
     PortfolioMenuDropdown: typeof import('./src/components/topbar/AppMenu/PortfolioMenuDropdown.vue')['default']
     ProcessMenuDropdown: typeof import('./src/components/topbar/AppMenu/ProcessMenuDropdown.vue')['default']
     ResourcesMenuDropdown: typeof import('./src/components/topbar/AppMenu/ResourcesMenuDropdown.vue')['default']
-
-
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     ShopNavbar: typeof import('./src/components/navbar/ShopNavbar.vue')['default']
