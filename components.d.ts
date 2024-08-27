@@ -7,9 +7,11 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+
     BAccordion: typeof import('bootstrap-vue-next')['BAccordion']
     BAccordionItem: typeof import('bootstrap-vue-next')['BAccordionItem']
     BAlert: typeof import('bootstrap-vue-next')['BAlert']
+
     BButton: typeof import('bootstrap-vue-next')['BButton']
     BCard: typeof import('bootstrap-vue-next')['BCard']
     BCardBody: typeof import('bootstrap-vue-next')['BCardBody']
@@ -26,6 +28,7 @@ declare module 'vue' {
     BFormGroup: typeof import('bootstrap-vue-next')['BFormGroup']
     BFormInput: typeof import('bootstrap-vue-next')['BFormInput']
     BFormTextarea: typeof import('bootstrap-vue-next')['BFormTextarea']
+
     BIconArrowRight: typeof import('bootstrap-vue-next')['BIconArrowRight']
     BListGroup: typeof import('bootstrap-vue-next')['BListGroup']
     BListGroupItem: typeof import('bootstrap-vue-next')['BListGroupItem']
@@ -36,6 +39,7 @@ declare module 'vue' {
     BRow: typeof import('bootstrap-vue-next')['BRow']
     BTab: typeof import('bootstrap-vue-next')['BTab']
     BTabs: typeof import('bootstrap-vue-next')['BTabs']
+
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
