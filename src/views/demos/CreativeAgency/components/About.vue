@@ -1,10 +1,10 @@
 <template>
-  <section class="pb-0">
+  <section class="pb-0" style="background-color: #e7f8ee">
     <b-container>
       <b-row class="mb-3 mb-xl-0">
         <b-col xl="9">
-          <h4 class="lh-base mb-0">
-            Welcome to <span style="color: #09b850">Mizzle</span> , where we transform innovative
+          <h4 class="lh-base mb-0 text-black">
+            Welcome to <span style="color: #05dac3">Mizzle</span> , where we transform innovative
             ideas into practical solutions. Founded with the vision of bridging technology and
             business needs.
           </h4>

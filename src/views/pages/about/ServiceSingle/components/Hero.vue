@@ -5,20 +5,41 @@
     data-bs-theme="dark"
     :style="{ backgroundImage: `url('${bgpattern}')` }"
   >
-    <b-container class="position-relative pt-4 pt-lg-0">
+    <b-container class="position-relative pt-2 pt-lg-0">
+      <b-row
+        v-if="loading"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">Loading ...</p>
+        </b-col>
+      </b-row>
+      <b-row
+        v-if="error"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
+        </b-col>
+      </b-row>
       <b-row class="align-items-center">
-        <b-col md="7" xl="6">
-          <h1 class="mb-4">Web Design</h1>
-          <p class="mb-4">
-            Our Web Design service is dedicated to crafting visually appealing, user-friendly, and
-            responsive websites that align perfectly with your brand identity.
-          </p>
+        <b-col md="7" xl="6" v-if="services">
+          <h1 class="mb-4">{{ services.name }}</h1>
+          <p class="mb-4">{{ services.description }}</p>
         </b-col>
 
         <b-col md="4" class="ms-auto text-md-end">
-          <router-link :to="{ name: 'contact.v1' }" class="btn btn-lg btn-primary mb-6 mb-md-0"
-            >Start your project</router-link
-          >
+          <router-link :to="{ name: 'contact.v1' }" class="btn btn-lg btn-primary mb-6 mb-md-0">
+            Start your project
+          </router-link>
+        </b-col>
+      </b-row>
+      <b-row
+        v-if="!services"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">No services available.</p>
         </b-col>
       </b-row>
     </b-container>
@@ -26,9 +47,14 @@
 </template>
 
 <script lang="ts" setup>
-import CustomGLightbox from '@/components/CustomGLightbox.vue'
-import { BIconPlayFill } from 'bootstrap-icons-vue'
-
-import bg5Img from '@/assets/images/bg/05.jpg'
 import bgpattern from '@/assets/images/elements/bg-pattern-2.png'
+
+import { onMounted } from 'vue'
+import { useServices } from '@/views/pages/about/ServiceSingle/Services/composables/service.ts'
+
+const { services, loading, error, loadServices } = useServices()
+onMounted(() => {
+  loadServices()
+  console.log(services)
+})
 </script>
