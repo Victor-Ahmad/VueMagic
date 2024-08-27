@@ -2,7 +2,7 @@
   <section class="">
     <b-container>
       <b-row>
-        <b-col lg="6" class="mb-6 mb-lg-0">
+        <b-col lg="6" class="mb-6 mb-lg-0 d-none d-lg-block">
           <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
               <h3 class="mb-3">What's Next ?</h3>
@@ -26,7 +26,9 @@
 
         <b-col lg="5" class="ms-auto">
           <b-card no-body class="card-body shadow border p-sm-5">
-            <figure class="position-absolute top-100 start-0 translate-middle mt-n5">
+            <figure
+              class="position-absolute top-100 start-0 translate-middle mt-n5 d-lg-block d-none"
+            >
               <svg
                 width="225.3px"
                 height="168.1px"
@@ -104,6 +106,27 @@
 
               <b-button class="mb-0" variant="primary" size="lg">Send a message</b-button>
             </b-form>
+          </b-card>
+        </b-col>
+        <b-col lg="6" class="mb-6 mb-lg-0 d-lg-none d-sm-block">
+          <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
+            <b-card-header class="bg-transparent position-relative mb-3">
+              <h3 class="mb-3">What's Next ?</h3>
+              <p>What are the next steps for your project?</p>
+
+              <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
+                <b-list-group-item
+                  v-for="list in lists"
+                  :key="list"
+                  class="heading-color d-flex mb-0"
+                >
+                  <span class="flex-centered">
+                    <BIconPatchCheck class="text-primary me-2" />
+                  </span>
+                  {{ list }}
+                </b-list-group-item>
+              </b-list-group>
+            </b-card-header>
           </b-card>
         </b-col>
       </b-row>

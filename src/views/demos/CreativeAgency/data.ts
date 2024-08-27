@@ -189,7 +189,14 @@ export const blogs: BlogType[] = [
     route: { name: 'blog.single.v1' }
   }
 ]
-
+export const lists: string[] = [
+  "Get a free consultation",
+  'Real-time tracking and data-driven decision-making',
+  'Improved Customer Engagement',
+  'Drive conversions and boost revenue',
+  'Create a loyal customer community',
+  
+]
 export const projects: RecentProjectType[] = [
   {
     name: 'Dynamic Workflows Website',

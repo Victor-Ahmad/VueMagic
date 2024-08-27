@@ -1,82 +1,92 @@
 <template>
-    <section class="pt-0">
-      <b-container>
-        <b-row class="g-4 align-items-center">
-          <b-col lg="6">
-            <b-row class="g-xl-5">
-              <b-col md="6" v-for="(item, idx) in feature" :key="idx">
-                <b-card no-body class="bg-light p-4" :class="idx == feature.length - 2 ? 'mt-5' : ''">
-                  <figure class="text-primary mb-3 flex-shrink-0">
-                    <span v-html="item.icon" />
-                  </figure>
-                  <h6>{{ item.title }}</h6>
-                  <p class="mb-0">{{ item.description }}</p>
-                </b-card>
-  
-                <b-card no-body class="bg-light p-4 mt-5">
-                  <figure class="text-primary mb-3 flex-shrink-0">
-                    <span v-html="item.icon1" />
-                  </figure>
-                  <h6>{{ item.title1 }}</h6>
-                  <p class="mb-0">{{ item.description1 }}</p>
-                </b-card>
-              </b-col>
-            </b-row>
-          </b-col>
-  
-          <b-col lg="6" class="ps-xl-7">
-            <h2 class="mb-4">Know About Mizzle</h2>
-           <ul>
-            <li>
-              <h6>Know About Mizzle:</h6>
-              <p>
-                At Mizzle, we're not just in the business of digital solutions; we're in the business of
-                crafting digital success stories. Founded on a passion for innovation and a commitment
-                to excellence, we've been at the forefront of the digital landscape, helping businesses
-                like yours thrive in the digital age.
-              </p>
-            </li>
-            <li>
-              <h6>Know About Mizzle:</h6>
-              <p>
-                Our story begins with a vision – a vision to transform the digital experience for
-                businesses of all sizes. Over the years, we've evolved from a small startup to a dynamic
-                digital agency with a global footprint.
-              </p>
-            </li>
-            <li>
-              <h6>Know About Mizzle:</h6>
-              <p class="mb-4">
-                To empower businesses to achieve their digital goals. We believe that the digital realm
-                offers boundless opportunities for growth and connection, and we're here to guide you
-                through this transformative journey.
-              </p>
-            </li>
-            <li>
-              <h6>Know About Mizzle:</h6>
-              <p class="mb-4">
-              To empower businesses to achieve their digital goals. We believe that the digital realm
-              offers boundless opportunities for growth and connection, and we're here to guide you
-              through this transformative journey.
-            </p>
-            </li>
-            <li>
-              <h6>Know About Mizzle:</h6>
-              <p class="mb-4">
-              To empower businesses to achieve their digital goals. We believe that the digital realm
-              offers boundless opportunities for growth and connection, and we're here to guide you
-              through this transformative journey.
-            </p>
-            </li>
-          </ul>
+  <section class="pt-0">
+    <b-container>
+      <b-row class="g-4 align-items-center" v-for="(item, idx) in about" :key="idx">
+        <b-col lg="6" class="order-lg-1 order-2">
+          <b-row class="g-xl-5">
+            <b-col md="6" v-for="(item, idx) in feature" :key="idx">
+              <b-card no-body class="bg-light p-4" :class="idx == feature.length - 1 ? 'mt-5' : ''">
+                <figure class="text-primary mb-3 flex-shrink-0">
+                  <span v-html="item.icon" />
+                </figure>
+                <h6>{{ item.title }}</h6>
+                <p class="mb-0">{{ item.description }}</p>
+              </b-card>
+
+              <b-card no-body class="bg-light p-4 mt-5">
+                <figure class="text-primary mb-3 flex-shrink-0">
+                  <span v-html="item.icon1" />
+                </figure>
+                <h6>{{ item.title1 }}</h6>
+                <p class="mb-0">{{ item.description1 }}</p>
+              </b-card>
+            </b-col>
+          </b-row>
+        </b-col>
+        <b-row
+          v-if="loading"
+          class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
+        >
+          <b-col>
+            <p class="mb-2 p-2 rounded text-white bg-primary">Loading ...</p>
           </b-col>
         </b-row>
-      </b-container>
-    </section>
-  </template>
-  
-  <script setup lang="ts">
-  import { feature } from '@/views/pages/about/AboutV2/data'
-  
-  </script>
-  
+        <b-row
+          v-if="error"
+          class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+        >
+          <b-col>
+            <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
+          </b-col>
+        </b-row>
+        <b-col
+          lg="6"
+          class="ps-xl-7 order-lg-2 order-1"
+          v-for="(service, id) in item.for_who_services"
+          :key="id"
+        >
+          <h2 class="mb-4">{{ item.title_for_who }}</h2>
+          <ul>
+            <li>
+              <h6>{{ service.name_of_service_for_who }}</h6>
+              <p>
+                {{ service.description_of_service_for_who }}
+              </p>
+            </li>
+          </ul>
+        </b-col>
+      </b-row>
+      <b-row
+        v-if="!about"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">No data available.</p>
+        </b-col>
+      </b-row>
+    </b-container>
+  </section>
+</template>
+
+<script setup lang="ts">
+import { feature } from '@/views/pages/about/AboutV2/data'
+import { onMounted } from 'vue'
+import { useAbout } from '@/views/pages/about/AboutV4/Services/composables/about.ts'
+
+const { about, loading, error, loadAbout } = useAbout()
+onMounted(() => {
+  loadAbout()
+})
+</script>
+
+<style>
+@media (max-width: 375px) {
+  .order-lg-1 {
+    order: 2 !important;
+  }
+
+  .order-lg-2 {
+    order: 1 !important;
+  }
+}
+</style>

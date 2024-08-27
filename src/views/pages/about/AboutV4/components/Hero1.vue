@@ -3,7 +3,23 @@
     <b-container>
       <b-row>
         <b-col xl="10" class="text-center mx-auto">
-          <b-row class="g-4 mt-5 mx-auto align-items-end">
+          <b-row
+            v-if="loading"
+            class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
+          >
+            <b-col>
+              <p class="mb-2 p-2 rounded text-white bg-primary">Loading ...</p>
+            </b-col>
+          </b-row>
+          <b-row
+            v-if="error"
+            class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+          >
+            <b-col>
+              <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
+            </b-col>
+          </b-row>
+          <b-row class="g-4 mt-5 mx-auto align-items-end" v-if="about && about.length">
             <b-col md="5" class="position-relative">
               <img :src="about14" class="rounded mb-4" alt="about-img" />
 
@@ -73,7 +89,7 @@
               </div>
             </b-col>
 
-            <b-col md="7" class="position-relative mb-n4">
+            <b-col md="7" class="position-relative mb-n4" v-for="(item, id) in about" :key="id">
               <figure class="position-absolute top-0 end-0 me-6 mt-n7">
                 <svg
                   class="opacity-2"
@@ -252,10 +268,8 @@
               </figure>
 
               <b-card no-body class="bg-dark text-start z-index-2 w-75 p-5 mb-4">
-                <span class="text-white">Our Goal:</span>
-                <h4 class="text-white fw-light mb-0 mt-3">
-                  "We believe that it takes great people to deliver a great product"
-                </h4>
+                <span class="text-white">Our Goals :</span>
+                <h4 class="text-white fw-light mb-0 mt-3">"{{ item.our_goals }}"</h4>
               </b-card>
 
               <b-card no-body class="overflow-hidden p-0">
@@ -274,6 +288,14 @@
               </b-card>
             </b-col>
           </b-row>
+          <b-row
+            v-if="!about"
+            class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+          >
+            <b-col>
+              <p class="mb-2 p-2 rounded text-white bg-primary">No data available.</p>
+            </b-col>
+          </b-row>
         </b-col>
       </b-row>
     </b-container>
@@ -287,4 +309,12 @@ import { BIconYoutube } from 'bootstrap-icons-vue'
 import about14 from '@/assets/images/about/14.jpg'
 import about15 from '@/assets/images/about/15.jpg'
 import about16 from '@/assets/images/about/16.jpg'
+
+import { onMounted } from 'vue'
+import { useAbout } from '@/views/pages/about/AboutV4/Services/composables/about.ts'
+
+const { about, loading, error, loadAbout } = useAbout()
+onMounted(() => {
+  loadAbout()
+})
 </script>

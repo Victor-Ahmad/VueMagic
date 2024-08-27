@@ -1,6 +1,23 @@
 <template>
   <section class="pb-0">
     <b-container>
+      <b-row
+        v-if="loading"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">Loading ...</p>
+        </b-col>
+      </b-row>
+
+      <b-row
+        v-if="error"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
+        </b-col>
+      </b-row>
       <b-row>
         <b-col lg="6" class="mb-6 mb-lg-0">
           <b-card no-body class="bg-dark overflow-hidden p-sm-4 h-100" data-bs-theme="dark">
@@ -10,14 +27,17 @@
 
               <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
                 <b-list-group-item
-                  v-for="list in approach"
+                  v-for="list in services?.service_benefits || []"
                   :key="list"
-                  class="heading-color d-flex mb-0"
+                  class="heading-color d-flex mb-0 small"
                 >
                   <span class="flex-centered">
                     <BIconPatchCheck class="text-primary me-2" />
                   </span>
-                  {{ list }}
+                  <span class="pt-1"
+                    ><span class="fw-bold text-primary">{{ list.name }} :</span
+                    >{{ list.description }}</span
+                  >
                 </b-list-group-item>
               </b-list-group>
             </b-card-header>
@@ -44,7 +64,11 @@
               clickable: true
             }"
           >
-            <SwiperSlide class="mb-5" v-for="(item, idx) in pricing" :key="idx">
+            <SwiperSlide
+              class="mb-5"
+              v-for="item in services?.client_testimonial || []"
+              :key="item"
+            >
               <SwiperCard :testimonial="item" />
             </SwiperSlide>
 
@@ -52,6 +76,14 @@
               class="swiper-pagination swiper-pagination-primary position-relative text-start"
             ></div>
           </Swiper>
+        </b-col>
+      </b-row>
+      <b-row
+        v-if="!services"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">No services available.</p>
         </b-col>
       </b-row>
     </b-container>
@@ -128,8 +160,16 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination } from 'swiper/modules'
-import { pricing } from '@/views/pages/about/ServiceSingle/data'
+// import { pricing } from '@/views/pages/about/ServiceSingle/data'
 import SwiperCard from '@/views/pages/about/ServiceSingle/components/SwiperCard.vue'
-import { approach } from '@/views/pages/about/ServiceSingle/data'
+// import { approach } from '@/views/pages/about/ServiceSingle/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'
+import { onMounted } from 'vue'
+import { useServices } from '@/views/pages/about/ServiceSingle/Services/composables/service.ts'
+const { services, loading, error, loadServices } = useServices()
+const service_benefits = services.service_benefits
+const client_testimonial = services.client_testimonial
+onMounted(() => {
+  loadServices()
+})
 </script>

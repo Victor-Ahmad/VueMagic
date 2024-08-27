@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-0">
+    <section class="pt-6">
       <b-container>
         <div
           class="rounded-3 position-relative overflow-hidden p-4 p-md-6"
