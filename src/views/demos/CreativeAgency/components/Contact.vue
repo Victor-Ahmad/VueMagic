@@ -1,5 +1,5 @@
 <template>
-  <section class="pb-0" style="background-color: #e7f8ee">
+  <section class="pb-0">
     <b-container class="pt-5">
       <b-row>
         <b-col lg="6" class="mb-6 mb-lg-0 d-none d-lg-block">
@@ -53,14 +53,27 @@
 
             <b-form class="row g-4">
               <b-col md="6">
-                <b-form-group label="Your name *" label-for="name" label-class="heading-color">
-                  <b-form-input type="text" class="form-control-lg" placeholder="Full name"
+                <b-form-group label="First name *" label-for="name" label-class="heading-color">
+                  <b-form-input
+                    v-model="form.first_name"
+                    type="text"
+                    class="form-control-lg"
+                    placeholder="First name"
                 /></b-form-group>
               </b-col>
-
+              <b-col md="6">
+                <b-form-group label="Last name *" label-for="name" label-class="heading-color">
+                  <b-form-input
+                    v-model="form.last_name"
+                    type="text"
+                    class="form-control-lg"
+                    placeholder="Last name"
+                /></b-form-group>
+              </b-col>
               <b-col md="6">
                 <b-form-group label="Email address *" label-for="email" label-class="heading-color">
                   <b-form-input
+                    v-model="form.email"
                     type="email"
                     class="form-control-lg"
                     id="floatingInput"
@@ -70,22 +83,26 @@
 
               <b-col md="6">
                 <b-form-group label="Phone number *" label-for="number" label-class="heading-color">
-                  <b-form-input type="text" class="form-control-lg" placeholder="(xxx) xx xxxx"
+                  <b-form-input
+                    v-model="form.mobile_number"
+                    type="text"
+                    class="form-control-lg"
+                    placeholder="(xxx) xx xxxx"
                 /></b-form-group>
               </b-col>
 
-              <b-col md="6">
+              <b-col md="12">
                 <b-form-group label="Services *" label-for="services" label-class="heading-color">
                   <select
-                    class="form-control-lg form-select bg-transparent border-bottom cursor-pointer p-2"
+                    v-model="form.service_id"
+                    class="form-control-lg form-select bg-primary-bg-subtle border-bottom cursor-pointer p-2"
                     id="floatingServices"
                     aria-label="Select a service"
                   >
                     <option value="" disabled selected>Select a service</option>
-                    <option value="web_design">Web Design</option>
-                    <option value="seo">SEO Optimization</option>
-                    <option value="marketing">Digital Marketing</option>
-                    <option value="content_creation">Content Creation</option>
+                    <option v-for="service in services" :key="service.id" :value="service.id">
+                      {{ service.name }}
+                    </option>
                   </select>
                 </b-form-group>
               </b-col>
@@ -97,6 +114,7 @@
                   label-class="form-label heading-color"
                 >
                   <b-form-textarea
+                    v-model="form.msg"
                     placeholder="Write your message here...."
                     id="floatingTextarea2"
                     style="height: 150px"
@@ -104,7 +122,9 @@
                 ></b-form-group>
               </b-col>
 
-              <b-button class="mb-0" variant="primary" size="lg">Send a message</b-button>
+              <b-button @click="submitFormHandler" class="mb-0" variant="primary" size="lg"
+                >Send a message</b-button
+              >
             </b-form>
           </b-card>
         </b-col>
@@ -137,4 +157,25 @@
 <script setup lang="ts">
 import { lists } from '@/views/demos/CreativeAgency/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'
+import { reactive } from 'vue'
+import { onMounted } from 'vue'
+import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
+import { submitForm } from '@/views/demos/CreativeAgency/Services/apis/serviceApi'
+const { services, loadServices } = useServices()
+// const { form, services, loadServices } = useServices()
+onMounted(() => {
+  loadServices()
+})
+
+const form = reactive({
+  first_name: '',
+  last_name: '',
+  email: '',
+  mobile_number: '',
+  service_id: '',
+  msg: ''
+})
+const submitFormHandler = async () => {
+  await submitForm(form)
+}
 </script>

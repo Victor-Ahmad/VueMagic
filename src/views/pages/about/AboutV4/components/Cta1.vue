@@ -109,10 +109,9 @@
         </b-row>
         <b-row class="g-4 position-relative" v-if="about && about.length">
           <b-col lg="10" xl="7" class="mx-auto text-center" v-for="(item, idx) in about" :key="idx">
-            <h3 class="text-white mb-3">{{ item.our_partners_associates }}</h3>
+            <h3 class="text-white mb-3">Our Partners and Associates</h3>
             <p class="text-white opacity-8">
-              Join the Mizzle revolution today and be part of the millions who've already embraced a
-              brighter future!
+              {{ item.our_partners_associates }}
             </p>
 
             <b-form class="col-md-10 bg-white bg-opacity-10 rounded-2 mx-auto p-2 mb-5">
