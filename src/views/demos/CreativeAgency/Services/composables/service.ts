@@ -1,12 +1,11 @@
 import { ref } from 'vue';
 import { fetchServices } from '../apis/serviceApi';
-import type { Service,ContactBody } from '../types/ServiceType';
+import type { Service } from '../types/ServiceType';
 
 export function useServices() {
   const services = ref<Service[] | null>(null);
   const loading = ref<boolean>(false);
   const error = ref<string | null>(null);
-  const form = ref<ContactBody[] | null>(null);
   const loadServices = async () => {
     loading.value = true;
     error.value = null;
@@ -24,7 +23,6 @@ export function useServices() {
   };
 
   return {
-    form,
     services,
     loading,
     error,

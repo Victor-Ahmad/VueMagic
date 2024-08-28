@@ -51,83 +51,114 @@
               </svg>
             </figure>
 
-            <b-form class="row g-4">
+            <b-form @submit.prevent="handleSubmit" class="row g-4">
               <b-col md="6">
-                <b-form-group label="First name *" label-for="name" label-class="heading-color">
+                <b-form-group
+                  label="First name *"
+                  label-for="first_name"
+                  label-class="heading-color"
+                >
                   <b-form-input
-                    v-model="form.first_name"
+                    v-model="firstName"
                     type="text"
                     class="form-control-lg"
                     placeholder="First name"
-                /></b-form-group>
+                    required
+                  />
+                </b-form-group>
               </b-col>
               <b-col md="6">
-                <b-form-group label="Last name *" label-for="name" label-class="heading-color">
+                <b-form-group label="Last name *" label-for="last_name" label-class="heading-color">
                   <b-form-input
-                    v-model="form.last_name"
+                    v-model="lastName"
                     type="text"
                     class="form-control-lg"
                     placeholder="Last name"
-                /></b-form-group>
+                    required
+                  />
+                </b-form-group>
               </b-col>
               <b-col md="6">
                 <b-form-group label="Email address *" label-for="email" label-class="heading-color">
                   <b-form-input
-                    v-model="form.email"
+                    v-model="email"
                     type="email"
                     class="form-control-lg"
-                    id="floatingInput"
                     placeholder="name@example.com"
-                /></b-form-group>
+                    required
+                  />
+                </b-form-group>
               </b-col>
-
               <b-col md="6">
-                <b-form-group label="Phone number *" label-for="number" label-class="heading-color">
+                <b-form-group
+                  label="Phone number *"
+                  label-for="mobile_number"
+                  label-class="heading-color"
+                >
                   <b-form-input
-                    v-model="form.mobile_number"
+                    v-model="mobileNumber"
                     type="text"
                     class="form-control-lg"
                     placeholder="(xxx) xx xxxx"
-                /></b-form-group>
+                    required
+                  />
+                </b-form-group>
               </b-col>
-
               <b-col md="12">
-                <b-form-group label="Services *" label-for="services" label-class="heading-color">
-                  <select
-                    v-model="form.service_id"
-                    class="form-control-lg form-select bg-primary-bg-subtle border-bottom cursor-pointer p-2"
+                <b-form-group label="Services *" label-for="service_id" label-class="heading-color">
+                  <b-form-select
+                    v-model="serviceId"
+                    class="form-control-lg bg-primary-bg-subtle border-bottom cursor-pointer p-2"
                     id="floatingServices"
-                    aria-label="Select a service"
+                    required
                   >
-                    <option value="" disabled selected>Select a service</option>
+                    <option value="" disabled>Select a service</option>
                     <option v-for="service in services" :key="service.id" :value="service.id">
                       {{ service.name }}
                     </option>
-                  </select>
+                  </b-form-select>
+                </b-form-group>
+              </b-col>
+              <b-col cols="12">
+                <b-form-group
+                  label="Message *"
+                  label-for="msg"
+                  label-class="form-label heading-color"
+                >
+                  <b-form-textarea
+                    v-model="msg"
+                    placeholder="Write your message here...."
+                    style="height: 150px"
+                    required
+                  />
                 </b-form-group>
               </b-col>
 
               <b-col cols="12">
-                <b-form-group
-                  label="Message *"
-                  label-for="text"
-                  label-class="form-label heading-color"
+                <b-button
+                  type="submit"
+                  class="mb-0"
+                  variant="primary"
+                  size="lg"
+                  :disabled="loading"
                 >
-                  <b-form-textarea
-                    v-model="form.msg"
-                    placeholder="Write your message here...."
-                    id="floatingTextarea2"
-                    style="height: 150px"
-                  ></b-form-textarea
-                ></b-form-group>
+                  Send a message
+                </b-button>
               </b-col>
-
-              <b-button @click="submitFormHandler" class="mb-0" variant="primary" size="lg"
-                >Send a message</b-button
-              >
             </b-form>
+            <div v-if="response && response.success === 1" class="mt-3">
+              <p class="text-success">{{ response.message }}</p>
+            </div>
+
+            <div v-if="(response && response.success === 0) || error" class="mt-3 text-danger">
+              <p v-for="(msgs, key) in error" :key="key">
+                <strong>{{ key }}:</strong>
+                <span v-for="msg in msgs" :key="msg">{{ msg }}<br /></span>
+              </p>
+            </div>
           </b-card>
         </b-col>
+
         <b-col lg="6" class="mb-6 mt-5 mb-lg-0 d-lg-none d-sm-block">
           <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
@@ -154,28 +185,38 @@
   </section>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
+import { ref, onMounted } from 'vue'
 import { lists } from '@/views/demos/CreativeAgency/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'
-import { reactive } from 'vue'
-import { onMounted } from 'vue'
 import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
-import { submitForm } from '@/views/demos/CreativeAgency/Services/apis/serviceApi'
+import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
+import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
+
+const firstName = ref<string>('')
+const lastName = ref<string>('')
+const email = ref<string>('')
+const mobileNumber = ref<string>('')
+const msg = ref<string>('')
+const serviceId = ref<number | null>(null)
+
 const { services, loadServices } = useServices()
-// const { form, services, loadServices } = useServices()
 onMounted(() => {
   loadServices()
 })
 
-const form = reactive({
-  first_name: '',
-  last_name: '',
-  email: '',
-  mobile_number: '',
-  service_id: '',
-  msg: ''
-})
-const submitFormHandler = async () => {
-  await submitForm(form)
+const { submitForm, response, loading, error } = useContactForm()
+
+const handleSubmit = () => {
+  const formData: ContactUsBody = {
+    first_name: firstName.value,
+    last_name: lastName.value,
+    email: email.value,
+    mobile_number: mobileNumber.value,
+    msg: msg.value,
+    service_id: serviceId.value ?? 0
+  }
+
+  submitForm(formData)
 }
 </script>
