@@ -9,3 +9,4 @@ export interface Service {
     result: Service[];
     message: string;
   }
+  

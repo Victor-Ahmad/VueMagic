@@ -19,7 +19,7 @@
       </b-row>
       <b-row v-if="about && about.length">
         <b-col md="4" class="mb-4 mb-md-0" v-for="(item, idx) in about" :key="idx">
-          <h2>{{ item.meet_our_team }}</h2>
+          <p class="text-black">{{ item.meet_our_team }}</p>
 
           <div class="d-flex gap-3 position-relative mt-md-5">
             <a href="#" class="btn btn-dark btn-icon rounded-circle mb-0 swiper-button-prev-team">
