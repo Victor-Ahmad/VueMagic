@@ -20,72 +20,104 @@
                   <p class="mb-0">You can reach us anytime via <a href="#">example@gmail.com</a></p>
                 </b-card-header>
 
-                <b-form class="px-0 pb-0 pt-5">
+                <b-form  @submit.prevent="handleSubmit" class="px-0 pb-0 pt-5">
                   <div class="input-floating-label form-floating mb-4">
                     <input
+                       v-model="firstName"
                       type="text"
                       class="form-control bg-transparent"
                       id="floatingName"
                       placeholder="Password"
+                      required
                     />
                     <label for="floatingName">First name</label>
                   </div>
                   <div class="input-floating-label form-floating mb-4">
                     <input
+                      v-model="lastName"
                       type="text"
                       class="form-control bg-transparent"
                       id="floatingName"
                       placeholder="Password"
+                      required
                     />
                     <label for="floatingName">Last name</label>
                   </div>
 
                   <div class="input-floating-label form-floating mb-4">
                     <input
+                      v-model="email"
                       type="email"
                       class="form-control bg-transparent"
                       id="floatingInput"
                       placeholder="name@example.com"
+                      required
                     />
                     <label for="floatingInput">Email address</label>
                   </div>
 
                   <div class="input-floating-label form-floating mb-4">
                     <input
+                      v-model="mobileNumber"
                       type="text"
                       class="form-control bg-transparent"
                       id="floatingNumber"
                       placeholder="Password"
+                      required
                     />
                     <label for="floatingNumber">Phone number</label>
                   </div>
                   <div class="input-floating-label form-floating mb-4">
                     <select
+                      v-model="serviceId"
                       class="primary form-select bg-primary-bg-subtle border-bottom cursor-pointer p-0"
                       id="floatingServices"
                       aria-label="Select a service"
+                      required
                     >
                       <option value="" disabled selected>Select a service</option>
                       <option value="web_design">Web Design</option>
                       <option value="seo">SEO Optimization</option>
                       <option value="marketing">Digital Marketing</option>
                       <option value="content_creation">Content Creation</option>
+                      <option v-for="service in services" :key="service.id" :value="service.id">
+                      {{ service.name }}
+                    </option>
                     </select>
                     <label for="floatingServices">Services</label>
                   </div>
 
                   <div class="input-floating-label form-floating mb-4">
                     <textarea
+                      v-model="msg"
                       class="form-control bg-transparent"
                       placeholder="Leave a comment here"
                       id="floatingTextarea2"
                       style="height: 100px"
+                      required
                     ></textarea>
                     <label for="floatingTextarea2">Message</label>
                   </div>
 
-                  <b-button size="lg" variant="primary" class="mb-0">Send a message</b-button>
+                  <b-button 
+                  type="submit"
+                  size="lg" 
+                  variant="primary"
+                  class="mb-0"
+                  :disabled="loading"
+                  >Send a message</b-button>
                 </b-form>
+                <div v-if="response && response.success === 1" class="mt-3">
+                  <p class="text-success">{{ response.message }}</p>
+                </div>
+
+                <div v-if="(response && response.success === 0) || error" class="mt-3 text-danger">
+                  <p v-for="(msgs, key) in error" :key="key">
+                    <strong>{{ key }}:</strong>
+                    <span v-for="msg in msgs" :key="msg">{{ msg }}<br /></span>
+                  </p>
+                </div>
+                
               </b-card>
             </b-col>
           </b-row>
@@ -97,7 +129,40 @@
 
 <script setup lang="ts">
 import bg02 from '@/assets/images/bg/02.jpg'
+import { ref, onMounted } from 'vue'
+import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
+import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
+import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
+
+const firstName = ref<string>('')
+const lastName = ref<string>('')
+const email = ref<string>('')
+const mobileNumber = ref<string>('')
+const msg = ref<string>('')
+const serviceId = ref<number | null>(null)
+
+const { services, loadServices } = useServices()
+onMounted(() => {
+  loadServices()
+})
+
+const { submitForm, response, loading, error } = useContactForm()
+
+const handleSubmit = () => {
+  const formData: ContactUsBody = {
+    first_name: firstName.value,
+    last_name: lastName.value,
+    email: email.value,
+    mobile_number: mobileNumber.value,
+    msg: msg.value,
+    service_id: serviceId.value ?? 0
+  }
+
+  submitForm(formData)
+}
 </script>
+
+
 <style scoped>
 select.form-select {
   padding: 10px !important;
