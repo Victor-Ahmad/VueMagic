@@ -3,9 +3,9 @@
     <ul class="navbar-nav navbar-nav-scroll dropdown-hover" :class="ulClass">
       <HomePage :menuItems="menuItems[0].children!" />
 
-      <PagesMenuDropdown :menu-items="menuItems[1].children!" />
+      <AboutPage :menu-items="menuItems[1].children!" />
 
-      <ResourcesMenuDropdown v-if="showResources" />
+      <ServicesPage />
 
       <PortfolioMenuDropdown :menu-items="menuItems[2].children!" />
       <ProcessMenuDropdown :menu-items="menuItems[2].children!" />
@@ -19,7 +19,7 @@
           Contact us
         </router-link>
       </li>
-      <DemosMenu :menuItems="menuItems[0].children!" />
+      <!-- <DemosMenu :menuItems="menuItems[0].children!" /> -->
 
       <!-- <li v-if="showDocs" class="nav-item">
         <a class="nav-link" href="https://mizzle-vue.vercel.app/docs/index.html" target="_blank">
@@ -33,11 +33,11 @@
 <script lang="ts" setup>
 import { getAppMenuItems, type MenuItemType } from '@/helpers/menu'
 import HomePage from '@/components/topbar/AppMenu/HomePage.vue'
-import PagesMenuDropdown from '@/components/topbar/AppMenu/PagesMenuDropdown.vue'
+import AboutPage from '@/components/topbar/AppMenu/AboutPage.vue'
 import MegaMenuDropdown from '@/components/topbar/AppMenu/MegaMenuDropdown.vue'
 import PortfolioMenuDropdown from '@/components/topbar/AppMenu/PortfolioMenuDropdown.vue'
 import ProcessMenuDropdown from '@/components/topbar/AppMenu/ProcessMenuDropdown.vue'
-import ResourcesMenuDropdown from '@/components/topbar/AppMenu/ResourcesMenuDropdown.vue'
+import ServicesPage from '@/components/topbar/AppMenu/ServicesPage.vue'
 import DemosMenu from '@/components/topbar/AppMenu/DemosMenu.vue'
 import { menuItemActive } from '@/components/topbar/AppMenu/getActiveClass'
 import router from '@/router'

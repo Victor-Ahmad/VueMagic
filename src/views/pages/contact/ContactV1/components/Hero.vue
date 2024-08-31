@@ -20,10 +20,10 @@
                   <p class="mb-0">You can reach us anytime via <a href="#">example@gmail.com</a></p>
                 </b-card-header>
 
-                <b-form  @submit.prevent="handleSubmit" class="px-0 pb-0 pt-5">
+                <b-form @submit.prevent="handleSubmit" class="px-0 pb-0 pt-5">
                   <div class="input-floating-label form-floating mb-4">
                     <input
-                       v-model="firstName"
+                      v-model="firstName"
                       type="text"
                       class="form-control bg-transparent"
                       id="floatingName"
@@ -76,13 +76,10 @@
                       required
                     >
                       <option value="" disabled selected>Select a service</option>
-                      <option value="web_design">Web Design</option>
-                      <option value="seo">SEO Optimization</option>
-                      <option value="marketing">Digital Marketing</option>
-                      <option value="content_creation">Content Creation</option>
+
                       <option v-for="service in services" :key="service.id" :value="service.id">
-                      {{ service.name }}
-                    </option>
+                        {{ service.name }}
+                      </option>
                     </select>
                     <label for="floatingServices">Services</label>
                   </div>
@@ -99,13 +96,14 @@
                     <label for="floatingTextarea2">Message</label>
                   </div>
 
-                  <b-button 
-                  type="submit"
-                  size="lg" 
-                  variant="primary"
-                  class="mb-0"
-                  :disabled="loading"
-                  >Send a message</b-button>
+                  <b-button
+                    type="submit"
+                    size="lg"
+                    variant="primary"
+                    class="mb-0"
+                    :disabled="loading"
+                    >Send a message</b-button
+                  >
                 </b-form>
                 <div v-if="response && response.success === 1" class="mt-3">
                   <p class="text-success">{{ response.message }}</p>
@@ -117,7 +115,6 @@
                     <span v-for="msg in msgs" :key="msg">{{ msg }}<br /></span>
                   </p>
                 </div>
-                
               </b-card>
             </b-col>
           </b-row>
@@ -161,7 +158,6 @@ const handleSubmit = () => {
   submitForm(formData)
 }
 </script>
-
 
 <style scoped>
 select.form-select {
