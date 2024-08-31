@@ -1,4 +1,4 @@
-export interface Project {
+export interface projects {
   id: number;
   title: string;
   description: string;
@@ -41,8 +41,8 @@ export interface Challenge {
 
 
   
-  export interface ProjectResponse {
+  export interface ProjectsResponse {
     success: number;
-    result: Project[];
+    result: projects[];
     message: string;
   }

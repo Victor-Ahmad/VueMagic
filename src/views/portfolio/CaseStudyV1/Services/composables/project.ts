@@ -1,22 +1,22 @@
 import { ref } from 'vue';
-import { fetchProject } from '../apis/projectApi';
+import { fetchProjects } from '../apis/projectApi';
 import type { Project } from '../types/ProjectType';
 
 
-export function useProject() {
-  const Project = ref<Project[] | null>(null);
+export function UseProjects() {
+  const projects = ref<Project[] | null>(null);
   const loading = ref<boolean>(false);
   const error = ref<string | null>(null);
-  const loadProject = async () => {
+  const loadProjects = async () => {
     loading.value = true;
     error.value = null;
 
     try {
-      const data = await fetchProject();
-      Project.value = data.result;
+      const data = await fetchProjects();
+      projects.value = data.result;
     
     } catch (err) {
-      error.value = 'Failed to load project';
+      error.value = 'Failed to load projects';
       console.error(err);
     } finally {
       loading.value = false;
@@ -24,10 +24,10 @@ export function useProject() {
   };
 
   return {
-    Project,
+    projects,
     loading,
     error,
-    loadProject,
+    loadProjects,
   };
 }
 
