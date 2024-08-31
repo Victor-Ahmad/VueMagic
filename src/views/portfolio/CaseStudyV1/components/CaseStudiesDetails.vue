@@ -14,7 +14,7 @@
               </ol>
             </nav>
           </div>
-          <h1 class="mb-4">Transforming Ideas into Reality</h1>
+          <h1 class="mb-4">{{ Project.title }}</h1>
           <p>
             In affronting unreserved delightful simplicity ye. Law own advantage furniture continual
             sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she
@@ -207,3 +207,43 @@ import caseStudyImg1 from '@/assets/images/portfolio/case-study-01.jpg'
 
 const lightBoxImages = [masonryImg8, masonryImg6, masonryImg5]
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

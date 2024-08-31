@@ -23,7 +23,7 @@
                 <b-form  @submit.prevent="handleSubmit" class="px-0 pb-0 pt-5">
                   <div class="input-floating-label form-floating mb-4">
                     <input
-                       v-model="firstName"
+                      v-model="firstName"
                       type="text"
                       class="form-control bg-transparent"
                       id="floatingName"
