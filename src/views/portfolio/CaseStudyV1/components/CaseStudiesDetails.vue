@@ -1,7 +1,7 @@
 <template>
   <section class="pt-xl-9">
     <b-container class="pt-4 pt-xl-0">
-       <b-row
+      <b-row
         v-if="loading"
         class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
       >
@@ -19,8 +19,7 @@
       </b-row>
 
       <b-row>
-        <b-col md="9" class="mx-auto text-center" v-if="projects">
-          
+        <b-col md="9" class="mx-auto text-center" v-if="Project">
           <div class="d-flex justify-content-center position-relative mb-4">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb breadcrumb-dots pb-0 mb-0">
@@ -32,9 +31,9 @@
               </ol>
             </nav>
           </div>
-          <h1 class="mb-4">{{ projects.title }}</h1>
+          <h1 class="mb-4">{{ Project.title }}</h1>
           <p>
-            {{ projects.description }}
+            {{ Project.description }}
           </p>
         </b-col>
 
@@ -51,9 +50,27 @@
             <b-col cols="11" lg="5" xl="4" class="mx-auto mt-n8 mt-md-n9">
               <b-card no-body class="card-body bg-dark p-sm-5" data-bs-theme="dark">
                 <ul class="list-group list-group-borderless">
-                  <li class="list-group-item mb-3" v-for="(item, idx) in about" :key="idx">
+                  <!-- <li class="list-group-item mb-3" v-for="(item, idx) in about" :key="idx">
                     <small>{{ item.title }}</small>
                     <p class="heading-color lead mt-1 mb-0">{{ item.description }}</p>
+                  </li> -->
+                  <li class="list-group-item mb-3">
+                    <small>Client</small>
+                    <p class="heading-color lead mt-1 mb-0">
+                      {{ Project?.client?.first_name ?? '' }} {{ Project?.client?.last_name ?? '' }}
+                    </p>
+                  </li>
+                  <li class="list-group-item mb-3">
+                    <small>Email</small>
+                    <p class="heading-color lead mt-1 mb-0">
+                      {{ Project?.client?.email ?? '' }}
+                    </p>
+                  </li>
+                  <li class="list-group-item mb-3">
+                    <small>Phone</small>
+                    <p class="heading-color lead mt-1 mb-0">
+                      {{ Project?.client?.phone_number ?? '' }}
+                    </p>
                   </li>
 
                   <li class="list-group-item d-grid mb-0">
@@ -206,7 +223,7 @@
         </b-col>
       </b-row>
       <b-row
-        v-if="!projects"
+        v-if="!Project"
         class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
       >
         <b-col>
@@ -232,52 +249,11 @@ import caseStudyImg1 from '@/assets/images/portfolio/case-study-01.jpg'
 const lightBoxImages = [masonryImg8, masonryImg6, masonryImg5]
 
 import { onMounted } from 'vue'
-import {  UseProjects } from '@/views/portfolio/CaseStudyV1/Services/composables/project'
+import { UseProjects } from '@/views/portfolio/CaseStudyV1/Services/composables/project'
 
-const { projects, loading, error, loadProjects } = UseProjects()
+const { Project, loading, error, loadProjects } = UseProjects()
 onMounted(() => {
   loadProjects()
-  console.log(projects)
+  console.log(Project)
 })
-
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

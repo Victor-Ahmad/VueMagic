@@ -50,7 +50,7 @@
 import bgpattern from '@/assets/images/elements/bg-pattern-2.png'
 
 import { onMounted } from 'vue'
-import { useServices } from '@/views/pages/about/ServiceSingle/Services/composables/service.ts'
+import { useServices } from '@/views/pages/about/ServiceSingle/Services/composables/service'
 
 const { services, loading, error, loadServices } = useServices()
 onMounted(() => {

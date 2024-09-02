@@ -4,7 +4,7 @@ import type { Project } from '../types/ProjectType';
 
 
 export function UseProjects() {
-  const projects = ref<Project[] | null>(null);
+  const Project = ref<Project[] | null>(null);
   const loading = ref<boolean>(false);
   const error = ref<string | null>(null);
   const loadProjects = async () => {
@@ -13,8 +13,9 @@ export function UseProjects() {
 
     try {
       const data = await fetchProjects();
-      projects.value = data.result;
-    
+      Project.value = data.result;
+      console.log(" project =====================");
+      console.log(data);
     } catch (err) {
       error.value = 'Failed to load projects';
       console.error(err);
@@ -24,7 +25,7 @@ export function UseProjects() {
   };
 
   return {
-    projects,
+    Project,
     loading,
     error,
     loadProjects,
