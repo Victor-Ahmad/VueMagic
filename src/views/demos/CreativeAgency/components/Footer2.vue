@@ -91,7 +91,7 @@
         </b-col>
 
         <b-col lg="3">
-          <h6 class="mb-2 mb-md-4">App available on</h6>
+          <!-- <h6 class="mb-2 mb-md-4">App available on</h6>
           <b-row class="g-2 mb-4 mb-sm-5">
             <b-col cols="6" sm="4" md="3" lg="6">
               <router-link to=""> <img :src="googlePlay" alt="" /> </router-link>
@@ -100,7 +100,7 @@
             <b-col cols="6" sm="4" md="3" lg="6">
               <router-link to=""> <img :src="appStore" alt="app-store" /> </router-link>
             </b-col>
-          </b-row>
+          </b-row> -->
 
           <h6 class="mb-2 mb-md-4">Follow on</h6>
 

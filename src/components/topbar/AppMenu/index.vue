@@ -8,7 +8,7 @@
       <ServicesPage />
 
       <PortfolioMenuDropdown :menu-items="menuItems[2].children!" />
-      <ProcessMenuDropdown :menu-items="menuItems[2].children!" />
+      <!-- <ProcessMenuDropdown :menu-items="menuItems[2].children!" /> -->
       <MegaMenuDropdown v-if="showMegaMenu" />
       <li v-if="showContactUs" class="nav-item">
         <router-link
@@ -36,9 +36,9 @@ import HomePage from '@/components/topbar/AppMenu/HomePage.vue'
 import AboutPage from '@/components/topbar/AppMenu/AboutPage.vue'
 import MegaMenuDropdown from '@/components/topbar/AppMenu/MegaMenuDropdown.vue'
 import PortfolioMenuDropdown from '@/components/topbar/AppMenu/PortfolioMenuDropdown.vue'
-import ProcessMenuDropdown from '@/components/topbar/AppMenu/ProcessMenuDropdown.vue'
+// import ProcessMenuDropdown from '@/components/topbar/AppMenu/ProcessMenuDropdown.vue'
 import ServicesPage from '@/components/topbar/AppMenu/ServicesPage.vue'
-import DemosMenu from '@/components/topbar/AppMenu/DemosMenu.vue'
+// import DemosMenu from '@/components/topbar/AppMenu/DemosMenu.vue'
 import { menuItemActive } from '@/components/topbar/AppMenu/getActiveClass'
 import router from '@/router'
 type AppMenuProps = {
