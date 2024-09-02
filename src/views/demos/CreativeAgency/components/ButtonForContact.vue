@@ -22,7 +22,7 @@ const goToContact = () => {
 <style scoped>
 .fixed-contact-button {
   position: fixed;
-  bottom: 50%;
+  bottom: 5%;
   right: 0;
   transform: translateY(50%);
   z-index: 1000;

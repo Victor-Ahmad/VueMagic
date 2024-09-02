@@ -1,23 +1,42 @@
 <template>
   <section class="pb-0">
     <b-container class="pt-5">
+      <b-row
+        v-if="loading"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">Loading ...</p>
+        </b-col>
+      </b-row>
+
+      <b-row
+        v-if="error"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
+        </b-col>
+      </b-row>
       <b-row>
         <b-col lg="6" class="mb-6 mb-lg-0 d-none d-lg-block">
           <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
-              <h3 class="mb-3">What's Next ?</h3>
-              <p>What are the next steps for your project?</p>
+              <h3 class="mb-3">
+                {{ home?.contact_page?.whats_next?.title ?? '' }}
+              </h3>
 
+              <p>{{ home?.contact_page?.whats_next?.sub_title ?? '' }}</p>
               <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
                 <b-list-group-item
-                  v-for="list in lists"
+                  v-for="list in home?.contact_page?.whats_next?.whats_next_steps ?? []"
                   :key="list"
                   class="heading-color d-flex mb-0"
                 >
                   <span class="flex-centered">
                     <BIconPatchCheck class="text-primary me-2" />
                   </span>
-                  {{ list }}
+                  {{ list.step_no }} {{ list.step }}
                 </b-list-group-item>
               </b-list-group>
             </b-card-header>
@@ -191,19 +210,21 @@
         <b-col lg="6" class="mb-6 mb-lg-0 d-lg-none d-sm-block">
           <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
-              <h3 class="mb-3">What's Next ?</h3>
-              <p>What are the next steps for your project?</p>
+              <h3 class="mb-3">
+                {{ home?.contact_page?.whats_next?.title ?? '' }}
+              </h3>
 
+              <p>{{ home?.contact_page?.whats_next?.sub_title ?? '' }}</p>
               <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
                 <b-list-group-item
-                  v-for="list in lists"
+                  v-for="list in home?.contact_page?.whats_next?.whats_next_steps ?? []"
                   :key="list"
                   class="heading-color d-flex mb-0"
                 >
                   <span class="flex-centered">
                     <BIconPatchCheck class="text-primary me-2" />
                   </span>
-                  {{ list }}
+                  {{ list.step_no }} {{ list.step }}
                 </b-list-group-item>
               </b-list-group>
             </b-card-header>
@@ -235,6 +256,7 @@ onMounted(() => {
 })
 
 const { submitForm, response, loading, error } = useContactForm()
+import { useHome } from '@/views/demos/CreativeAgency/Services/composables/home'
 
 const handleSubmit = () => {
   const formData: ContactUsBody = {
@@ -248,4 +270,10 @@ const handleSubmit = () => {
 
   submitForm(formData)
 }
+
+const { home, loadHome } = useHome()
+
+onMounted(() => {
+  loadHome()
+})
 </script>
