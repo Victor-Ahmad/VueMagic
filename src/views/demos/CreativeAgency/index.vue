@@ -6,14 +6,13 @@
 
     <About />
 
-   
-
     <Services />
 
     <RecentProjects />
 
     <Testimonials />
     <Contact />
+    <ButtonForContact />
 
     <!-- <FAQ /> -->
 
@@ -34,4 +33,5 @@ import RecentProjects from '@/views/demos/CreativeAgency/components/RecentProjec
 import Footer2 from '@/views/demos/CreativeAgency/components/Footer2.vue'
 import TopNavigationBar2 from '@/views/demos/CreativeAgency/components/TopNavigationBar2.vue'
 import Contact from '@/views/demos/CreativeAgency/components/Contact.vue'
+import ButtonForContact from '@/views/demos/CreativeAgency/components/ButtonForContact.vue'
 </script>
