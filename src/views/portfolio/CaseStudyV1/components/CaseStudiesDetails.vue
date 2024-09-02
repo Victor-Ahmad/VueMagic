@@ -1,8 +1,26 @@
 <template>
   <section class="pt-xl-9">
     <b-container class="pt-4 pt-xl-0">
+       <b-row
+        v-if="loading"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">Loading ...</p>
+        </b-col>
+      </b-row>
+      <b-row
+        v-if="error"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
+        </b-col>
+      </b-row>
+
       <b-row>
-        <b-col md="9" class="mx-auto text-center">
+        <b-col md="9" class="mx-auto text-center" v-if="projects">
+          
           <div class="d-flex justify-content-center position-relative mb-4">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb breadcrumb-dots pb-0 mb-0">
@@ -14,11 +32,9 @@
               </ol>
             </nav>
           </div>
-          <h1 class="mb-4">Transforming Ideas into Reality</h1>
+          <h1 class="mb-4">{{ projects.title }}</h1>
           <p>
-            In affronting unreserved delightful simplicity ye. Law own advantage furniture continual
-            sweetness bed agreeable perpetual. Oh song well four only head busy it. Afford son she
-            had lively living.
+            {{ projects.description }}
           </p>
         </b-col>
 
@@ -189,6 +205,14 @@
           </b-card>
         </b-col>
       </b-row>
+      <b-row
+        v-if="!projects"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">No projects available.</p>
+        </b-col>
+      </b-row>
     </b-container>
   </section>
 </template>
@@ -206,4 +230,54 @@ import masonryImg8 from '@/assets/images/portfolio/masonry/08.jpg'
 import caseStudyImg1 from '@/assets/images/portfolio/case-study-01.jpg'
 
 const lightBoxImages = [masonryImg8, masonryImg6, masonryImg5]
+
+import { onMounted } from 'vue'
+import {  UseProjects } from '@/views/portfolio/CaseStudyV1/Services/composables/project'
+
+const { projects, loading, error, loadProjects } = UseProjects()
+onMounted(() => {
+  loadProjects()
+  console.log(projects)
+})
+
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
