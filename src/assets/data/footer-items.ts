@@ -23,7 +23,7 @@ type FooterLinkType = {
 export const quickLinks: FooterLinkType[] = [
   {
     name: 'About us',
-    link: 'about.v1'
+    link: 'about.v4'
   },
   {
     name: 'Contact us',
@@ -53,9 +53,7 @@ export const quickLinks: FooterLinkType[] = [
 ]
 
 export const communityLinks: FooterLinkType[] = [
-  {
-    name: 'Documents'
-  },
+ 
   {
     name: 'Supports',
     icon: BIconBoxArrowUpRight
@@ -67,10 +65,7 @@ export const communityLinks: FooterLinkType[] = [
   {
     name: 'Privacy Policy'
   },
-  {
-    name: 'News and blogs',
-    link: 'blog.grid'
-  },
+
   {
     name: 'Terms & condition',
     link: 'terms-conditions'
@@ -80,9 +75,9 @@ export const communityLinks: FooterLinkType[] = [
 export const followOnIcons = [
   { icon: faFacebookF, variant: 'bg-facebook' },
   { icon: faInstagram, variant: 'bg-instagram' },
-  { icon: faTwitter, variant: 'bg-twitter' },
+  // { icon: faTwitter, variant: 'bg-twitter' },
   { icon: faLinkedinIn, variant: 'bg-linkedin' },
-  { icon: faYoutube, variant: 'bg-youtube' }
+  // { icon: faYoutube, variant: 'bg-youtube' }
 ]
 
 export const contactDetails = {
