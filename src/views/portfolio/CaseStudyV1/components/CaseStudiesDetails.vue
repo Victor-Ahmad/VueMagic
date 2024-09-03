@@ -73,20 +73,22 @@
                     </p>
                   </li>
                   <li class="list-group-item mb-3">
-                  <small>time_in_days</small>
+                    <small>time_in_days</small>
                     <p class="heading-color lead mt-1 mb-0">
-                      {{ Project?.time_in_days ??'' }}
+                      {{ Project?.time_in_days ?? '' }}
                     </p>
                   </li>
                   <li class="list-group-item mb-3">
-                  <small>time</small>
+                    <small>time</small>
                     <p class="heading-color lead mt-1 mb-0">
-                      {{ Project?.time ??'' }}
+                      {{ Project?.time ?? '' }}
                     </p>
                   </li>
 
                   <li class="list-group-item d-grid mb-0">
-                    <a href="Project.project_live_links.link" class="btn btn-lg btn-primary mb-0 flex-centered"
+                    <a
+                      href="Project.project_live_links.link"
+                      class="btn btn-lg btn-primary mb-0 flex-centered"
                       >View project website
                       <BIconBoxArrowUpRight class="ms-2" />
                     </a>
@@ -128,7 +130,10 @@
 
               <h4 class="mb-3">Achievements</h4>
               <ul>
-                <li v-for="achievement in Project?.achievements" :key="achievement.achievement_name">
+                <li
+                  v-for="achievement in Project?.achievements"
+                  :key="achievement.achievement_name"
+                >
                   {{ achievement.achievement_name }}
                 </li>
               </ul>
@@ -161,10 +166,10 @@
               <h4 class="mb-3">Challenges</h4>
               <ul>
                 <li v-for="challenge in Project?.challenges" :key="challenge.challenge_name">
-                  <strong>{{ challenge.challenge_name }}</strong>: {{ challenge.challenge_description }}
+                  <strong>{{ challenge.challenge_name }}</strong
+                  >: {{ challenge.challenge_description }}
                 </li>
               </ul>
-
             </b-col>
           </b-row>
         </b-col>
@@ -187,8 +192,11 @@
           <b-row class="g-4 g-xl-6">
             <b-col sm="4" v-for="(image, idx) in Project?.project_images" :key="idx">
               <CustomGLightbox :link="image.image_path" data-glightbox data-gallery="image-popup">
-                <img :src="image.image_path" class="rounded" alt="Project Image"
-                :class="idx == lightBoxImages.length - 2 ? 'mt-sm-6' : ''"
+                <img
+                  :src="image.image_path"
+                  class="rounded"
+                  alt="Project Image"
+                  :class="idx == lightBoxImages.length - 2 ? 'mt-sm-6' : ''"
                 />
               </CustomGLightbox>
             </b-col>
@@ -212,7 +220,7 @@
 
             <b-col lg="7" xl="6" class="ms-auto">
               <p v-for="technology in Project?.project_technologies" :key="technology.tools">
-              {{ technology.tools }}
+                {{ technology.tools }}
               </p>
 
               <b-row class="row-cols-2 row-cols-md-3 mt-lg-6 g-4 g-lg-5">
@@ -282,14 +290,18 @@ import masonryImg8 from '@/assets/images/portfolio/masonry/08.jpg'
 import caseStudyImg1 from '@/assets/images/portfolio/case-study-01.jpg'
 
 const lightBoxImages = [masonryImg8, masonryImg6, masonryImg5]
-
-import { onMounted } from 'vue'
-import { UseProjects } from '@/views/portfolio/CaseStudyV1/Services/composables/project'
-import type { SpawnOptions } from 'child_process'
-
-const { Project, loading, error, loadProjects } = UseProjects()
-onMounted(() => {
-  loadProjects()
-  console.log(Project)
+defineProps({
+  Project: {
+    type: Object,
+    default: null
+  },
+  loading: {
+    type: Boolean,
+    default: false
+  },
+  error: {
+    type: String,
+    default: ''
+  }
 })
 </script>
