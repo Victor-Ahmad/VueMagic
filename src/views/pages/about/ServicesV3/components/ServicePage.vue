@@ -65,7 +65,7 @@ import ServiceCard from '@/views/demos/CreativeAgency/components/ServiceCard.vue
           <b-card
             no-body
             class="card-hover-shadow border h-100 p-4 cursor-pointer"
-            @click="goToServicePage"
+            @click="goToServicePage(service.id)"
           >
             <figure class="text-primary mb-4">
               <svg
@@ -127,8 +127,8 @@ onMounted(() => {
   loadServices()
   console.log(services)
 })
-function goToServicePage() {
-  router.push({ name: 'services.single' }).then(() => {
+function goToServicePage(serviceId: number) {
+  router.push({ name: 'services.single', params: { id: serviceId } }).then(() => {
     window.scrollTo(0, 0)
   })
 }

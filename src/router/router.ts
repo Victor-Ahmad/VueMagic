@@ -271,13 +271,13 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/ServicesV3/index.vue')
   },
   {
-    path: '/services/single',
+    path: '/services/single/:id',
     name: 'services.single',
     meta: {
       title: setTitle('Services Single')
     },
     component: () => import('@/views/pages/about/ServiceSingle/index.vue')
-  },
+  },  
   {
     path: '/customer/stories',
     name: 'customer.stories',

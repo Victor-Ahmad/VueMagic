@@ -50,11 +50,15 @@
 import bgpattern from '@/assets/images/elements/bg-pattern-2.png'
 
 import { onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { useServices } from '@/views/pages/about/ServiceSingle/Services/composables/service'
 
 const { services, loading, error, loadServices } = useServices()
+const route = useRoute()
+const serviceId = route.params.id
+
 onMounted(() => {
-  loadServices()
+  loadServices(serviceId)
   console.log(services)
 })
 </script>

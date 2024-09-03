@@ -7,12 +7,12 @@ export function useServices() {
   const loading = ref<boolean>(false);
   const error = ref<string | null>(null);
 
-  const loadServices = async () => {
+  const loadServices = async (id: string | number) => {
     loading.value = true;
     error.value = null;
 
     try {
-      const data = await fetchServices();
+      const data = await fetchServices(id);
       services.value = data.result;
     } catch (err) {
       error.value = 'Failed to load services';
