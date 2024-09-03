@@ -73,17 +73,17 @@
                     </p>
                   </li>
                   <li class="list-group-item mb-3">
-                  <small>time_in_days</small>
+                  <small>Duration</small>
                     <p class="heading-color lead mt-1 mb-0">
                       {{ Project?.time_in_days ??'' }}
                     </p>
                   </li>
-                  <li class="list-group-item mb-3">
+                  <!-- <li class="list-group-item mb-3">
                   <small>time</small>
                     <p class="heading-color lead mt-1 mb-0">
                       {{ Project?.time ??'' }}
                     </p>
-                  </li>
+                  </li> -->
 
                   <li class="list-group-item d-grid mb-0">
                     <a href="Project.project_live_links.link" class="btn btn-lg btn-primary mb-0 flex-centered"
