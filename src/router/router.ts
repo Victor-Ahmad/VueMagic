@@ -271,7 +271,7 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/ServicesV3/index.vue')
   },
   {
-    path: '/services/single/:id',
+    path: '/services/single/:id?',
     name: 'services.single',
     meta: {
       title: setTitle('Services Single')
