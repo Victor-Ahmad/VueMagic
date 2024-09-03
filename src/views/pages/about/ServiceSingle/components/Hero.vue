@@ -58,7 +58,7 @@ const route = useRoute()
 const serviceId = route.params.id
 
 onMounted(() => {
-  loadServices(serviceId)
+  loadServices(Number(serviceId))
   console.log(services)
 })
 </script>
