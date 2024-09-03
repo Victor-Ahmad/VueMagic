@@ -1,10 +1,10 @@
 <template>
   <Hero />
-  <Nav2 />
+  <!-- <Nav2 /> -->
   <ServicePage />
   <!-- <Test1 /> -->
   <ButtonForContact />
-  <Footer1 />
+  <!-- <Footer1 /> -->
 </template>
 
 <script setup lang="ts">

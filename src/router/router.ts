@@ -247,6 +247,14 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/Team/index.vue')
   },
   {
+    path: '/services/v0',
+    name: 'services.v0',
+    meta: {
+      title: setTitle('Services-V0')
+    },
+    component: () => import('@/views/pages/about/ServiceV0/index.vue')
+  },
+  {
     path: '/services/v1',
     name: 'services.v1',
     meta: {
@@ -271,7 +279,7 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/ServicesV3/index.vue')
   },
   {
-    path: '/services/single/:id',
+    path: '/services/single/:id?',
     name: 'services.single',
     meta: {
       title: setTitle('Services Single')

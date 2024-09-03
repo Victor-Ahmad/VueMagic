@@ -1,6 +1,6 @@
 import { ref } from 'vue';
 import { fetchServices } from '../apis/serviceApi';
-import type { Service } from '../types/ServiceType';
+import type { Service } from './types/ServiceType';
 
 export function useServices() {
   const services = ref<Service[] | null>(null);

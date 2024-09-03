@@ -1,5 +1,5 @@
 <template>
-  <TopNavigationBar9 />
+  <!-- <TopNavigationBar9 /> -->
 
   <main>
     <CaseStudiesDetails />
@@ -7,7 +7,7 @@
     <RelatedWorks />
   </main>
 
-  <Footer9 />
+  <!-- <Footer9 /> -->
 </template>
 
 <script lang="ts" setup>

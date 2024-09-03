@@ -19,8 +19,8 @@
 </template>
 
 <script lang="ts" setup>
-import logoLight from '@/assets/images/logo-light.svg'
-import logo from '@/assets/images/logo.svg'
+import logoLight from '@/assets/images/Innovacraft logo png.png'
+import logo from '@/assets/images/Innovacraft logo png.png'
 import logoIcon from '@/assets/images/logo-icon.svg'
 
 defineProps<{

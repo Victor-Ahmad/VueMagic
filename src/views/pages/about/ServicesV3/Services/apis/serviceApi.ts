@@ -1,6 +1,6 @@
 
 import axiosInstance from '@/connectivity/axios/axiosInstance';
-import type { ServicesResponse } from '../types/ServiceType';
+import type { ServicesResponse } from '../composables/types/ServiceType';
 
 export const fetchServices = async (): Promise<ServicesResponse> => {
   try {

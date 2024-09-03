@@ -137,7 +137,7 @@ onMounted(() => {
 </script> -->
 
 <template>
-  <TopNavigationBar9 />
+  <!-- <TopNavigationBar9 /> -->
 
   <main>
     <section class="pt-8">
@@ -234,7 +234,7 @@ onMounted(() => {
       </b-container>
     </section>
   </main>
-  <Footer8 />
+  <!-- <Footer8 /> -->
 </template>
 
 <script setup lang="ts">
