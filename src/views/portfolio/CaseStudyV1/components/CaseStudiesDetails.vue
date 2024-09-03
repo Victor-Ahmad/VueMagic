@@ -72,9 +72,21 @@
                       {{ Project?.client?.phone_number ?? '' }}
                     </p>
                   </li>
+                  <li class="list-group-item mb-3">
+                  <small>time_in_days</small>
+                    <p class="heading-color lead mt-1 mb-0">
+                      {{ Project?.time_in_days ??'' }}
+                    </p>
+                  </li>
+                  <li class="list-group-item mb-3">
+                  <small>time</small>
+                    <p class="heading-color lead mt-1 mb-0">
+                      {{ Project?.time ??'' }}
+                    </p>
+                  </li>
 
                   <li class="list-group-item d-grid mb-0">
-                    <a href="#" class="btn btn-lg btn-primary mb-0 flex-centered"
+                    <a href="Project.project_live_links.link" class="btn btn-lg btn-primary mb-0 flex-centered"
                       >View project website
                       <BIconBoxArrowUpRight class="ms-2" />
                     </a>
@@ -84,7 +96,7 @@
             </b-col>
 
             <b-col lg="7" class="ms-auto ps-5 mt-6 mt-lg-0">
-              <h4 class="mb-3">Overview</h4>
+              <!-- <h4 class="mb-3">Overview</h4>
               <p class="lead">
                 Ideas are the seeds of innovation. They can originate from personal experiences,
                 observations, or the desire to solve a problem.
@@ -112,9 +124,16 @@
                     >UI/UX design</a
                   >
                 </li>
+              </ul> -->
+
+              <h4 class="mb-3">Achievements</h4>
+              <ul>
+                <li v-for="achievement in Project?.achievements" :key="achievement.achievement_name">
+                  {{ achievement.achievement_name }}
+                </li>
               </ul>
 
-              <h4 class="mb-3">The Challenge</h4>
+              <!-- <h4 class="mb-3">The Challenge</h4>
               <p>
                 Turning ideas into reality is a transformative process that drives innovation and
                 progress. It begins with recognizing the power and potential of an idea. Through
@@ -137,12 +156,20 @@
                   <BIconCheckCircle class="text-primary me-2" />Designed machines/servers and
                   trained employees
                 </li>
+              </ul> -->
+
+              <h4 class="mb-3">Challenges</h4>
+              <ul>
+                <li v-for="challenge in Project?.challenges" :key="challenge.challenge_name">
+                  <strong>{{ challenge.challenge_name }}</strong>: {{ challenge.challenge_description }}
+                </li>
               </ul>
+
             </b-col>
           </b-row>
         </b-col>
 
-        <b-col cols="12" class="mt-6">
+        <!-- <b-col cols="12" class="mt-6">
           <b-row class="g-4 g-xl-6">
             <b-col sm="4" v-for="(image, idx) in lightBoxImages" :key="idx">
               <CustomGLightbox :link="image" data-glightbox data-gallery="image-popup">
@@ -155,6 +182,17 @@
               </CustomGLightbox>
             </b-col>
           </b-row>
+        </b-col> -->
+        <b-col cols="12" class="mt-6">
+          <b-row class="g-4 g-xl-6">
+            <b-col sm="4" v-for="(image, idx) in Project?.project_images" :key="idx">
+              <CustomGLightbox :link="image.image_path" data-glightbox data-gallery="image-popup">
+                <img :src="image.image_path" class="rounded" alt="Project Image"
+                :class="idx == lightBoxImages.length - 2 ? 'mt-sm-6' : ''"
+                />
+              </CustomGLightbox>
+            </b-col>
+          </b-row>
         </b-col>
 
         <b-col cols="12">
@@ -162,11 +200,10 @@
             <b-col lg="5">
               <h4 class="mb-3">Result</h4>
               <p class="lead mb-4">
-                Two assure Edward whence the was. Who worthy yet ten boys denote wonder. Weeks views
-                her sight old tears sorry. Additions can suspected its concealed put furnished.
+                {{ Project?.result }}
               </p>
               <a
-                href="#"
+                href="Project.project_live_links.link"
                 class="btn btn-link heading-color text-primary-hover p-0 mb-0 icons-center"
                 >View project website
                 <BIconBoxArrowUpRight class="ms-2" />
@@ -174,10 +211,8 @@
             </b-col>
 
             <b-col lg="7" xl="6" class="ms-auto">
-              <p>
-                Transforming ideas into reality often requires collaboration with a diverse range of
-                individuals. Partnering with experts, seeking mentorship, and building a network of
-                like-minded individuals can provide valuable insights and support.
+              <p v-for="technology in Project?.project_technologies" :key="technology.tools">
+              {{ technology.tools }}
               </p>
 
               <b-row class="row-cols-2 row-cols-md-3 mt-lg-6 g-4 g-lg-5">
@@ -250,6 +285,7 @@ const lightBoxImages = [masonryImg8, masonryImg6, masonryImg5]
 
 import { onMounted } from 'vue'
 import { UseProjects } from '@/views/portfolio/CaseStudyV1/Services/composables/project'
+import type { SpawnOptions } from 'child_process'
 
 const { Project, loading, error, loadProjects } = UseProjects()
 onMounted(() => {
