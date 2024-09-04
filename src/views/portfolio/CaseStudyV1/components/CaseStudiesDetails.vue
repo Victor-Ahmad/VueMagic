@@ -20,7 +20,9 @@
 
       <b-row>
         <b-col md="9" class="mx-auto text-center" v-if="Project">
-          <div class="d-flex justify-content-center position-relative mb-4">
+
+          
+          <!-- <div class="d-flex justify-content-center position-relative mb-4">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb breadcrumb-dots pb-0 mb-0">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -30,7 +32,7 @@
                 </li>
               </ol>
             </nav>
-          </div>
+          </div> -->
           <h1 class="mb-4">{{ Project.title }}</h1>
           <p>
             {{ Project.description }}
@@ -214,6 +216,29 @@
               <p v-for="technology in Project?.project_technologies" :key="technology.tools">
               {{ technology.tools }}
               </p>
+              <Swiper
+            class="mt-2 mt-md-4"
+            :modules="[Autoplay]"
+            :loop="true"
+            :slidesPerView="2"
+            :spaceBetween="30"
+            :autoplay="{
+              delay: 2000,
+              disableOnInteraction: false
+            }"
+            :breakpoints="{
+              576: { slidesPerView: 3 },
+              768: { slidesPerView: 2 },
+              992: { slidesPerView: 3 },
+              1200: { slidesPerView: 4 }
+            }"
+            wrapperClass="align-items-center"
+          >
+            <SwiperSlide v-for="(image, idx) in clientImages" :key="idx">
+              <img :src="image" class="px-3" :class="!idx && 'ps-0'" alt="client-img" />
+            </SwiperSlide>
+          </Swiper>
+              
 
               <b-row class="row-cols-2 row-cols-md-3 mt-lg-6 g-4 g-lg-5">
                 <b-col>
@@ -275,6 +300,20 @@ import { BIconBoxArrowUpRight, BIconCheckCircle, BIconQuote } from 'bootstrap-ic
 import { about } from '@/views/portfolio/CaseStudyV1/data'
 import { currency } from '@/helpers'
 
+
+import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/vue'
+
+
+
+import client1 from '@/assets/images/client/01.svg'
+import client2 from '@/assets/images/client/02.svg'
+import client3 from '@/assets/images/client/03.svg'
+import client4 from '@/assets/images/client/04.svg'
+
+
+const clientImages = [client1, client2, client3, client4]
+
 import avatar2 from '@/assets/images/avatar/02.jpg'
 import masonryImg5 from '@/assets/images/portfolio/masonry/05.jpg'
 import masonryImg6 from '@/assets/images/portfolio/masonry/06.jpg'
@@ -285,11 +324,14 @@ const lightBoxImages = [masonryImg8, masonryImg6, masonryImg5]
 
 import { onMounted } from 'vue'
 import { UseProjects } from '@/views/portfolio/CaseStudyV1/Services/composables/project'
-import type { SpawnOptions } from 'child_process'
+// import type { SpawnOptions } from 'child_process'
+import { useRoute } from 'vue-router'
 
 const { Project, loading, error, loadProjects } = UseProjects()
+const route = useRoute()
+const ProjectId = route.params.id
 onMounted(() => {
-  loadProjects()
+  loadProjects(Number(ProjectId))
   console.log(Project)
 })
 </script>

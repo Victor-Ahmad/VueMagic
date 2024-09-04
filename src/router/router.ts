@@ -472,7 +472,7 @@ const portfolioRoutes = [
     component: () => import('@/views/portfolio/List/index.vue')
   },
   {
-    path: '/portfolio/case-study/v1',
+    path: '/portfolio/case-study/v1/:id',
     name: 'portfolio.case-study.v1',
     meta: {
       title: setTitle('Portfolio Case Study v.1')

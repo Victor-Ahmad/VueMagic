@@ -42,7 +42,9 @@ import { faCircle, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 </script> -->
 
 <template>
-  <b-card no-body class="card-img-scale bg-transparent overflow-hidden mb-6 mb-xl-8">
+  <b-card no-body class="card-img-scale bg-transparent overflow-hidden mb-6 mb-xl-8"
+  @click="goToCaseCard(Project.id)"
+  >
     <b-row class="g-xl-6 align-items-center">
       <b-col lg="6">
         <div class="card-img-scale-wrapper rounded-2 h-100">
@@ -77,6 +79,11 @@ defineProps({
     required: true
   }
 })
+function goToCaseCard(ProjectId: number) {
+  router.push({ name: 'portfolio.case-study.v1', params: { id: ProjectId } }).then(() => {
+    window.scrollTo(0, 0)
+  })
+}
 
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 </script>

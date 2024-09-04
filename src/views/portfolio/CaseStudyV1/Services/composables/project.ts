@@ -7,12 +7,12 @@ export function UseProjects() {
   const Project = ref<Project[] | null>(null);
   const loading = ref<boolean>(false);
   const error = ref<string | null>(null);
-  const loadProjects = async () => {
+  const loadProjects = async (id: string | number) => {
     loading.value = true;
     error.value = null;
 
     try {
-      const data = await fetchProjects();
+      const data = await fetchProjects(id);
       Project.value = data.result;
       console.log(" project =====================");
       console.log(data);
