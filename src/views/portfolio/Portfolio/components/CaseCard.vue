@@ -72,7 +72,8 @@ import { faCircle, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 <script lang="ts" setup>
 import type { PropType } from 'vue'
 import { type Project } from '../Services/types/ProjectsType'
-
+import { useRoute } from 'vue-router'
+const route = useRoute()
 defineProps({
   item: {
     type: Object as PropType<Project>,
