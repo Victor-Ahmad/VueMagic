@@ -271,7 +271,7 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/ServicesV3/index.vue')
   },
   {
-    path: '/services/single/:id?',
+    path: '/services/single',
     name: 'services.single',
     meta: {
       title: setTitle('Services Single')
@@ -472,7 +472,7 @@ const portfolioRoutes = [
     component: () => import('@/views/portfolio/List/index.vue')
   },
   {
-    path: '/portfolio/case-study/v1/:id',
+    path: '/portfolio/case-study/v1',
     name: 'portfolio.case-study.v1',
     meta: {
       title: setTitle('Portfolio Case Study v.1')

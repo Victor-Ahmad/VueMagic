@@ -43,7 +43,7 @@ import { faCircle, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 
 <template>
   <b-card no-body class="card-img-scale bg-transparent overflow-hidden mb-6 mb-xl-8"
-  @click="goToCaseCard(item.id)"
+  
   >
     <b-row class="g-xl-6 align-items-center">
       <b-col lg="6">
@@ -72,19 +72,15 @@ import { faCircle, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 <script lang="ts" setup>
 import type { PropType } from 'vue'
 import { type Project } from '../Services/types/ProjectsType'
-import { useRouter } from 'vue-router'
-const router = useRouter()
+
+
 defineProps({
   item: {
     type: Object as PropType<Project>,
     required: true
   }
 })
-function goToCaseCard(ProjectId: number) {
-  router.push({ name: 'portfolio.case-study.v1', params: { id: ProjectId } }).then(() => {
-    window.scrollTo(0, 0)
-  })
-}
+
 
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 </script>
