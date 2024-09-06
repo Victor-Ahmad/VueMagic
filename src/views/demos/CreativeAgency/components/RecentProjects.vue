@@ -69,11 +69,11 @@
 
 <script lang="ts" setup>
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
-import { initIsotope } from '@/helpers/init-isotope'
-import { onMounted } from 'vue'
+// import { initIsotope } from '@/helpers/init-isotope'
+// import { onMounted } from 'vue'
 import ProjectCard from '@/views/demos/CreativeAgency/components/ProjectCard.vue'
 import { projects } from '@/views/demos/CreativeAgency/data'
-import router from '@/router'
+// import router from '@/router'
 // import { useRouter } from 'vue-router'
 // const router = useRouter()
 

@@ -178,7 +178,7 @@ const clientImages = [client1, client2, client3, client4]
       <b-row  class="g-4 g-xxl-5">
         <b-col xl="6">
           <h1 class="mb-0 lh-base">
-            Empowering businesses with innovative digital solutions that drive growth and success .
+           We Are [] Agency 
             <!-- <span class="position-relative"
               >digital -->
               <span
@@ -202,7 +202,8 @@ const clientImages = [client1, client2, client3, client4]
           </h1>
 
           <p class="mb-0 mt-4 mt-xl-5">
-            Transform ideas into impactful solutions that enhance user engagement and performance .
+            We combine design and technology to build tailored solutions that elevate brands, 
+            empower businesses, and create lasting impact."
           </p>
 
           <div class="d-flex gap-1 gap-sm-3 flex-wrap mt-4 mt-xl-5">
@@ -235,13 +236,13 @@ const clientImages = [client1, client2, client3, client4]
         </b-col>
 
         <b-col xl="6" class="text-center" >
-          <img :src="item.image" alt="hero-img" />
+          <img :src="leading" >
         </b-col>
       </b-row>
 
       <hr class="border-primary opacity-2 mt-sm-7 my-5" />
-      <b-row>
-        <b-col md="6" xl="7" class="mb-5 mb-md-0">
+      <b-row >
+        <b-col md="6" xl="12" class="mb-5 mb-md-0">
           <!-- <p class="mb-0">
             <BIconShieldCheck class="mb-1" />
             | We believe in going above and beyond to exceed. We reached
@@ -249,7 +250,7 @@ const clientImages = [client1, client2, client3, client4]
           </p> -->
 
           <Swiper
-            class="mt-2 mt-md-4"
+            class="mt-2 mt-md-4 "
             :modules="[Autoplay]"
             :loop="true"
             :slidesPerView="2"
@@ -259,10 +260,10 @@ const clientImages = [client1, client2, client3, client4]
               disableOnInteraction: false
             }"
             :breakpoints="{
-              576: { slidesPerView: 3 },
-              768: { slidesPerView: 2 },
-              992: { slidesPerView: 3 },
-              1200: { slidesPerView: 4 }
+              576: { slidesPerView: 2},
+              768: { slidesPerView: 3 },
+              992: { slidesPerView: 4 },
+              1200: { slidesPerView: 5 }
             }"
             wrapperClass="align-items-center"
           >
@@ -332,6 +333,7 @@ import client2 from '@/assets/images/client/02.svg'
 import client3 from '@/assets/images/client/03.svg'
 import client4 from '@/assets/images/client/04.svg'
 import heroFinance from '@/assets/images/elements/hero-finance.svg'
+import leading  from '@/assets/images/home/leading image.png'
 
 const clientImages = [client1, client2, client3, client4]
 
