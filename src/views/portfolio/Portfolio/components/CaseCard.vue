@@ -42,7 +42,9 @@ import { faCircle, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 </script> -->
 
 <template>
-  <b-card no-body class="card-img-scale bg-transparent overflow-hidden mb-6 mb-xl-8">
+  <b-card no-body class="card-img-scale bg-transparent overflow-hidden mb-6 mb-xl-8"
+  
+  >
     <b-row class="g-xl-6 align-items-center">
       <b-col lg="6">
         <div class="card-img-scale-wrapper rounded-2 h-100">
@@ -71,12 +73,14 @@ import { faCircle, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import type { PropType } from 'vue'
 import { type Project } from '../Services/types/ProjectsType'
 
+
 defineProps({
   item: {
     type: Object as PropType<Project>,
     required: true
   }
 })
+
 
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 </script>

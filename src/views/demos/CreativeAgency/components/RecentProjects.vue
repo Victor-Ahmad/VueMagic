@@ -44,7 +44,7 @@
         </b-col> -->
 
         <b-col
-          @click="goToProjectsPage"
+         
           sm="6"
           lg="4"
           v-for="(project, idx) in projects"
@@ -57,7 +57,7 @@
       </b-row>
       <b-row class="mt-6">
         <b-col class="d-flex flex-row justify-content-center align-items-center">
-          <div class="btn btn-light" @click="goToPortfolioPage">
+          <div class="btn btn-light" >
             View all projects
             <font-awesome-icon :icon="faArrowRightLong" class="ms-1" />
           </div>
@@ -69,23 +69,25 @@
 
 <script lang="ts" setup>
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
-import { initIsotope } from '@/helpers/init-isotope'
-import { onMounted } from 'vue'
+// import { initIsotope } from '@/helpers/init-isotope'
+// import { onMounted } from 'vue'
 import ProjectCard from '@/views/demos/CreativeAgency/components/ProjectCard.vue'
 import { projects } from '@/views/demos/CreativeAgency/data'
-import router from '@/router'
+// import router from '@/router'
+// import { useRouter } from 'vue-router'
+// const router = useRouter()
 
-function goToPortfolioPage() {
-  router.push({ name: 'portfolio.portfolio' }).then(() => {
-    window.scrollTo(0, 0)
-  })
-}
-function goToProjectsPage() {
-  router.push({ name: 'portfolio.case-study.v1' }).then(() => {
-    window.scrollTo(0, 0)
-  })
-}
-onMounted(() => {
-  initIsotope()
-})
+// function goToPortfolioPage() {
+//   router.push({ name: 'portfolio.portfolio' }).then(() => {
+//     window.scrollTo(0, 0)
+//   })
+// }
+// function goToProjectsPage(ProjectId: number) {
+//   router.push({ name: 'portfolio.case-study.v1',params: { id: ProjectId }  }).then(() => {
+//     window.scrollTo(0, 0)
+//   })
+// }
+// onMounted(() => {
+//   initIsotope()
+// })
 </script>
