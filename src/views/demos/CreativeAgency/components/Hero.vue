@@ -158,7 +158,7 @@ const clientImages = [client1, client2, client3, client4]
 <template>
   <section class="pt-xl-8 pb-0">
     <b-container class="pt-2 pt-sm-5">
-      <b-row
+      <!-- <b-row
         v-if="loading"
         class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
       >
@@ -174,13 +174,13 @@ const clientImages = [client1, client2, client3, client4]
         <b-col>
           <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
         </b-col>
-      </b-row>
-      <b-row v-if="home" class="g-4 g-xxl-5">
-        <b-col xl="6" v-for="(item, idx) in home?.hero_section" :key="idx">
+      </b-row> -->
+      <b-row  class="g-4 g-xxl-5">
+        <b-col xl="6">
           <h1 class="mb-0 lh-base">
-            {{ item.title }}
-            <span class="position-relative"
-              >digital
+           We Are [] Agency 
+            <!-- <span class="position-relative"
+              >digital -->
               <span
                 class="position-absolute top-50 start-50 translate-middle z-index-n1 ms-n2 d-none d-sm-block"
               >
@@ -197,12 +197,13 @@ const clientImages = [client1, client2, client3, client4]
                   />
                 </svg>
               </span>
-            </span>
-            realities
+            <!-- </span> -->
+            
           </h1>
 
           <p class="mb-0 mt-4 mt-xl-5">
-            {{ item.sub_title }}
+            We combine design and technology to build tailored solutions that elevate brands, 
+            empower businesses, and create lasting impact."
           </p>
 
           <div class="d-flex gap-1 gap-sm-3 flex-wrap mt-4 mt-xl-5">
@@ -234,8 +235,8 @@ const clientImages = [client1, client2, client3, client4]
           </ul>
         </b-col>
 
-        <b-col xl="6" class="text-center" v-for="(item, idx) in home?.hero_section" :key="idx">
-          <img :src="item.image" alt="hero-img" />
+        <b-col xl="6" class="text-center" >
+          <img :src="leading" >
         </b-col>
       </b-row>
       <b-row
@@ -247,16 +248,16 @@ const clientImages = [client1, client2, client3, client4]
         </b-col>
       </b-row>
       <hr class="border-primary opacity-2 mt-sm-7 my-5" />
-      <b-row>
-        <b-col md="6" xl="7" class="mb-5 mb-md-0">
-          <p class="mb-0">
+      <b-row >
+        <b-col md="6" xl="12" class="mb-5 mb-md-0">
+          <!-- <p class="mb-0">
             <BIconShieldCheck class="mb-1" />
             | We believe in going above and beyond to exceed. We reached
             <b class="text-primary fs-6">19k</b>
-          </p>
+          </p> -->
 
           <Swiper
-            class="mt-2 mt-md-4"
+            class="mt-2 mt-md-4 "
             :modules="[Autoplay]"
             :loop="true"
             :slidesPerView="2"
@@ -266,10 +267,10 @@ const clientImages = [client1, client2, client3, client4]
               disableOnInteraction: false
             }"
             :breakpoints="{
-              576: { slidesPerView: 3 },
-              768: { slidesPerView: 2 },
-              992: { slidesPerView: 3 },
-              1200: { slidesPerView: 4 }
+              576: { slidesPerView: 2},
+              768: { slidesPerView: 3 },
+              992: { slidesPerView: 4 },
+              1200: { slidesPerView: 5 }
             }"
             wrapperClass="align-items-center"
           >
@@ -279,7 +280,7 @@ const clientImages = [client1, client2, client3, client4]
           </Swiper>
         </b-col>
 
-        <b-col md="6" lg="5" xl="3" class="ms-auto text-md-end">
+        <!-- <b-col md="6" lg="5" xl="3" class="ms-auto text-md-end">
           <p class="mb-0 me-2">Trusted by Customers <span class="badge bg-dark">Active</span></p>
 
           <div class="d-flex justify-content-md-end mt-2 mt-md-4">
@@ -294,7 +295,7 @@ const clientImages = [client1, client2, client3, client4]
                     :duration="3"
                   />
                 </h4>
-              </div>
+              <!-- </div>
               <p class="mb-0">Active users</p>
             </div>
 
@@ -308,9 +309,10 @@ const clientImages = [client1, client2, client3, client4]
               </div>
               <p class="mb-0">Completed projects</p>
             </div>
-          </div>
-        </b-col>
+          </div> --> -->
+        <!-- </b-col> -->
       </b-row>
+
     </b-container>
   </section>
 </template>
@@ -331,14 +333,15 @@ import client2 from '@/assets/images/client/02.svg'
 import client3 from '@/assets/images/client/03.svg'
 import client4 from '@/assets/images/client/04.svg'
 import heroFinance from '@/assets/images/elements/hero-finance.svg'
+import leading  from '@/assets/images/home/leading image.png'
 
 const clientImages = [client1, client2, client3, client4]
 
-import { onMounted } from 'vue'
-import { useHome } from '@/views/demos/CreativeAgency/Services/composables/home'
-const { home, loading, error, loadHome } = useHome()
-const hero_section = home.hero_section
-onMounted(() => {
-  loadHome()
-})
+// import { onMounted } from 'vue'
+// import { useHome } from '@/views/demos/CreativeAgency/Services/composables/home'
+// const { home, loading, error, loadHome } = useHome()
+// const hero_section = home.hero_section
+// onMounted(() => {
+//   loadHome()
+// })
 </script>

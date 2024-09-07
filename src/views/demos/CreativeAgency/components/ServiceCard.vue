@@ -1,5 +1,9 @@
 <template>
-  <b-card no-body class="card-hover-shadow border h-100 p-4" @click="goToServicePage">
+  <b-card no-body class="card-hover-shadow border h-100 p-4" 
+  
+  >
+  <!-- @click="goToServicePage" -->
+  
     <b-card-body class="p-0">
       <figure class="text-primary mb-4">
         <span v-html="service.icon" />
@@ -37,9 +41,9 @@ defineProps({
     required: true
   }
 })
-function goToServicePage() {
-  router.push({ name: 'services.single' }).then(() => {
-    window.scrollTo(0, 0)
-  })
-}
+// function goToServicePage() {
+//   router.push({ name: 'services.single' }).then(() => {
+//     window.scrollTo(0, 0)
+//   })
+// }
 </script>
