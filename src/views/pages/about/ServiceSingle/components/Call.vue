@@ -19,6 +19,27 @@
             </p>
 
             <a @click="goToServicePage" class="btn btn-primary mb-6">Get started today</a>
+
+            <p class="text-white text-center">Used by the world best companies.</p>
+
+            <Swiper
+              :modules="[Autoplay]"
+              :autoplay="{
+                delay: 2000
+              }"
+              :loop="false"
+              :slidesPerView="2"
+              :spaceBetween="30"
+              :breakpoints="{
+                576: { slidesPerView: 2 },
+                768: { slidesPerView: 4 }
+              }"
+              wrapperClass="align-items-center"
+            >
+              <SwiperSlide v-for="(item, idx) in swiper" :key="idx">
+                <img :src="item" class="px-sm-3 ps-0" alt="client-img" />
+              </SwiperSlide>
+            </Swiper>
           </b-col>
         </b-row>
       </div>
@@ -27,6 +48,10 @@
 </template>
 
 <script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay } from 'swiper/modules'
+import { swiper } from '@/views/pages/about/ServiceV2/data'
+
 import ctaVectorImg from '@/assets/images/elements/cta-vector.svg'
 import saasDecoration05 from '@/assets/images/elements/saas-decoration/05.png'
 import { useRouter } from 'vue-router'

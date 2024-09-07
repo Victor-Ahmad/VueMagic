@@ -10,9 +10,9 @@
           <ThemeToggleDropdown />
 
           <li class="nav-item me-2 d-none d-sm-block">
-            <router-link :to="{ name: 'auth.sign-in' }" class="btn btn-sm btn-light mb-0"
-              ><BIconPersonCircle class="me-1" />Sign up</router-link
-            >
+            <router-link :to="{ name: 'auth.sign-in' }" class="btn btn-sm btn-light mb-0">
+              <BIconPersonCircle class="me-1" />Sign up
+            </router-link>
           </li>
 
           <li class="nav-item d-none d-sm-block">

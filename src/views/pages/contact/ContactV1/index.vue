@@ -1,11 +1,11 @@
 <template>
-  <!-- <TopNavigationBar9 /> -->
+  <TopNavigationBar9 />
   <main>
     <Hero />
     <NextSection />
     <ContactMap />
   </main>
-  <!-- <Footer9 /> -->
+  <Footer9 />
 </template>
 
 <script setup lang="ts">

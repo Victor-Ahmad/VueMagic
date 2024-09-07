@@ -1,5 +1,5 @@
 <template>
-  <!-- <TopNavigationBar8 /> -->
+  <TopNavigationBar8 />
   <main>
     <Hero />
     <Requirements />
@@ -9,7 +9,7 @@
     <ButtonForContact />
   </main>
 
-  <!-- <Footer9 /> -->
+  <Footer9 />
 </template>
 
 <script setup lang="ts">

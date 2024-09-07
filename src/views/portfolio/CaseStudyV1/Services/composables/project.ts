@@ -14,7 +14,8 @@ export function UseProjects() {
     try {
       const data = await fetchProjects();
       Project.value = data.result;
-     
+      console.log(" project =====================");
+      console.log(data);
     } catch (err) {
       error.value = 'Failed to load projects';
       console.error(err);

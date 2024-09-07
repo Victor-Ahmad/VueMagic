@@ -239,14 +239,7 @@ const clientImages = [client1, client2, client3, client4]
           <img :src="leading" >
         </b-col>
       </b-row>
-      <b-row
-        v-if="!home"
-        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
-      >
-        <b-col>
-          <p class="mb-2 p-2 rounded text-white bg-primary">No data available.</p>
-        </b-col>
-      </b-row>
+
       <hr class="border-primary opacity-2 mt-sm-7 my-5" />
       <b-row >
         <b-col md="6" xl="12" class="mb-5 mb-md-0">
@@ -312,7 +305,14 @@ const clientImages = [client1, client2, client3, client4]
           </div> --> -->
         <!-- </b-col> -->
       </b-row>
-
+      <!-- <b-row
+        v-if="home && !home.length"
+        class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
+      >
+        <b-col>
+          <p class="mb-2 p-2 rounded text-white bg-primary">No data available.</p>
+        </b-col>
+      </b-row> -->
     </b-container>
   </section>
 </template>
