@@ -21,16 +21,16 @@
     </li>
   </ul>
 
-  <p class="fs-5 heading-color">"{{ testimonial.client_testimonial }}"</p>
+  <p class="fs-5 heading-color">"{{ testimonial.description }}"</p>
 
   <div class="blockquote-footer mb-0 fs-6 mt-3">
-    {{ testimonial.client_name }}
+    {{ testimonial.title }}
   </div>
 </template>
 
 <script setup lang="ts">
 import { type PropType } from 'vue'
-import type { PricingType } from '@/views/pages/about/ServiceSingle/Services/types/ServiceType'
+import type { PricingType } from '@/views/pages/about/ServiceSingle/data'
 import { BIconStarFill, BIconStarHalf } from 'bootstrap-icons-vue'
 
 defineProps({

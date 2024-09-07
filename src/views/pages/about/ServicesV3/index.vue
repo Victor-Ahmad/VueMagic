@@ -8,9 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import Nav2 from '@/views/pages/about/ServicesV3/components/Nav2.vue'
 import Hero from '@/views/pages/about/ServicesV3/components/Hero.vue'
-import Footer1 from '@/views/pages/about/ServicesV3/components/Footer1.vue'
 import ServicePage from '@/views/pages/about/ServicesV3/components/ServicePage.vue'
 import ButtonForContact from '@/views/pages/about/ServicesV3/components/ButtonForContact.vue'
 // import Test1 from '@/views/pages/about/ServicesV3/components/Test1.vue'
