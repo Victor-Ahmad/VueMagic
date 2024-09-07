@@ -15,7 +15,9 @@ import { BIconTelephone } from 'bootstrap-icons-vue'
 const router = useRouter()
 
 const goToContact = () => {
-  router.push({ name: 'contact.v1' })
+  router.push({ name: 'contact.v1' }).then(() => {
+    window.scrollTo(0, 0)
+  })
 }
 </script>
 

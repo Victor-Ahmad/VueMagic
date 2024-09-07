@@ -1,6 +1,6 @@
 <template>
   <StickyHeader class-name="header-absolute">
-    <nav class="navbar navbar-expand-xl">
+    <nav class="navbar navbar-expand-xl navbar-nav dropdown-hover">
       <b-container>
         <LogoBox class-name="me-0" />
 
@@ -9,14 +9,10 @@
         <ul class="nav align-items-center dropdown-hover ms-sm-2">
           <ThemeToggleDropdown />
 
-          <li class="nav-item me-2 d-none d-sm-block">
-            <router-link :to="{ name: 'auth.sign-in' }" class="btn btn-sm btn-light mb-0"
-              ><BIconPersonCircle class="me-1" />Sign up</router-link
-            >
-          </li>
-
           <li class="nav-item d-none d-sm-block">
-            <a :href="buyLink" target="_blank" class="btn btn-sm btn-primary mb-0">Buy now!</a>
+            <router-link class="btn btn-sm btn-primary mb-0" :to="{ name: 'contact.v1' }">
+              Hire us
+            </router-link>
           </li>
 
           <li class="nav-item">
