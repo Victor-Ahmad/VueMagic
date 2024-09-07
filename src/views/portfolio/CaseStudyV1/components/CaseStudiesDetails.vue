@@ -20,8 +20,6 @@
 
       <b-row>
         <b-col md="9" class="mx-auto text-center" v-if="Project">
-
-          
           <!-- <div class="d-flex justify-content-center position-relative mb-4">
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb breadcrumb-dots pb-0 mb-0">
@@ -75,20 +73,23 @@
                     </p>
                   </li>
                   <li class="list-group-item mb-3">
-                  <small>Duration</small>
+                    <small>time_in_days</small>
                     <p class="heading-color lead mt-1 mb-0">
-                      {{ Project?.time_in_days ??'' }}
+                      {{ Project?.time_in_days ?? '' }}
                     </p>
                   </li>
-                  <!-- <li class="list-group-item mb-3">
-                  <small>time</small>
+                  <li class="list-group-item mb-3">
+                    <small>time</small>
                     <p class="heading-color lead mt-1 mb-0">
-                      {{ Project?.time ??'' }}
+                      {{ Project?.time ?? '' }}
                     </p>
-                  </li> -->
+                  </li>
+                  -->
 
                   <li class="list-group-item d-grid mb-0">
-                    <a href="Project.project_live_links.link" class="btn btn-lg btn-primary mb-0 flex-centered"
+                    <a
+                      href="Project.project_live_links.link"
+                      class="btn btn-lg btn-primary mb-0 flex-centered"
                       >View project website
                       <BIconBoxArrowUpRight class="ms-2" />
                     </a>
@@ -130,7 +131,10 @@
 
               <h4 class="mb-3">Achievements</h4>
               <ul>
-                <li v-for="achievement in Project?.achievements" :key="achievement.achievement_name">
+                <li
+                  v-for="achievement in Project?.achievements"
+                  :key="achievement.achievement_name"
+                >
                   {{ achievement.achievement_name }}
                 </li>
               </ul>
@@ -163,10 +167,10 @@
               <h4 class="mb-3">Challenges</h4>
               <ul>
                 <li v-for="challenge in Project?.challenges" :key="challenge.challenge_name">
-                  <strong>{{ challenge.challenge_name }}</strong>: {{ challenge.challenge_description }}
+                  <strong>{{ challenge.challenge_name }}</strong
+                  >: {{ challenge.challenge_description }}
                 </li>
               </ul>
-
             </b-col>
           </b-row>
         </b-col>
@@ -189,8 +193,11 @@
           <b-row class="g-4 g-xl-6">
             <b-col sm="4" v-for="(image, idx) in Project?.project_images" :key="idx">
               <CustomGLightbox :link="image.image_path" data-glightbox data-gallery="image-popup">
-                <img :src="image.image_path" class="rounded" alt="Project Image"
-                :class="idx == lightBoxImages.length - 2 ? 'mt-sm-6' : ''"
+                <img
+                  :src="image.image_path"
+                  class="rounded"
+                  alt="Project Image"
+                  :class="idx == lightBoxImages.length - 2 ? 'mt-sm-6' : ''"
                 />
               </CustomGLightbox>
             </b-col>
@@ -214,31 +221,30 @@
 
             <b-col lg="7" xl="6" class="ms-auto">
               <p v-for="technology in Project?.project_technologies" :key="technology.tools">
-              {{ technology.tools }}
+                {{ technology.tools }}
               </p>
               <Swiper
-            class="mt-2 mt-md-4"
-            :modules="[Autoplay]"
-            :loop="true"
-            :slidesPerView="2"
-            :spaceBetween="30"
-            :autoplay="{
-              delay: 2000,
-              disableOnInteraction: false
-            }"
-            :breakpoints="{
-              576: { slidesPerView: 3 },
-              768: { slidesPerView: 2 },
-              992: { slidesPerView: 3 },
-              1200: { slidesPerView: 4 }
-            }"
-            wrapperClass="align-items-center"
-          >
-            <SwiperSlide v-for="(image, idx) in clientImages" :key="idx">
-              <img :src="image" class="px-3" :class="!idx && 'ps-0'" alt="client-img" />
-            </SwiperSlide>
-          </Swiper>
-              
+                class="mt-2 mt-md-4"
+                :modules="[Autoplay]"
+                :loop="true"
+                :slidesPerView="2"
+                :spaceBetween="30"
+                :autoplay="{
+                  delay: 2000,
+                  disableOnInteraction: false
+                }"
+                :breakpoints="{
+                  576: { slidesPerView: 3 },
+                  768: { slidesPerView: 2 },
+                  992: { slidesPerView: 3 },
+                  1200: { slidesPerView: 4 }
+                }"
+                wrapperClass="align-items-center"
+              >
+                <SwiperSlide v-for="(image, idx) in clientImages" :key="idx">
+                  <img :src="image" class="px-3" :class="!idx && 'ps-0'" alt="client-img" />
+                </SwiperSlide>
+              </Swiper>
 
               <b-row class="row-cols-2 row-cols-md-3 mt-lg-6 g-4 g-lg-5">
                 <b-col>
@@ -300,17 +306,13 @@ import { BIconBoxArrowUpRight, BIconCheckCircle, BIconQuote } from 'bootstrap-ic
 import { about } from '@/views/portfolio/CaseStudyV1/data'
 import { currency } from '@/helpers'
 
-
 import { Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/vue'
-
-
 
 import client1 from '@/assets/images/client/01.svg'
 import client2 from '@/assets/images/client/02.svg'
 import client3 from '@/assets/images/client/03.svg'
 import client4 from '@/assets/images/client/04.svg'
-
 
 const clientImages = [client1, client2, client3, client4]
 
@@ -321,17 +323,18 @@ import masonryImg8 from '@/assets/images/portfolio/masonry/08.jpg'
 import caseStudyImg1 from '@/assets/images/portfolio/case-study-01.jpg'
 
 const lightBoxImages = [masonryImg8, masonryImg6, masonryImg5]
-
-import { onMounted } from 'vue'
-import { UseProjects } from '@/views/portfolio/CaseStudyV1/Services/composables/project'
-// import type { SpawnOptions } from 'child_process'
-import { useRoute } from 'vue-router'
-
-const { Project, loading, error, loadProjects } = UseProjects()
-const route = useRoute()
-const ProjectId = route.params.id
-onMounted(() => {
-  loadProjects(Number(ProjectId))
-  console.log(Project)
+defineProps({
+  Project: {
+    type: Object,
+    default: null
+  },
+  loading: {
+    type: Boolean,
+    default: false
+  },
+  error: {
+    type: String,
+    default: ''
+  }
 })
 </script>

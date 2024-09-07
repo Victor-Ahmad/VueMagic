@@ -1,6 +1,6 @@
 <template>
   <main>
-    <TopNavigationBar2 />
+    <!-- <TopNavigationBar2 /> -->
 
     <Hero />
 
@@ -19,7 +19,7 @@
     <!-- <Blogs /> -->
   </main>
 
-  <Footer2 />
+  <!-- <Footer2 /> -->
 </template>
 
 <script lang="ts" setup>

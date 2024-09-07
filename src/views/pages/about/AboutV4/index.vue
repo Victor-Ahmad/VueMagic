@@ -1,5 +1,5 @@
 <template>
-  <Nav1 />
+  <!-- <Nav1 /> -->
   <main>
     <About1 />
     <Counter1 />
@@ -11,7 +11,7 @@
     <Testimonial />
     <Contact1 />
   </main>
-  <Footer2 />
+  <!-- <Footer2 /> -->
 </template>
 <script setup lang="ts">
 import Nav1 from '@/views/pages/about/AboutV4/components/Nav1.vue'

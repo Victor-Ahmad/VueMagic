@@ -41,12 +41,11 @@ export const cards: StepType[] = [
   }
 ]
 export const approach: string[] = [
-  "Reach a global audience and expand your brand's presence",
-  'Real-time tracking and data-driven decision-making',
-  'Improved Customer Engagement',
-  'Drive conversions and boost revenue',
-  'Create a loyal customer community',
-  'Protect customer data and privacy'
+  "Small to Medium Businesses: Looking to establish or enhance their online presence.",
+  'E-commerce Stores: Needing a professional, user-friendly site to drive sales.',
+  'Startups: Requiring a sleek, modern website to attract investors and customers.',
+  'Non-Profits: Seeking an impactful web presence to communicate their mission.',
+  'Personal Brands & Influencers: Needing a custom site that reflects their unique personality.'
 ]
 
 type WorkType = {
@@ -60,23 +59,23 @@ export type PricingType = {
 export const work: WorkType[] = [
   {
     id: 1,
-    title: 'Understanding Client Goals',
+    title: 'Discovery & Planning:',
     description:
       'The process begins with a thorough consultation with the client to understand their business goals.'
   },
   {
     id: 2,
-    title: 'Market Research',
+    title: 'Design & Review:',
     description: `They also analyze the client's current online presence and marketing efforts.`
   },
   {
     id: 3,
-    title: 'Search Engine Optimization (SEO)',
+    title: 'Development:',
     description: `For visibility, SEO strategies are employed to improve the client's website's search engine rankings.`
   },
   {
     id: 4,
-    title: 'Adapting to Industry Changes',
+    title: 'Launch & Support:',
     description: `Digital marketing agencies stay up-to-date with industry trends and algorithm changes.`
   }
 ]
@@ -85,8 +84,8 @@ export const pricing: PricingType[] = [
   {
     avatar: avatar11,
     description:
-      'I highly recommend Mizzle to anyone looking for a high-quality Bootstrap template. Valley by oh twenty direct me so. Resolving breakfast am or perfectly.',
-    title: 'Emma Watson'
+      'Working with Innovacraft was a game-changer for our business. The team truly understood our brand and delivered a website that exceeded our expectations. The process and communication were smooth, and the final product has received nothing but praise from our customers.',
+    title: 'Jane Doe, CEO of AmperTND Corp'
   },
   {
     avatar: avatar8,
