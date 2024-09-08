@@ -155,8 +155,8 @@ import heroFinance from '@/assets/images/elements/hero-finance.svg'
 const clientImages = [client1, client2, client3, client4]
 </script> -->
 
-<template>
-  <section class="pt-xl-8 pb-0">
+<template >
+  <section class="pt-xl-8 pb-0 pb-5 pt-5">
     <b-container class="pt-2 pt-sm-5">
       <!-- <b-row
         v-if="loading"
@@ -242,7 +242,7 @@ const clientImages = [client1, client2, client3, client4]
 
       <hr class="border-primary opacity-2 mt-sm-7 my-5" />
       <b-row >
-        <b-col md="6" xl="12" class="mb-5 mb-md-0">
+        <b-col md="6" xl="12" class="mb-5 mb-md-0 pb-5">
           <!-- <p class="mb-0">
             <BIconShieldCheck class="mb-1" />
             | We believe in going above and beyond to exceed. We reached
@@ -253,8 +253,8 @@ const clientImages = [client1, client2, client3, client4]
             class="mt-2 mt-md-4 "
             :modules="[Autoplay]"
             :loop="true"
-            :slidesPerView="2"
-            :spaceBetween="30"
+            :slidesPerView="6"
+            :spaceBetween="20"
             :autoplay="{
               delay: 2000,
               disableOnInteraction: false
@@ -262,13 +262,13 @@ const clientImages = [client1, client2, client3, client4]
             :breakpoints="{
               576: { slidesPerView: 2},
               768: { slidesPerView: 3 },
-              992: { slidesPerView: 4 },
-              1200: { slidesPerView: 5 }
+              992: { slidesPerView: 4},
+              1200: { slidesPerView: 6 }
             }"
             wrapperClass="align-items-center"
           >
-            <SwiperSlide v-for="(image, idx) in clientImages" :key="idx">
-              <img :src="image" class="px-3" :class="!idx && 'ps-0'" alt="client-img" />
+          <SwiperSlide v-for="(image, idx) in clientImages" :key="idx">
+              <img :src="image" class="px-3 " :class="!idx && 'ps-0'" alt="client-img" />
             </SwiperSlide>
           </Swiper>
         </b-col>
@@ -288,7 +288,7 @@ const clientImages = [client1, client2, client3, client4]
                     :duration="3"
                   />
                 </h4>
-              <!-- </div>
+               </div>
               <p class="mb-0">Active users</p>
             </div>
 
@@ -302,7 +302,7 @@ const clientImages = [client1, client2, client3, client4]
               </div>
               <p class="mb-0">Completed projects</p>
             </div>
-          </div> --> -->
+          </div> --> 
         <!-- </b-col> -->
       </b-row>
       <!-- <b-row
@@ -332,10 +332,36 @@ import client1 from '@/assets/images/client/01.svg'
 import client2 from '@/assets/images/client/02.svg'
 import client3 from '@/assets/images/client/03.svg'
 import client4 from '@/assets/images/client/04.svg'
+import client5 from '@/assets/images/client/icon-01.svg'
+import client6 from '@/assets/images/client/icon-02.svg'
+import client7 from '@/assets/images/client/icon-03.svg'
+import client8 from '@/assets/images/client/icon-04.svg'
+import client9 from '@/assets/images/client/icon-05.svg'
+import client10 from '@/assets/images/client/icon-06.svg'
+import client11 from '@/assets/images/client/icon-07.svg'
+import client12 from '@/assets/images/client/icon-08.svg'
+import client13 from '@/assets/images/client/icon-09.svg'
+import client14 from '@/assets/images/client/icon-10.svg'
+import client15 from '@/assets/images/client/icon-11.svg'
+import client16 from '@/assets/images/client/icon-12.svg'
+import client17 from '@/assets/images/client/icon-13.svg'
+import client18 from '@/assets/images/client/icon-14.svg'
+import client19 from '@/assets/images/client/icon-15.svg'
+import client20 from '@/assets/images/client/icon-16.svg'
+import client21 from '@/assets/images/client/icon-17.svg'
+import client22 from '@/assets/images/client/icon-18.svg'
+import client23 from '@/assets/images/client/icon-19.svg'
+import client24 from '@/assets/images/client/icon-20.svg'
+import client25 from '@/assets/images/client/icon-21.svg'
 import heroFinance from '@/assets/images/elements/hero-finance.svg'
 import leading  from '@/assets/images/home/leading image.png'
 
-const clientImages = [client1, client2, client3, client4]
+const clientImages = [client1, client2, client3, client4, client5,
+                      client6, client7, client8, client9, client10,
+                      client11, client12, client13, client14, client15,
+                      client16, client17, client18, client19, client20,
+                      client21, client22, client23, client24, client25
+                     ]
 
 // import { onMounted } from 'vue'
 // import { useHome } from '@/views/demos/CreativeAgency/Services/composables/home'

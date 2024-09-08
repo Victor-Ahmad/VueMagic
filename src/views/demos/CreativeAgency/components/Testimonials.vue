@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-md-0">
+  <section class="pt-md-5">
     <b-container>
       <div class="bg-primary position-relative rounded p-4 pt-sm-5 px-sm-5 mb-n9">
         <span class="display-4 heading-color position-absolute top-0 start-0 mt-n4 mt-md-n5 ms-4">
