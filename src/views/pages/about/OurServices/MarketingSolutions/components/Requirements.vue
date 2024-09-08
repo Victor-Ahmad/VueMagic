@@ -4,9 +4,10 @@
       <b-row>
         <b-col lg="4" class="mb-5">
           <CustomStickyElement data-sticky data-margin-top="80" data-sticky-for="576">
-            <h2 class="mb-4">Mobile Development Requirements</h2>
+            <h2 class="mb-4">Marketing Solutions Requirements</h2>
             <p class="mb-4">
-              To get started with our Mobile Development service, we will need the following:
+              To craft a marketing strategy that resonates with your target audience, we need the
+              following:
             </p>
           </CustomStickyElement>
         </b-col>
@@ -32,7 +33,7 @@
 
 <script setup lang="ts">
 import CustomStickyElement from '@/components/CustomStickyElement.vue'
-import { cards } from '@/views/pages/about/OurServices/MobileDevelopment/data'
+import { cards } from '@/views/pages/about/OurServices/MarketingSolutions/data'
 </script>
 <style scoped>
 .card:hover {

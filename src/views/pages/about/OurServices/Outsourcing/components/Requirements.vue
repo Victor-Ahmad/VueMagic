@@ -4,9 +4,9 @@
       <b-row>
         <b-col lg="4" class="mb-5">
           <CustomStickyElement data-sticky data-margin-top="80" data-sticky-for="576">
-            <h2 class="mb-4">Mobile Development Requirements</h2>
+            <h2 class="mb-4">Outsourcing Requirements</h2>
             <p class="mb-4">
-              To get started with our Mobile Development service, we will need the following:
+              To ensure we provide a customized outsourcing solution, please provide:
             </p>
           </CustomStickyElement>
         </b-col>
@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import CustomStickyElement from '@/components/CustomStickyElement.vue'
-import { cards } from '@/views/pages/about/OurServices/MobileDevelopment/data'
+import { cards } from '@/views/pages/about/OurServices/Outsourcing/data'
 </script>
 <style scoped>
 .card:hover {
