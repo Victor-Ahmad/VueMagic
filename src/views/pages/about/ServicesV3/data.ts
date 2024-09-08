@@ -26,10 +26,11 @@ export const services: ServiceType[] = [
     route: { name: 'ourservices.ui-ux-design' }
   },
   {
-    title: 'Content Creation',
+    title: 'Mobile Development',
     description:
       "Our Marketing Strategy service is designed to elevate your brand's visibility and engagement.",
-    icon: marketingIcon
+    icon: marketingIcon,
+    route: { name: 'ourservices.mobile-development' }
   },
   {
     title: 'software solutions',
