@@ -1,5 +1,5 @@
 <template>
-  <section class="pb-0" style="background-color: #e7f8ee">
+  <section class="pb-5 pt-5" >
     <b-container>
       <b-row class="mb-3 mb-xl-0">
         <b-col xl="12">
@@ -11,29 +11,29 @@
         </b-col>
       </b-row>
       <b-row class="align-items-center">
-        <b-col lg="6" class="pe-lg-5 mt-3">
-          <p class="mb-5">
+        <b-col lg="6" class="pe-lg-5 mt-3"  >
+          <p class="mb-5"  >
             At InnovaCraft , we combine creative innovation with technical 
             expertise to deliver tailored solutions that drive business growth , 
             transform ideas into reality , and empower brands to succeed in the
              digital world . 
           </p>
 
-          <b-card no-body class="card-body bg-light p-sm-5 h-100">
+          <b-card no-body class="card-body bg-light p-sm-5 h-100  ">
             <img :src="about3" class="position-absolute bottom-0 end-0 mb-0 me-3 d-none d-sm-block w-25" 
             />
             
 
-            <b-tabs nav-class="nav-pills nav-pills-dark border-0" content-class="mt-4">
+            <b-tabs nav-class="nav-pills nav-pills-dark border-0" content-class="mt-4" >
               <b-tab title="Our Mission" class="fade">
                 <!-- <h5 class="mb-3">Modern & creative agency specialized in Business</h5> -->
                 <p class="mb-2">
                   Empowering businesses with innovative digital solutions that drive growth and success .
                 </p>
 
-                <ul class="list-group list-group-borderless mb-3">
+                <ul class="list-group list-group-borderless mb-3" style="max-width: 380px;">
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
+                    <BIconPatchCheckFill class="me-2"  />
                     Deliver creative , technology - driven strategies tailored to our clients ' unique needs .
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
@@ -60,7 +60,7 @@
                   Our goals focus on driving innovation , delivering value , and building lasting partnerships .
                 </p>
 
-                <ul class="list-group list-group-borderless mb-3">
+                <ul class="list-group list-group-borderless mb-3" style="max-width: 380px;">
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
                     <BIconPatchCheckFill class="me-2" />
                     Innovate Continuously : Stay ahead of industry trends with cutting - edge solutions .
