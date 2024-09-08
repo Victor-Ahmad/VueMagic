@@ -22,16 +22,12 @@
         <b-col lg="6" class="mb-6 mb-lg-0 d-none d-lg-block">
           <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
-              <h3 class="mb-3">
-               
-              </h3>
+              <h3 class="mb-3"></h3>
 
               <p></p>
               <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
-                <b-list-group-item
-                class="heading-color d-flex mb-0"
-                >
-                <!-- v-for="list in home?.contact_page?.whats_next?.whats_next_steps ?? []"
+                <b-list-group-item class="heading-color d-flex mb-0">
+                  <!-- v-for="list in home?.contact_page?.whats_next?.whats_next_steps ?? []"
                 :key="list" -->
                   <span class="flex-centered">
                     <BIconPatchCheck class="text-primary me-2" />
@@ -71,7 +67,7 @@
             </figure>
             <h1 class="mb-5 h3">Let's level up your brand, together</h1>
 
-            <b-form  class="row g-4">
+            <b-form class="row g-4">
               <b-col md="6">
                 <b-form-group
                   label="First name *"
@@ -155,13 +151,7 @@
               </b-col>
 
               <b-col cols="12">
-                <b-button
-                  type="submit"
-                  class="mb-0"
-                  variant="primary"
-                  size="lg"
-                  
-                >
+                <b-button type="submit" class="mb-0" variant="primary" size="lg">
                   Send a message
                 </b-button>
               </b-col>
@@ -211,15 +201,13 @@
           <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
               <h3 class="mb-3">
-                {{ }}
+                {{}}
               </h3>
 
-              <p>{{  }}</p>
+              <p>{{}}</p>
               <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
-                <b-list-group-item
-                class="heading-color d-flex mb-0"
-                >
-                <!-- v-for="list in home?.contact_page?.whats_next?.whats_next_steps ?? []"
+                <b-list-group-item class="heading-color d-flex mb-0">
+                  <!-- v-for="list in home?.contact_page?.whats_next?.whats_next_steps ?? []"
                 :key="list" -->
                   <span class="flex-centered">
                     <BIconPatchCheck class="text-primary me-2" />
@@ -239,9 +227,9 @@
 import { ref, onMounted } from 'vue'
 import { lists } from '@/views/demos/CreativeAgency/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'
-import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
-import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
-import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
+// import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
+// import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
+// import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
 
 const firstName = ref<string>('')
 const lastName = ref<string>('')
