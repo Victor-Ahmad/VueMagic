@@ -328,31 +328,28 @@ import {
   BIconStopwatch
 } from 'bootstrap-icons-vue'
 
-import client1 from '@/assets/images/client/01.svg'
-import client2 from '@/assets/images/client/02.svg'
-import client3 from '@/assets/images/client/03.svg'
-import client4 from '@/assets/images/client/04.svg'
-import client5 from '@/assets/images/client/icon-01.svg'
-import client6 from '@/assets/images/client/icon-02.svg'
-import client7 from '@/assets/images/client/icon-03.svg'
-import client8 from '@/assets/images/client/icon-04.svg'
-import client9 from '@/assets/images/client/icon-05.svg'
-import client10 from '@/assets/images/client/icon-06.svg'
-import client11 from '@/assets/images/client/icon-07.svg'
-import client12 from '@/assets/images/client/icon-08.svg'
-import client13 from '@/assets/images/client/icon-09.svg'
-import client14 from '@/assets/images/client/icon-10.svg'
-import client15 from '@/assets/images/client/icon-11.svg'
-import client16 from '@/assets/images/client/icon-12.svg'
-import client17 from '@/assets/images/client/icon-13.svg'
-import client18 from '@/assets/images/client/icon-14.svg'
-import client19 from '@/assets/images/client/icon-15.svg'
-import client20 from '@/assets/images/client/icon-16.svg'
-import client21 from '@/assets/images/client/icon-17.svg'
-import client22 from '@/assets/images/client/icon-18.svg'
-import client23 from '@/assets/images/client/icon-19.svg'
-import client24 from '@/assets/images/client/icon-20.svg'
-import client25 from '@/assets/images/client/icon-21.svg'
+
+import client1 from '@/assets/images/client/icon-01.svg'
+import client2 from '@/assets/images/client/icon-02.svg'
+import client3 from '@/assets/images/client/icon-03.svg'
+import client4 from '@/assets/images/client/icon-04.svg'
+import client5 from '@/assets/images/client/icon-05.svg'
+import client6 from '@/assets/images/client/icon-06.svg'
+import client7 from '@/assets/images/client/icon-07.svg'
+import client8 from '@/assets/images/client/icon-08.svg'
+import client9 from '@/assets/images/client/icon-09.svg'
+import client10 from '@/assets/images/client/icon-10.svg'
+import client11 from '@/assets/images/client/icon-11.svg'
+import client12 from '@/assets/images/client/icon-12.svg'
+import client13 from '@/assets/images/client/icon-13.svg'
+import client14 from '@/assets/images/client/icon-14.svg'
+import client15 from '@/assets/images/client/icon-15.svg'
+import client16 from '@/assets/images/client/icon-16.svg'
+import client17 from '@/assets/images/client/icon-17.svg'
+import client18 from '@/assets/images/client/icon-18.svg'
+import client19 from '@/assets/images/client/icon-19.svg'
+import client20 from '@/assets/images/client/icon-20.svg'
+import client21 from '@/assets/images/client/icon-21.svg'
 import heroFinance from '@/assets/images/elements/hero-finance.svg'
 import leading  from '@/assets/images/home/leading image.png'
 
@@ -360,7 +357,7 @@ const clientImages = [client1, client2, client3, client4, client5,
                       client6, client7, client8, client9, client10,
                       client11, client12, client13, client14, client15,
                       client16, client17, client18, client19, client20,
-                      client21, client22, client23, client24, client25
+                      client21
                      ]
 
 // import { onMounted } from 'vue'
