@@ -255,6 +255,14 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/OurServices/UiUx/index.vue')
   }, 
   {
+    path: '/ourservices/mobile-development',
+    name: 'ourservices.mobile-development',
+    meta: {
+      title: setTitle('Mobile Development')
+    },
+    component: () => import('@/views/pages/about/OurServices/MobileDevelopment/index.vue')
+  },
+  {
     path: '/pages/team',
     name: 'pages.team',
     meta: {
