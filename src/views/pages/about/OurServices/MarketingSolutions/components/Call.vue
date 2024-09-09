@@ -12,13 +12,19 @@
 
         <b-row class="g-4 position-relative">
           <b-col lg="10" xl="7" class="mx-auto text-center">
-            <h3 class="text-white mb-3">Get Started Today</h3>
+            <h3 class="text-white mb-3">
+              Ready to boost your brand’s presence and drive results with a customized marketing
+              strategy?
+            </h3>
             <p class="text-white opacity-8">
-              Whether you have an app idea or need to optimize an existing one, our team is here to
-              help. Share your vision with us, and let’s turn it into a reality.
+              LET’S TALK ABOUT YOUR NEEDS. Ready to boost your brand’s presence and drive results
+              with a customized marketing strategy? We’re excited to help you achieve your marketing
+              goals.
             </p>
 
-            <a @click="goToServicePage" class="btn btn-primary mb-6">Get started today</a>
+            <a @click="goToServicePage" class="btn btn-primary mb-6">
+              LET’S TALK ABOUT YOUR NEEDS</a
+            >
           </b-col>
         </b-row>
       </div>

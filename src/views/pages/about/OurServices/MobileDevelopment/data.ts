@@ -1,7 +1,4 @@
-import avatar11 from '@/assets/images/avatar/11.jpg'
-import avatar8 from '@/assets/images/avatar/08.jpg'
-import avatar5 from '@/assets/images/avatar/05.jpg'
-import type { PricingPlanType, ServiceType , StepType } from '@/types'
+import type {  ServiceType , StepType } from '@/types'
 export const cards: StepType[] = [
   {
     title: 'Project Scope',
@@ -35,20 +32,17 @@ export const cards: StepType[] = [
   }
 ]
 export const approach: string[] = [
-  "Small to Medium Businesses: Looking to establish or enhance their online presence.",
-  'E-commerce Stores: Needing a professional, user-friendly site to drive sales.',
-  'Startups: Requiring a sleek, modern website to attract investors and customers.',
-  'Non-Profits: Seeking an impactful web presence to communicate their mission.',
-  'Personal Brands & Influencers: Needing a custom site that reflects their unique personality.'
+  "Startups: Launch your app idea with a reliable partner that understands the challenges of new ventures.",
+  'Established Businesses: Expand your digital presence and engage your customers through a custom mobile app.',
+  'E-commerce: Provide a mobile shopping experience that increases sales and customer loyalty.',
+  'Enterprises: Optimize internal processes and enhance productivity with tailored mobile solutions.'
 ]
 
 type WorkType = {
   id: number
 } & ServiceType
 
-export type PricingType = {
-  avatar: string
-} & PricingPlanType
+
 
 export const work: WorkType[] = [
   {
@@ -65,37 +59,18 @@ export const work: WorkType[] = [
   {
     id: 3,
     title: 'Development:',
-    description: `For visibility, SEO strategies are employed to improve the client's website's search engine rankings.`
+    description: `Our developers bring the design to life using the latest technologies and best practices. We focus on creating a seamless, responsive, and high-performance app.
+`
   },
   {
     id: 4,
-    title: 'Launch & Support:',
-    description: `Digital marketing agencies stay up-to-date with industry trends and algorithm changes.`
+    title: 'Testing & Quality Assurance:',
+    description: `Before launch, we rigorously test the app across different devices and environments to ensure it works flawlessly. We address any issues to deliver a smooth user experience.`
   },
   {
     id: 5,
-    title: 'Launch & Support:',
-    description: `Digital marketing agencies stay up-to-date with industry trends and algorithm changes.`
+    title: 'Deployment & Support:',
+    description: `We handle the app's launch on the App Store, Google Play, or other platforms. Post-launch, we offer ongoing support and maintenance to keep your app updated and secure.`
   }
 ]
 
-export const pricing: PricingType[] = [
-  {
-    avatar: avatar11,
-    description:
-      'Working with Innovacraft was a game-changer for our business. The team truly understood our brand and delivered a website that exceeded our expectations. The process and communication were smooth, and the final product has received nothing but praise from our customers.',
-    title: 'Jane Doe, CEO of AmperTND Corp'
-  },
-  {
-    avatar: avatar8,
-    description:
-      'Two before narrow not relied on how except moment myself Dejection assurance Mrs led certainly So gate at no only none open Betrayed.',
-    title: 'Louis Ferguson'
-  },
-  {
-    avatar: avatar5,
-    description:
-      "Our passion for customer excellence is just one reason why we are the market leader. We've always worked very hard to give our customers the best experience.",
-    title: 'Jacqueline Miller'
-  }
-]

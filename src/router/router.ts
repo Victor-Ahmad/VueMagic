@@ -263,6 +263,30 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/OurServices/MobileDevelopment/index.vue')
   },
   {
+    path: '/ourservices/software-solutions',
+    name: 'ourservices.software-solutions',
+    meta: {
+      title: setTitle('Software Solutions')
+    },
+    component: () => import('@/views/pages/about/OurServices/SoftwareSolutions/index.vue')
+  },
+  {
+    path: '/ourservices/marketing-solutions',
+    name: 'ourservices.marketing-solutions',
+    meta: {
+      title: setTitle('Marketing Solutions')
+    },
+    component: () => import('@/views/pages/about/OurServices/MarketingSolutions/index.vue')
+  },
+  {
+    path: '/ourservices/outsourcing',
+    name: 'ourservices.outsourcing',
+    meta: {
+      title: setTitle('Outsourcing')
+    },
+    component: () => import('@/views/pages/about/OurServices/Outsourcing/index.vue')
+  },
+  {
     path: '/pages/team',
     name: 'pages.team',
     meta: {

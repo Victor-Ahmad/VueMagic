@@ -15,12 +15,10 @@
         <b-col lg="8" class="ps-xl-7">
           <b-row class="g-4 g-sm-5">
             <b-col md="6" v-for="requirement in cards" :key="requirement">
-              <b-card no-body class="border bg-light p-5" style="height: 250px">
+              <b-card no-body class="border bg-light p-5 card" style="height: 250px">
                 <b-card-body class="p-0">
                   <h5 class="mb-2">
-                    <router-link :to="{ name: 'services.single' }" class="stretched-link">{{
-                      requirement.title
-                    }}</router-link>
+                    {{ requirement.title }}
                   </h5>
                   <p class="mb-0">{{ requirement.description }}</p>
                 </b-card-body>
@@ -37,3 +35,12 @@
 import CustomStickyElement from '@/components/CustomStickyElement.vue'
 import { cards } from '@/views/pages/about/OurServices/UiUx/data'
 </script>
+<style scoped>
+.card:hover {
+  border: 1px solid #05dac3 !important;
+  cursor: pointer;
+}
+.card:hover h5 {
+  color: #05dac3 !important;
+}
+</style>

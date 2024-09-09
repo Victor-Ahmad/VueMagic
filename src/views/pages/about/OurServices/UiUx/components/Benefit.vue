@@ -61,39 +61,47 @@
               </li>
             </ul>
             <b-card no-body class="border p-4 overflow-hidden p-sm-4 mt-5">
-              <p class="mb-2">Services We Provide:</p>
+              <p class="mb-2">Roles We Provide:</p>
               <ul class="list-group list-group-borderless my-3">
                 <li class="list-group-item heading-color d-flex pb-0 icons-center my-2">
                   <BIconPatchCheckFill class="me-2" />
-                  User Research & Analysis
+                  UI/UX Designer
                 </li>
                 <li class="list-group-item heading-color d-flex pb-0 icons-center">
                   <BIconPatchCheckFill class="me-2" />
-                  Wireframing & Prototyping
+                  User Researcher
                 </li>
                 <li class="list-group-item heading-color d-flex pb-0 icons-center my-2">
                   <BIconPatchCheckFill class="me-2" />
-                  Visual Design
+                  Interaction Designer
                 </li>
                 <li class="list-group-item heading-color d-flex pb-0 icons-center">
                   <BIconPatchCheckFill class="me-2" />
-                  User Flow & Information Architecture
+                  Visual Designer
                 </li>
                 <li class="list-group-item heading-color d-flex pb-0 icons-center my-2">
                   <BIconPatchCheckFill class="me-2" />
-                  Usability Testing
+                  Information Architect
                 </li>
                 <li class="list-group-item heading-color d-flex pb-0 icons-center">
                   <BIconPatchCheckFill class="me-2" />
-                  Interaction Design
+                  Usability Analyst
                 </li>
                 <li class="list-group-item heading-color d-flex pb-0 icons-center my-2">
                   <BIconPatchCheckFill class="me-2" />
-                  Responsive Design
+                  Front-End Developer
                 </li>
                 <li class="list-group-item heading-color d-flex pb-0 icons-center">
                   <BIconPatchCheckFill class="me-2" />
-                  Design System Development
+                  Prototype Specialist
+                </li>
+                <li class="list-group-item heading-color d-flex pb-0 icons-center">
+                  <BIconPatchCheckFill class="me-2" />
+                  Design System Manager
+                </li>
+                <li class="list-group-item heading-color d-flex pb-0 icons-center">
+                  <BIconPatchCheckFill class="me-2" />
+                  Accessibility Specialist
                 </li>
               </ul>
             </b-card>
@@ -121,7 +129,7 @@
               clickable: true
             }"
           >
-            <SwiperSlide class="mb-5" v-for="item in pricing" :key="item">
+            <SwiperSlide class="mb-5" v-for="item in testimonials" :key="item">
               <SwiperCard :testimonial="item" />
             </SwiperSlide>
 
@@ -138,7 +146,7 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination } from 'swiper/modules'
-import { pricing } from '@/views/pages/about/OurServices/UiUx/data'
+import { testimonials } from '@/views/pages/about/OurServices/UiUx/data'
 import SwiperCard from '@/views/pages/about/OurServices/UiUx/components/SwiperCard.vue'
 import { approach } from '@/views/pages/about/OurServices/UiUx/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'

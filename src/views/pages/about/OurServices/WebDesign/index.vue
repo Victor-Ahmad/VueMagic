@@ -3,7 +3,7 @@
     <Hero />
     <Requirements />
     <Works />
-    <Pricing />
+    <Benefit />
     <Call />
     <ButtonForContact />
   </main>
@@ -11,7 +11,7 @@
 
 <script setup lang="ts">
 import Hero from '@/views/pages/about/OurServices/WebDesign/components/Hero.vue'
-import Pricing from '@/views/pages/about/OurServices/WebDesign/components/Pricing.vue'
+import Benefit from '@/views/pages/about/OurServices/WebDesign/components/Benefit.vue'
 import Works from '@/views/pages/about/OurServices/WebDesign/components/Works.vue'
 import Requirements from '@/views/pages/about/OurServices/WebDesign/components/Requirements.vue'
 import Call from '@/views/pages/about/OurServices/WebDesign/components/Call.vue'

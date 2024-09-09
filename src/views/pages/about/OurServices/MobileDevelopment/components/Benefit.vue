@@ -2,11 +2,11 @@
   <section class="pb-0">
     <b-container>
       <b-row>
-        <b-col lg="6" class="mb-6 mb-lg-0">
+        <b-col lg="12" class="mb-6 mb-lg-0">
           <b-card no-body class="bg-dark overflow-hidden p-sm-4 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
               <h3 class="mb-3">Who Could Benefit from This Service</h3>
-              <p>Our Web Design service is perfect for:</p>
+              <p>Our Mobile Development service is perfect for:</p>
 
               <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
                 <b-list-group-item
@@ -23,46 +23,12 @@
             </b-card-header>
           </b-card>
         </b-col>
-
-        <b-col lg="5" class="ms-auto">
-          <h2>Feedback for Service Enhancement</h2>
-          <p class="lead mb-2">
-            300+ Users rated us <span class="text-primary fw-bold">4.85</span> out of 5.
-          </p>
-
-          <Swiper
-            class="mt-7"
-            :modules="[Autoplay, Pagination]"
-            :autoplay="{
-              delay: 2000
-            }"
-            :loop="true"
-            :spaceBetween="30"
-            :grabCursor="true"
-            :pagination="{
-              el: '.swiper-pagination',
-              clickable: true
-            }"
-          >
-            <SwiperSlide class="mb-5" v-for="item in pricing" :key="item">
-              <SwiperCard :testimonial="item" />
-            </SwiperSlide>
-
-            <div
-              class="swiper-pagination swiper-pagination-primary position-relative text-start"
-            ></div>
-          </Swiper>
-        </b-col>
       </b-row>
     </b-container>
   </section>
 </template>
 
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Autoplay, Pagination } from 'swiper/modules'
-import { pricing } from '@/views/pages/about/OurServices/MobileDevelopment/data'
-import SwiperCard from '@/views/pages/about/OurServices/MobileDevelopment/components/SwiperCard.vue'
 import { approach } from '@/views/pages/about/OurServices/MobileDevelopment/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'
 </script>

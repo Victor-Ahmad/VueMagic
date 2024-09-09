@@ -44,7 +44,7 @@
               clickable: true
             }"
           >
-            <SwiperSlide class="mb-5" v-for="item in pricing" :key="item">
+            <SwiperSlide class="mb-5" v-for="item in testimonials" :key="item">
               <SwiperCard :testimonial="item" />
             </SwiperSlide>
 
@@ -61,7 +61,7 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay, Pagination } from 'swiper/modules'
-import { pricing } from '@/views/pages/about/OurServices/WebDesign/data'
+import { testimonials } from '@/views/pages/about/OurServices/WebDesign/data'
 import SwiperCard from '@/views/pages/about/OurServices/WebDesign/components/SwiperCard.vue'
 import { approach } from '@/views/pages/about/OurServices/WebDesign/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'

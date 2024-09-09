@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import { type PropType } from 'vue'
-import type { PricingType } from '@/views/pages/about/OurServices/MobileDevelopment/data'
+import type { PricingType } from '@/views/pages/about/OurServices/Outsourcing/data'
 import { BIconStarFill, BIconStarHalf } from 'bootstrap-icons-vue'
 
 defineProps({

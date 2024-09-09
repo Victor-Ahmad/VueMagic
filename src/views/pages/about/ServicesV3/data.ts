@@ -36,18 +36,23 @@ export const services: ServiceType[] = [
     title: 'software solutions',
     description:
       'From website design to app development, we blend aesthetics with usability to leave a lasting impression.',
-    icon: designIcon
+    icon: designIcon,
+    route: { name: 'ourservices.software-solutions' }
+  },
+  {
+    title: 'Marketing Solutions',
+    description:
+      "We're here to optimize your tax strategy, so you can focus on what matters most to your business.",
+    icon: taxIcon,
+    route: { name: 'ourservices.marketing-solutions' }
+
   },
   {
     title: 'outsourcing',
     description: 'Our consultants become your trusted advisors on the path to success.',
-    icon: businessIcon2
-  },
-  {
-    title: 'Tax consultant',
-    description:
-      "We're here to optimize your tax strategy, so you can focus on what matters most to your business.",
-    icon: taxIcon
+    icon: businessIcon2,
+    route: { name: 'ourservices.outsourcing' }
+
   }
 ]
 

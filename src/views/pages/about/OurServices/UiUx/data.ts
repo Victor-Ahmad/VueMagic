@@ -87,7 +87,7 @@ export const work: WorkType[] = [
   }
 ]
 
-export const pricing: PricingType[] = [
+export const testimonials: PricingType[] = [
   {
     avatar: avatar11,
     description:
