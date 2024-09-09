@@ -127,9 +127,9 @@
 <script setup lang="ts">
 import bg02 from '@/assets/images/bg/02.jpg'
 import { ref, onMounted } from 'vue'
-import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
-import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
-import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
+import { useServices } from '@/views/pages/contact/ContactV1/Services/composables/service'
+import { useContactForm } from '@/views/pages/contact/ContactV1/Services/composables/contact'
+import type { ContactUsBody } from '@/views/pages/contact/ContactV1/Services/types/ContactUsBodyType'
 
 const firstName = ref<string>('')
 const lastName = ref<string>('')
