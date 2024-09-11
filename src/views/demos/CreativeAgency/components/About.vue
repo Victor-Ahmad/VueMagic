@@ -1,48 +1,48 @@
 <template>
-  <section class="pb-0" style="background-color: #e7f8ee">
+  <section class="pb-5 pt-5" >
     <b-container>
       <b-row class="mb-3 mb-xl-0">
         <b-col xl="12">
-          <h4 class="lh-base mb-0 text-black">
-            InnovaCraft :" Where 
+          <h4 class="lh-base mb-0 ">
+            InnovaCraft : Where 
             <span style="color: #05dac3">Innovation</span>
-             Meets Expertise "
+             Meets Expertise 
           </h4>
         </b-col>
       </b-row>
       <b-row class="align-items-center">
-        <b-col lg="6" class="pe-lg-5 mt-3">
-          <p class="mb-5">
-            At InnovaCraft , we combine creative innovation with technical 
-            expertise to deliver tailored solutions that drive business growth , 
-            transform ideas into reality , and empower brands to succeed in the
-             digital world . 
+        <b-col lg="6" class="pe-lg-5 mt-3"  >
+          <p class="mb-5"  >
+            At InnovaCraft,we combine creative innovation with technical 
+            expertise to deliver tailored solutions that drive business growth, 
+            transform ideas into reality,and empower brands to succeed in the
+             digital world. 
           </p>
 
-          <b-card no-body class="card-body bg-light p-sm-5 h-100">
+          <b-card no-body class="card-body bg-light p-sm-5 h-100  ">
             <img :src="about3" class="position-absolute bottom-0 end-0 mb-0 me-3 d-none d-sm-block w-25" 
             />
             
 
-            <b-tabs nav-class="nav-pills nav-pills-dark border-0" content-class="mt-4">
+            <b-tabs nav-class="nav-pills nav-pills-dark border-0" content-class="mt-4" >
               <b-tab title="Our Mission" class="fade">
                 <!-- <h5 class="mb-3">Modern & creative agency specialized in Business</h5> -->
                 <p class="mb-2">
-                  Empowering businesses with innovative digital solutions that drive growth and success .
+                  Empowering businesses with innovative digital solutions that drive growth and success.
                 </p>
 
-                <ul class="list-group list-group-borderless mb-3">
-                  <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Deliver creative , technology - driven strategies tailored to our clients ' unique needs .
+                <ul class="list-group list-group-borderless mb-3" style="max-width: 380px; font-size: small; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                  <li class="list-group-item heading-color d-flex pb-0 icons-center ">
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;"  />
+                    Deliver creative,technology - driven strategies tailored to our clients ' unique needs.
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Transform ideas into impactful solutions that enhance user engagement and performance .
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;"/>
+                    Transform ideas into impactful solutions that enhance user engagement and performance.
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Foster long - term partnerships through trust , collaboration , and excellence .
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;" />
+                    Foster long - term partnerships through trust,collaboration,and excellence.
                   </li>
                 </ul>
 
@@ -57,29 +57,29 @@
                   We believe that it takes great people to deliver a great product
                 </h5> -->
                 <p class="mb-2">
-                  Our goals focus on driving innovation , delivering value , and building lasting partnerships .
+                  Our goals focus on driving innovation,delivering value,and building lasting partnerships.
                 </p>
 
-                <ul class="list-group list-group-borderless mb-3">
+                <ul class="list-group list-group-borderless mb-3" style="max-width: 380px; font-size: small; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" >
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Innovate Continuously : Stay ahead of industry trends with cutting - edge solutions .
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;" />
+                    Innovate Continuously:Stay ahead of industry trends with cutting - edge solutions.
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Client - Centered Solutions : Tailor strategies to meet the unique goals of each client .
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;" />
+                    Client - Centered:Tailor strategies to meet the unique goals of each client.
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Deliver Excellence : Consistently provide high - quality , scalable solutions .
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;" />
+                    Deliver Excellence:Consistently provide high - quality,scalable solutions.
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Foster Long - Term Partnerships : Build trust and collaborative relationships with clients .
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;"/>
+                    Foster Long - Term Partnerships:Build trust and collaborative relationships with clients.
                   </li>
                   <li class="list-group-item heading-color d-flex pb-0 icons-center">
-                    <BIconPatchCheckFill class="me-2" />
-                    Empower Businesses Globally : Help businesses unlock their potential on a global scale .
+                    <BIconPatchCheckFill class="me-2" style="width: 1.4rem;" />
+                    Empower Businesses Globally:Help businesses unlock their potential on a global scale.
                   </li>
                 </ul>
 
