@@ -112,7 +112,7 @@
             </b-form> -->
             <h1 class="mb-5 h3">Let's level up your brand, together</h1>
 
-            <b-form @submit.prevent="handleSubmit" class="row g-4">
+            <b-form  class="row g-4">
               <b-col md="6">
                 <b-form-group
                   label="First name *"
@@ -174,9 +174,9 @@
                     required
                   >
                     <option value="" disabled>Select a service</option>
-                    <option v-for="service in services" :key="service.id" :value="service.id">
-                      {{ service.name }}
-                    </option>
+                    <!-- <option v-for="service in services" :key="service.id" :value="service.id">
+                      {{  }}
+                    </option> -->
                   </b-form-select>
                 </b-form-group>
               </b-col>
@@ -207,8 +207,8 @@
                 </b-button>
               </b-col>
             </b-form>
-            <div v-if="response && response.success === 1" class="mt-3">
-              <p class="text-success">{{ response.message }}</p>
+            <!-- <div v-if="response && response.success === 1" class="mt-3">
+              <p class="text-success">{{  }}</p>
             </div>
 
             <div v-if="(response && response.success === 0) || error" class="mt-3 text-danger">
@@ -216,7 +216,7 @@
                 <strong>{{ key }}:</strong>
                 <span v-for="msg in msgs" :key="msg">{{ msg }}<br /></span>
               </p>
-            </div>
+            </div> -->
           </b-card>
         </b-col>
         <b-col
@@ -277,11 +277,11 @@
 <script setup lang="ts">
 import { lists } from '@/views/pages/about/AboutV4/data'
 import { BIconPatchCheck } from 'bootstrap-icons-vue'
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
-import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
-import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
-import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
+// import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
+// import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
+// import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
 
 const firstName = ref<string>('')
 const lastName = ref<string>('')
@@ -290,23 +290,23 @@ const mobileNumber = ref<string>('')
 const msg = ref<string>('')
 const serviceId = ref<number | null>(null)
 
-const { services, loadServices } = useServices()
-onMounted(() => {
-  loadServices()
-})
+// const { services, loadServices } = useServices()
+// onMounted(() => {
+//   loadServices()
+// })
 
-const { submitForm, response, loading, error } = useContactForm()
+// const { submitForm, response, loading, error } = useContactForm()
 
-const handleSubmit = () => {
-  const formData: ContactUsBody = {
-    first_name: firstName.value,
-    last_name: lastName.value,
-    email: email.value,
-    mobile_number: mobileNumber.value,
-    msg: msg.value,
-    service_id: serviceId.value ?? 0
-  }
+// const handleSubmit = () => {
+//   const formData: ContactUsBody = {
+//     first_name: firstName.value,
+//     last_name: lastName.value,
+//     email: email.value,
+//     mobile_number: mobileNumber.value,
+//     msg: msg.value,
+//     service_id: serviceId.value ?? 0
+//   }
 
-  submitForm(formData)
-}
+//   submitForm(formData)
+// }
 </script>

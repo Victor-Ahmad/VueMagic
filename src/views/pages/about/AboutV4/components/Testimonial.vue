@@ -1,7 +1,7 @@
 <template>
   <section class="pt-0">
     <b-container>
-      <b-row
+      <!-- <b-row
         v-if="loading"
         class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center d-flex justify-content-center"
       >
@@ -16,7 +16,7 @@
         <b-col>
           <p class="mb-2 p-2 rounded text-white bg-primary">{{ error }}</p>
         </b-col>
-      </b-row>
+      </b-row> -->
       <b-row
         v-for="(item, idx) in about"
         :key="idx"
@@ -74,14 +74,14 @@
           </b-row>
         </b-col>
       </b-row>
-      <b-row
+      <!-- <b-row
         v-if="!about"
         class="row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 text-center d-flex justify-content-center"
       >
         <b-col>
           <p class="mb-2 p-2 rounded text-white bg-primary">No data available.</p>
         </b-col>
-      </b-row>
+      </b-row> -->
     </b-container>
   </section>
 </template>
@@ -93,11 +93,11 @@ import { Autoplay, Pagination } from 'swiper/modules'
 import TestimonialCard from '@/views/pages/about/AboutV4/components/TestimonialCard.vue'
 import bg5Img from '@/assets/images/bg/05.jpg'
 
-import { onMounted } from 'vue'
-import { useAbout } from '@/views/pages/about/AboutV4/Services/composables/about.ts'
+// import { onMounted } from 'vue'
+// import { useAbout } from '@/views/pages/about/AboutV4/Services/composables/about.ts'
 
-const { about, loading, error, loadAbout } = useAbout()
-onMounted(() => {
-  loadAbout()
-})
+// const { about, loading, error, loadAbout } = useAbout()
+// onMounted(() => {
+//   loadAbout()
+// })
 </script>
