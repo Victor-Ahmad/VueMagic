@@ -24,6 +24,6 @@
 </template>
 
 <script lang="ts" setup>
-import { services } from '@/views/demos/CreativeAgency/data'
-import ServiceCard from '@/views/demos/CreativeAgency/components/ServiceCard.vue'
+import { services } from '@/views/pages/about/ServicesV3/data'
+import ServiceCard from '@/views/pages/about/ServicesV3/components/ServiceCard.vue'
 </script>

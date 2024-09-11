@@ -239,6 +239,54 @@ const pagesRoutes = [
     component: () => import('@/views/pages/about/Process/index.vue')
   },
   {
+    path: '/ourservices/web-design',
+    name: 'ourservices.web-design',
+    meta: {
+      title: setTitle('Web Design')
+    },
+    component: () => import('@/views/pages/about/OurServices/WebDesign/index.vue')
+  },  
+  {
+    path: '/ourservices/ui-ux-design',
+    name: 'ourservices.ui-ux-design',
+    meta: {
+      title: setTitle('Ui/Ux Design')
+    },
+    component: () => import('@/views/pages/about/OurServices/UiUx/index.vue')
+  }, 
+  {
+    path: '/ourservices/mobile-development',
+    name: 'ourservices.mobile-development',
+    meta: {
+      title: setTitle('Mobile Development')
+    },
+    component: () => import('@/views/pages/about/OurServices/MobileDevelopment/index.vue')
+  },
+  {
+    path: '/ourservices/software-solutions',
+    name: 'ourservices.software-solutions',
+    meta: {
+      title: setTitle('Software Solutions')
+    },
+    component: () => import('@/views/pages/about/OurServices/SoftwareSolutions/index.vue')
+  },
+  {
+    path: '/ourservices/marketing-solutions',
+    name: 'ourservices.marketing-solutions',
+    meta: {
+      title: setTitle('Marketing Solutions')
+    },
+    component: () => import('@/views/pages/about/OurServices/MarketingSolutions/index.vue')
+  },
+  {
+    path: '/ourservices/outsourcing',
+    name: 'ourservices.outsourcing',
+    meta: {
+      title: setTitle('Outsourcing')
+    },
+    component: () => import('@/views/pages/about/OurServices/Outsourcing/index.vue')
+  },
+  {
     path: '/pages/team',
     name: 'pages.team',
     meta: {
@@ -274,10 +322,10 @@ const pagesRoutes = [
     path: '/services/single',
     name: 'services.single',
     meta: {
-      title: setTitle('Services Single')
+      title: setTitle('Services-Single')
     },
     component: () => import('@/views/pages/about/ServiceSingle/index.vue')
-  },  
+  },
   {
     path: '/customer/stories',
     name: 'customer.stories',
@@ -496,6 +544,7 @@ const portfolioRoutes = [
     component: () => import('@/views/portfolio/Portfolio/index.vue')
   },
 ]
+
 
 const authRoutes = [
   {

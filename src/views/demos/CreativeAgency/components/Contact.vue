@@ -2,9 +2,11 @@
   <section class="pb-9">
     <b-container class="pt-3">
       <b-row>
+
         <b-col lg="12">
           <b-card >
             <h1 class="text-white mt-8">CONTACT US</h1>
+
           </b-card>
           
 
@@ -13,6 +15,7 @@
               <b-col lg="6" class="ms-auto d-sm-none d-lg-block">
                 <b-card no-body class="card-body shadow border p-sm-5 m-3">                 
                   <h1 class="mb-5 h3">Let's level up your brand, together</h1>
+
 
                   <b-form class="row g-4">
                     <b-col md="6">
@@ -89,6 +92,7 @@
                         >
                           <option value="" disabled>Select a service</option>
                           <!-- <option v-for="service in services" :key="service.id" :value="service.id">
+
                       {{ service.name }}
                     </option> -->
                         </b-form-select>
@@ -117,8 +121,10 @@
                   </b-form>
 
 
+
                   
                   <!-- <div v-if="response && response.success === 1" class="mt-3">
+
               <p class="text-success">{{ response.message }}</p>
             </div>
 
@@ -170,15 +176,17 @@
           <b-card no-body class="bg-dark overflow-hidden p-sm-2 h-100" data-bs-theme="dark">
             <b-card-header class="bg-transparent position-relative mb-3">
               <h3 class="mb-3">
-                {{ }}
+                {{}}
               </h3>
 
-              <p>{{  }}</p>
+              <p>{{}}</p>
               <b-list-group class="list-group-borderless border-0 card-body bg-light border p-md-5">
+
                 <b-list-group-item
                 class="heading-color d-flex mb-0"
                 >
               
+
                   <span class="flex-centered">
                     <BIconPatchCheck class="text-primary me-2" />
                   </span>
@@ -386,7 +394,9 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { lists } from '@/views/demos/CreativeAgency/data'
+
 import { BIconChevronRight, BIconPatchCheckFill } from 'bootstrap-icons-vue'
+
 // import { useServices } from '@/views/demos/CreativeAgency/Services/composables/service'
 // import { useContactForm } from '@/views/demos/CreativeAgency/Services/composables/contact'
 // import type { ContactUsBody } from '@/views/demos/CreativeAgency/Services/types/ContactUsBodyType'
