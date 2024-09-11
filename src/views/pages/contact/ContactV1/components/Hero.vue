@@ -132,7 +132,6 @@ import { useServices } from '@/views/pages/contact/ContactV1/Services/composable
 import { useContactForm } from '@/views/pages/contact/ContactV1/Services/composables/contact'
 import type { ContactUsBody } from '@/views/pages/contact/ContactV1/Services/types/ContactUsBodyType'
 
-
 const firstName = ref<string>('')
 const lastName = ref<string>('')
 const email = ref<string>('')
@@ -140,25 +139,25 @@ const mobileNumber = ref<string>('')
 const msg = ref<string>('')
 const serviceId = ref<number | null>(null)
 
-// const { services, loadServices } = useServices()
-// onMounted(() => {
-//   loadServices()
-// })
+const { services, loadServices } = useServices()
+onMounted(() => {
+  loadServices()
+})
 
-// const { submitForm, response, loading, error } = useContactForm()
+const { submitForm, response, loading, error } = useContactForm()
 
-// const handleSubmit = () => {
-//   const formData: ContactUsBody = {
-//     first_name: firstName.value,
-//     last_name: lastName.value,
-//     email: email.value,
-//     mobile_number: mobileNumber.value,
-//     msg: msg.value,
-//     service_id: serviceId.value ?? 0
-//   }
+const handleSubmit = () => {
+  const formData: ContactUsBody = {
+    first_name: firstName.value,
+    last_name: lastName.value,
+    email: email.value,
+    mobile_number: mobileNumber.value,
+    msg: msg.value,
+    service_id: serviceId.value ?? 0
+  }
 
-//   submitForm(formData)
-// }
+  submitForm(formData)
+}
 </script>
 
 <style scoped>
