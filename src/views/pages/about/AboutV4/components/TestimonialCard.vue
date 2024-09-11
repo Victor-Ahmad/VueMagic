@@ -16,7 +16,7 @@
       <BIconStarHalf class="text-warning" />
     </li>
   </ul>
-
+<!-- 
   <q class="lead heading-color">{{ testimonial.client_testimonial }}</q>
 
   <div class="d-sm-flex align-items-center mt-4">
@@ -26,20 +26,20 @@
 
     <div class="ms-sm-3 mt-2 mt-sm-0">
       <span class="heading-color fw-semibold mb-0">{{ testimonial.client_name }}</span>
-      <!-- <p class="mb-0 small">{{ testimonial.role }}</p> -->
-    </div>
-  </div>
+       <p class="mb-0 small">{{ testimonial.role }}</p> -->
+    <!-- </div>
+  </div> -->
 </template>
 
 <script setup lang="ts">
 import { type PropType } from 'vue'
-import type { TestimonialType } from '@/views/pages/about/AboutV4/Services/types/AboutType'
+// import type { TestimonialType } from '@/views/pages/about/AboutV4/Services/types/AboutType'
 import { BIconStarFill, BIconStarHalf } from 'bootstrap-icons-vue'
 
-defineProps({
-  testimonial: {
-    type: Object as PropType<TestimonialType>,
-    required: true
-  }
-})
+// defineProps({
+//   testimonial: {
+//     type: Object as PropType<TestimonialType>,
+//     required: true
+//   }
+// })
 </script>
