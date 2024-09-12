@@ -253,10 +253,11 @@
               </figure>
 
               <b-card no-body class="bg-dark text-start z-index-2 w-75 p-5 mb-4">
-                <span class="text-white">Our Goal:</span>
-                <h4 class="text-white fw-light mb-0 mt-3">
-                  "We believe that it takes great people to deliver a great product"
-                </h4>
+                <h4 class="text-white">Our Mission:</h4>
+                <h6 class="text-white fw-light mb-0 mt-3">
+                    At <span style="color: #05dac3">InnovaCraft</span>,we empower businesses with cutting-edge solutions that drive growth and success.
+                    We build lasting relationships by delivering impactful results aligned with our clients' goal.
+                </h6>
               </b-card>
 
               <b-card no-body class="overflow-hidden p-0">
