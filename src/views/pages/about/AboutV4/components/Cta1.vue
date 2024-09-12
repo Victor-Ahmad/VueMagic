@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <section class="position-relative z-index-2 pt-0">
     <b-container class="position-relative">
       <div class="bg-dark rounded position-relative overflow-hidden p-4 p-sm-7">
@@ -141,5 +141,63 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Autoplay } from 'swiper/modules'
-import { swiper } from '@/views/pages/about/AboutV1/data'
+import { swiper } from '@/views/pages/about/AboutV4/data'
+</script> -->
+
+
+
+
+
+<template>
+  <section class="py-xl-5">
+    <b-container
+      class="py-xl-8"
+      style="background-position: center; background-size: cover"
+      :style="{ backgroundImage: `url('${mapImg}')` }"
+    >
+      <div class="inner-container text-center">
+        <h2 class="mb-4">Our Partners & Associates</h2>
+        <p class="mb-6">
+          We proudly collaborate with a network of esteemed partners and clients across various industries.
+          Our partnerships include leading technology providers,
+          renowned marketing agencies, and strategic business consultants.
+          Together, we work on projects that push the boundaries of innovation and deliver exceptional results.
+        </p>
+
+        <!-- <b-row class="g-4 text-start justify-content-center">
+          <b-col md="5" v-for="(item, idx) in location" :key="idx">
+            <b-card no-body class="border p-4">
+              <div class="avatar avatar-lg mb-4">
+                <img class="avatar-img rounded-circle" :src="item.image" alt="avatar" />
+              </div>
+              <b-card-title tag="h6" class="mb-3"
+                >
+                <a href="#">{{ item.counrty }}</a></b-card-title
+              
+              >
+
+              <ul class="list-group list-group-borderless border-0">
+                <li class="d-flex mb-3">
+                  <BIconGeoAlt class="me-2 fa-xl" />55/123 Norman street, Banking road, Sydney NSW
+                  5000
+                </li>
+                <li class="d-flex mb-3 icons-center">
+                  <BIconHeadset class="me-2" />Call: 469-537-2410 (Toll-free)
+                </li>
+
+               
+              </ul>
+            </b-card>
+          </b-col>
+        </b-row> -->
+      </div>
+    </b-container>
+  </section>
+</template>
+
+<script setup lang="ts">
+// import { location } from '@/views/pages/about/AboutV2/data'
+// import { BIconGeoAlt, BIconHeadset } from 'bootstrap-icons-vue'
+
+import mapImg from '@/assets/images/elements/map.svg'
 </script>

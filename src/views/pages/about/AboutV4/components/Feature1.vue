@@ -99,18 +99,32 @@
           
 
           <b-col lg="6" class="ms-auto mb-6 mb-lg-0 order-lg-2">
-            <h3 class="mb-4">Shaping Digital Futures</h3>
-            <p class="mb-5">
-              At mizzle, our vision is to pioneer a new era of software solutions. We believe in
-              empowering innovation, enabling businesses to shape their digital futures, and
-              creating a world where software knows no bounds.
-            </p>
+            <h3 class="mb-4">Our 5 steps process</h3>
 
             <div
               class="d-sm-flex"
               v-for="(item, idx) in features"
               :key="idx"
               :class="idx == features.length - 1 ? '' : 'mb-4'"
+            >
+              <figure class="text-primary mb-2">
+                <span v-html="item.icon" />
+              </figure>
+
+              <div class="ms-sm-4">
+                <h6>{{ item.title }}</h6>
+                <p class="pb-0">{{ item.description }}</p>
+              </div>
+            </div>
+          </b-col>
+
+          <b-col lg="6" class="ms-auto  mt-7 pt-2 mb-lg-0 order-lg-2">
+           
+            <div
+              class="d-sm-flex "
+              v-for="(item, idx) in feature"
+              :key="idx"
+              :class="idx == feature.length - 1 ? '' : 'mb-4'"
             >
               <figure class="text-primary mb-2">
                 <span v-html="item.icon" />
@@ -129,6 +143,7 @@
 </template>
 
 <script setup lang="ts">
-import Vue3Autocounter from 'vue3-autocounter'
-import { features } from '@/views/pages/about/AboutV3/data'
+
+import { features } from '@/views/pages/about/AboutV4/data'
+import { feature } from '@/views/pages/about/AboutV4/data'
 </script>

@@ -4,7 +4,13 @@
     <b-container>
       <b-row>
         <b-col md="4" class="mb-4 mb-md-0">
-          <h2>Meet Our Dedicated Team</h2>
+          <h2>Meet Our Team</h2>
+          <p style="font-size: small;text-align: left; margin-top: 10px;">
+            Our team at<span style="color: #05dac3">InnovaCraft</span> is composed of highly qualified engineers,
+            seasoned professionals, and industry experts from around the globe. We bring together a diverse range
+            of skills and languages to ensure that we can effectively address the needs of our international clientele.
+            Our professionals are dedicated to providing top-notch service and innovative solutions tailored to your business.
+          </p>
 
           <div class="d-flex gap-3 position-relative mt-md-5">
             <a href="#" class="btn btn-dark btn-icon rounded-circle mb-0 swiper-button-prev-team">

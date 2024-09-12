@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-4 mt-n6">
+    <section class="pt-2 mt-n6">
       <b-container>
         <b-row class="row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
           <b-col v-for="(item, idx) in counter" :key="idx">
@@ -25,6 +25,6 @@
   
   <script lang="ts" setup>
   import Vue3autocounter from 'vue3-autocounter'
-  import { counter } from '@/views/pages/about/AboutV1/data'
+  import { counter } from '@/views/pages/about/AboutV4/data'
   </script>
   
